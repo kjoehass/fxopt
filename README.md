@@ -9,3 +9,4 @@ fixed-point formats of the result and intermediate variables. Using the
 provided perl script you can also create generic C code that exactly duplicates
 the fixed-point calculations.
 
+A gcc plugin that performs floating-point to fixed-point arithemetic conversions.

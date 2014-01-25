@@ -1,0 +1,163 @@
+#!/usr/bin/perl -w
+# vim:syntax=perl:
+#
+if ( !defined( $ARGV[0] ) ) {
+  $0 =~ s|.*/||;
+  print "\nUsage: $0 data_file [output_file]";
+  print "\n       Output goes to STDOUT by default\n\n";
+  exit;
+}
+open( HANDLE, $ARGV[0] ) or die "\nERROR: Couldn't open input file $ARGV[0]!\n";
+if ( defined( $ARGV[1] ) ) {
+  open( STDOUT, ">" . $ARGV[1] )
+    or die "\nERROR: Couldn't redirect output to $ARGV[1]!\n";
+}
+
+#
+$infunc = 0;
+#
+# Parse the lines of the file and process them...
+#
+while (<HANDLE>) {
+  chomp;
+  if (/^[a-zA-Z].*\(.*\)/) {
+    $infunc = 1;
+    print "#include <stdint.h>\n";
+    print "#include <stdio.h>\n";
+    #
+    # MAX_EXPR and MIN_EXPR duplicate the MAX and MIN expressions in GIMPLE.
+    #
+    print "#define MAX_EXPR(X,Y) ((X) > (Y) ? (X) : (Y))\n";
+    print "#define MIN_EXPR(X,Y) ((X) < (Y) ? (X) : (Y))\n";
+    #
+    # The DUMPVAR and DUMPDBLVAR provide easy means to print the value of
+    # a variable. The first argument is the name of the variable and the second
+    # is the number of fraction and empty bits in its format.
+    #
+    print "#define DUMPVAR(A,B) printf(#A\" 0X%08X %10.6f\\n\", A, ((float)A)/(1UL << B));\n";
+    print "#define DUMPDBLVAR(A,B) printf(#A\" 0X%016llX %10.6f\\n\", (long long unsigned int) A, ((float)A)/(1UL << B));\n";
+    print "int32_t ";
+  }
+  if ($infunc) {
+    s/long long int/int64_t/;
+    s/long int/int32_t/;
+    s/short int/int16_t/;
+    s/\bchar\b/int8_t/;
+    s/\bint\b/int32_t/;
+    s/unsigned int/uint/;
+    # pointers to arrays become just pointers
+    s/int([36][24])_t\[\d+\] \* (\S+[;)])/int$1_t *$2/;
+    #
+    # Clean up variable names for C
+    #
+    s/#/\/\//;
+    s/D\.(\d+)/D$1/g;
+    s/([A-Za-z]\w*)\.(\d+)/$1_$2/g;
+    #
+    # fix assignments
+    #
+    if ( (/ = /) || (/\breturn\b/) ) {
+      s/\b(\w+)_\d+\b/$1/g;    # must be first
+      s/\(D\)//g;
+      #
+      # fix pointer-to-array references
+      #
+      s/=\s+\*(\w[\w_]+\[\w+\])/= $1/;
+      s/\*(\w[\w_]+\[\w+\]) =/$1 =/;
+      #
+      # replace _fx_ variables
+      #
+      while (/(_fx_\w+)/) {
+        $name = $1;
+        s/_fx_\w+/$replacement{$name}/e;
+      }
+      #
+      # fix array stride (SSA uses # bytes instead of # elements)
+      #
+      if (/\b(\w+)\s+=\s+(\w+)\s+\+\s+(\w+);/) {
+        $op0 = $1;
+        $op1 = $2;
+        $op2 = $3;
+        if ( ( exists $pointer{$op0} ) && ( exists $pointer{$op1} ) ) {
+          $new = "+ (" . $op2 . "/sizeof(*" . $op1 . "));";
+          s/\+.*/$new/e;
+        }
+      }
+      #
+      # fix double-precision multiplies
+      #
+      if (/ w\* /) {
+        s/=/= (int64_t)/;
+        s/w\*/\*/;
+      }
+      #
+      # Add a divide-by-zero check to division
+      #
+      if (/([a-zA-Z]\w*) = [a-zA-Z]\w* \/ ([a-zA-Z]\w*);/) {
+        print "  if ($2 == 0) fprintf(stderr,\" Divide by zero $1 \\n\");\n";
+      }
+      #
+      # Declare long constants to be unsigned and long or long long
+      #
+      if (/\s(\d{5,});/) {
+        if (/uint/) {
+          s/;/U;/;
+        }
+        s/;/L;/;
+        if (/\s(\d{9,})[UL;]/) {
+          s/;/L;/;
+        }
+      }
+      #
+      # MIN and MAX are macros
+      #
+      s/_EXPR <(.*)>/_EXPR($1)/;
+      #
+      # force an int return value to be consistent with assumed function type
+      #
+      s/return;/return 0;/;
+    #
+    # fix PHI nodes
+    #
+    } elsif ( (/<bb\s\d+>/) || (/\bif\b/) ) {
+      s/\b(\w+)_\d+\b/$1/g;    # must be first
+      s/<bb\s(\d+)>/bb$1/;
+    #
+    # fix variable declarations
+    #
+    } else {
+      if (/(u?int[136][246])_t\s+\*?(\w+)/) {
+        $type = $1;
+        $name = $2;
+        if ( exists $declared{$name} ) {
+          $_ = "";
+        }
+        $declared{$name} = 1;
+        if (/\s+\*/) {
+          $pointer{$name} = 1;
+        }
+        if (/_fx_/) {
+          $base = $name;
+          $base =~ s/_fx_([a-z]+\d)_\d+/$1/g;
+          $type =~ s/int64/LL/;
+          $type =~ s/int32/L/;
+          $type =~ s/int16/H/;
+          $type =~ s/u/U/;
+          $commonname = $base . $type;
+          if ( exists $declared{$commonname} ) {
+            $_ = "";
+          } else {
+            s/_fx_\w+/$commonname/e;
+          }
+          $declared{$commonname} = 1;
+          $replacement{$name}    = $commonname;
+        }
+      }
+    }
+    if ( length($_) > 0 ) { print "$_\n"; }
+  }
+  if (/^}/) { $infunc = 0; }
+}
+
+#
+close(HANDLE);

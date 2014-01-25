@@ -1,0 +1,18 @@
+\form#0:\[ coeff \times 2^{-bp} \]
+\form#1:$N$
+\form#2:$-2^{N-1}$
+\form#3:$2^{N-1}-1$
+\form#4:\[Mantissa \times 2^{Exponent}\]
+\form#5:$2^0$
+\form#6:$2^1$
+\form#7:$2^2$
+\form#8:$2^{-1}$
+\form#9:$2^{-12}$
+\form#10:$I$
+\form#11:$F$
+\form#12:$-2^{I}$
+\form#13:$2^I-2^{-F} \approx 2^I$
+\form#14:$2^{-F}$
+\form#15:$432538 / 2^{17} = 3.30000305176$
+\form#16:$1/4096$
+\form#17:$1\times 2^{-12}$

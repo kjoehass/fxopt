@@ -7,10 +7,17 @@ var NAVTREE =
     [ "Using fxopt", "index.html#using", [
       [ "Installing fxopt", "index.html#install", null ],
       [ "Preparing the source file", "index.html#prep", null ],
-      [ "Running the compiler", "index.html#run", null ]
+      [ "Running the compiler", "index.html#run", null ],
+      [ "Controlling the conversion process", "index.html#options", null ]
     ] ],
-    [ "GNU Free Documentation License", "index.html#copyright", null ],
+    [ "DCT Example", "dctexmpl.html", [
+      [ "Introduction", "dctexmpl.html#intro", null ],
+      [ "Evaluations", "dctexmpl.html#evaluations", null ],
+      [ "Results", "dctexmpl.html#results", null ]
+    ] ],
+    [ "GNU Free Documentation License", "copyright.html", null ],
     [ "Todo List", "todo.html", null ],
+    [ "Modules", "modules.html", "modules" ],
     [ "Data Structures", null, [
       [ "Data Structures", "annotated.html", "annotated" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -34,7 +41,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"globals_c.html"
+"fxopt__range_8c.html#a21def8691d50beb931337419659ec39e"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

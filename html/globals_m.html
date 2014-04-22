@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -123,7 +124,7 @@ $(document).ready(function(){initNavTree('globals_m.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -136,8 +137,19 @@ $(document).ready(function(){initNavTree('globals_m.html','');});
 <div class="textblock">Here is a list of all functions, variables, defines, enums, and typedefs with links to the files they belong to:</div>
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>main()
+: <a class="el" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main.c</a>
+</li>
 <li>MAX_ELEMENTS
 : <a class="el" href="fxopt__plugin_8h.html#af124795c150434ff274e1572bee8eba9">fxopt_plugin.h</a>
+</li>
+<li>MAX_EXPR
+: <a class="el" href="dct__da_8c.html#aec08fd23e72352919980866ad6becf20">dct_da.c</a>
+, <a class="el" href="dct__rda_8c.html#aec08fd23e72352919980866ad6becf20">dct_rda.c</a>
+, <a class="el" href="dct__pa_8c.html#aec08fd23e72352919980866ad6becf20">dct_pa.c</a>
+, <a class="el" href="dct__a_8c.html#aec08fd23e72352919980866ad6becf20">dct_a.c</a>
+, <a class="el" href="dct__pda_8c.html#aec08fd23e72352919980866ad6becf20">dct_pda.c</a>
+, <a class="el" href="dct__ra_8c.html#aec08fd23e72352919980866ad6becf20">dct_ra.c</a>
 </li>
 <li>max_is_mnn()
 : <a class="el" href="fxopt__plugin_8h.html#a4e1141dd0d204692f822763e485a34f7">fxopt_plugin.h</a>
@@ -146,9 +158,29 @@ $(document).ready(function(){initNavTree('globals_m.html','');});
 <li>MAX_PASSES
 : <a class="el" href="fxopt__plugin_8h.html#ac375c87c2a09616f10a6db6bd7dc45bb">fxopt_plugin.h</a>
 </li>
+<li>MAX_RAND
+: <a class="el" href="main_8c.html#ab3aae19d7f5ef86b69b55a19bcd62e06">main.c</a>
+</li>
+<li>MIN_EXPR
+: <a class="el" href="dct__pda_8c.html#af943ed7bf812ae436282a749e888e081">dct_pda.c</a>
+, <a class="el" href="dct__ra_8c.html#af943ed7bf812ae436282a749e888e081">dct_ra.c</a>
+, <a class="el" href="dct__rda_8c.html#af943ed7bf812ae436282a749e888e081">dct_rda.c</a>
+, <a class="el" href="dct__pa_8c.html#af943ed7bf812ae436282a749e888e081">dct_pa.c</a>
+, <a class="el" href="dct__a_8c.html#af943ed7bf812ae436282a749e888e081">dct_a.c</a>
+, <a class="el" href="dct__da_8c.html#af943ed7bf812ae436282a749e888e081">dct_da.c</a>
+</li>
+<li>MNN
+: <a class="el" href="main_8c.html#a56efee2a599f68e3ae537f1ee6314775">main.c</a>
+</li>
 <li>multiplication()
-: <a class="el" href="fxopt__plugin_8h.html#abee316a4cfbde39a6337009ee53eda6a">fxopt_plugin.h</a>
-, <a class="el" href="fxopt__stmts_8c.html#abee316a4cfbde39a6337009ee53eda6a">fxopt_stmts.c</a>
+: <a class="el" href="fxopt__stmts_8c.html#abee316a4cfbde39a6337009ee53eda6a">fxopt_stmts.c</a>
+, <a class="el" href="fxopt__plugin_8h.html#abee316a4cfbde39a6337009ee53eda6a">fxopt_plugin.h</a>
+</li>
+<li>myrand()
+: <a class="el" href="main_8c.html#a73c5876137a6346125b7a8808e72ce26">main.c</a>
+</li>
+<li>mysrand()
+: <a class="el" href="main_8c.html#af62eae29a0570b3993568280589a5003">main.c</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -156,7 +188,7 @@ $(document).ready(function(){initNavTree('globals_m.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Jan 8 2014 12:19:55 for fxopt by
+    <li class="footer">Generated on Tue Apr 22 2014 19:02:48 for fxopt by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

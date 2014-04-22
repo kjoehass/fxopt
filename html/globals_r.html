@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -123,7 +124,7 @@ $(document).ready(function(){initNavTree('globals_r.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -136,21 +137,24 @@ $(document).ready(function(){initNavTree('globals_r.html','');});
 <div class="textblock">Here is a list of all functions, variables, defines, enums, and typedefs with links to the files they belong to:</div>
 
 <h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
+<li>RANDBITS
+: <a class="el" href="main_8c.html#ab3b6a1e4ecd2e8b3e4b7bab310129943">main.c</a>
+</li>
 <li>range_compare()
 : <a class="el" href="fxopt__plugin_8h.html#a7b9615f4545c3a34ce89a781965c1578">fxopt_plugin.h</a>
 , <a class="el" href="fxopt__range_8c.html#a7b9615f4545c3a34ce89a781965c1578">fxopt_range.c</a>
 </li>
 <li>range_max()
-: <a class="el" href="fxopt__range_8c.html#afaab1eab8bda2b756dce2e9a74bdf17e">fxopt_range.c</a>
-, <a class="el" href="fxopt__plugin_8h.html#afaab1eab8bda2b756dce2e9a74bdf17e">fxopt_plugin.h</a>
+: <a class="el" href="fxopt__plugin_8h.html#afaab1eab8bda2b756dce2e9a74bdf17e">fxopt_plugin.h</a>
+, <a class="el" href="fxopt__range_8c.html#afaab1eab8bda2b756dce2e9a74bdf17e">fxopt_range.c</a>
 </li>
 <li>range_min()
 : <a class="el" href="fxopt__plugin_8h.html#a7fd7d3c6250a4999f948aa7542a0d228">fxopt_plugin.h</a>
 , <a class="el" href="fxopt__range_8c.html#a7fd7d3c6250a4999f948aa7542a0d228">fxopt_range.c</a>
 </li>
 <li>real_expr_to_integer()
-: <a class="el" href="fxopt__utils_8c.html#ad9d1b57a8608fc8ed021daee4f23a72e">fxopt_utils.c</a>
-, <a class="el" href="fxopt__plugin_8h.html#ad9d1b57a8608fc8ed021daee4f23a72e">fxopt_plugin.h</a>
+: <a class="el" href="fxopt__plugin_8h.html#ad9d1b57a8608fc8ed021daee4f23a72e">fxopt_plugin.h</a>
+, <a class="el" href="fxopt__utils_8c.html#ad9d1b57a8608fc8ed021daee4f23a72e">fxopt_utils.c</a>
 </li>
 <li>real_max()
 : <a class="el" href="fxopt__plugin_8h.html#a22781c7f4b2c2e46cd5d52fe0b64a68f">fxopt_plugin.h</a>
@@ -170,13 +174,29 @@ $(document).ready(function(){initNavTree('globals_r.html','');});
 : <a class="el" href="fxopt__plugin_8h.html#a90f0d05c95b84a24eefe0f01cea768e2">fxopt_plugin.h</a>
 , <a class="el" href="fxopt__utils_8c.html#a90f0d05c95b84a24eefe0f01cea768e2">fxopt_utils.c</a>
 </li>
+<li>RETURNE
+: <a class="el" href="dct__da_8c.html#a412b4bf30d61839543455040705bf79a">dct_da.c</a>
+, <a class="el" href="dct__a_8c.html#a412b4bf30d61839543455040705bf79a">dct_a.c</a>
+, <a class="el" href="dct__pa_8c.html#a412b4bf30d61839543455040705bf79a">dct_pa.c</a>
+, <a class="el" href="dct__pda_8c.html#a412b4bf30d61839543455040705bf79a">dct_pda.c</a>
+, <a class="el" href="dct__ra_8c.html#a412b4bf30d61839543455040705bf79a">dct_ra.c</a>
+, <a class="el" href="dct__rda_8c.html#a412b4bf30d61839543455040705bf79a">dct_rda.c</a>
+</li>
+<li>RETURNF
+: <a class="el" href="dct__pa_8c.html#a1248bda9cd021fc3177344ba54f47d7e">dct_pa.c</a>
+, <a class="el" href="dct__ra_8c.html#a1248bda9cd021fc3177344ba54f47d7e">dct_ra.c</a>
+, <a class="el" href="dct__pda_8c.html#a1248bda9cd021fc3177344ba54f47d7e">dct_pda.c</a>
+, <a class="el" href="dct__rda_8c.html#a1248bda9cd021fc3177344ba54f47d7e">dct_rda.c</a>
+, <a class="el" href="dct__da_8c.html#a1248bda9cd021fc3177344ba54f47d7e">dct_da.c</a>
+, <a class="el" href="dct__a_8c.html#a1248bda9cd021fc3177344ba54f47d7e">dct_a.c</a>
+</li>
 <li>ROUNDING
-: <a class="el" href="fxopt__plugin_8h.html#af1c2d3bd684953a9ceb6ea396153ae87">fxopt_plugin.h</a>
-, <a class="el" href="fxopt__plugin_8c.html#af1c2d3bd684953a9ceb6ea396153ae87">fxopt_plugin.c</a>
+: <a class="el" href="fxopt__plugin_8c.html#af1c2d3bd684953a9ceb6ea396153ae87">fxopt_plugin.c</a>
+, <a class="el" href="fxopt__plugin_8h.html#af1c2d3bd684953a9ceb6ea396153ae87">fxopt_plugin.h</a>
 </li>
 <li>rounding_may_overflow()
-: <a class="el" href="fxopt__range_8c.html#a1dc92e76034214debf80ce3ebd4a44df">fxopt_range.c</a>
-, <a class="el" href="fxopt__plugin_8h.html#a1dc92e76034214debf80ce3ebd4a44df">fxopt_plugin.h</a>
+: <a class="el" href="fxopt__plugin_8h.html#a1dc92e76034214debf80ce3ebd4a44df">fxopt_plugin.h</a>
+, <a class="el" href="fxopt__range_8c.html#a1dc92e76034214debf80ce3ebd4a44df">fxopt_range.c</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -184,7 +204,7 @@ $(document).ready(function(){initNavTree('globals_r.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Jan 8 2014 12:19:55 for fxopt by
+    <li class="footer">Generated on Tue Apr 22 2014 19:02:48 for fxopt by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

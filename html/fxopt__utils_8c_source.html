@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -92,7 +93,7 @@ $(document).ready(function(){initNavTree('fxopt__utils_8c_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -1561,7 +1562,7 @@ $(document).ready(function(){initNavTree('fxopt__utils_8c_source.html','');});
 <div class="line"><a name="l01903"></a><span class="lineno"> 1903</span>&#160;          tree satpos_var =</div>
 <div class="line"><a name="l01904"></a><span class="lineno"> 1904</span>&#160;              make_rename_temp(TREE_TYPE(*result_var_p), <span class="stringliteral">&quot;_fx_satpos0&quot;</span>);</div>
 <div class="line"><a name="l01905"></a><span class="lineno"> 1905</span>&#160;          new_stmt =</div>
-<div class="line"><a name="l01906"></a><span class="lineno"> 1906</span>&#160;              gimple_build_assign_with_ops(MIN_EXPR, satpos_var,</div>
+<div class="line"><a name="l01906"></a><span class="lineno"> 1906</span>&#160;              gimple_build_assign_with_ops(<a class="code" href="dct__a_8c.html#af943ed7bf812ae436282a749e888e081">MIN_EXPR</a>, satpos_var,</div>
 <div class="line"><a name="l01907"></a><span class="lineno"> 1907</span>&#160;                                           *result_var_p, maxpos_var);</div>
 <div class="line"><a name="l01908"></a><span class="lineno"> 1908</span>&#160;          <a class="code" href="fxopt__plugin_8h.html#a876c8b44be0037b8595d6cca4e4da2f6">print_gimple_stmt</a>(stderr, new_stmt, 2, 0);</div>
 <div class="line"><a name="l01909"></a><span class="lineno"> 1909</span>&#160;          <span class="comment">//gimple_set_visited(new_stmt, true);</span></div>
@@ -1581,7 +1582,7 @@ $(document).ready(function(){initNavTree('fxopt__utils_8c_source.html','');});
 <div class="line"><a name="l01923"></a><span class="lineno"> 1923</span>&#160;</div>
 <div class="line"><a name="l01924"></a><span class="lineno"> 1924</span>&#160;          tree sat_var = make_rename_temp(TREE_TYPE(*result_var_p), <span class="stringliteral">&quot;_fx_sat0&quot;</span>);</div>
 <div class="line"><a name="l01925"></a><span class="lineno"> 1925</span>&#160;          new_stmt =</div>
-<div class="line"><a name="l01926"></a><span class="lineno"> 1926</span>&#160;              gimple_build_assign_with_ops(MAX_EXPR, sat_var, *result_var_p,</div>
+<div class="line"><a name="l01926"></a><span class="lineno"> 1926</span>&#160;              gimple_build_assign_with_ops(<a class="code" href="dct__a_8c.html#aec08fd23e72352919980866ad6becf20">MAX_EXPR</a>, sat_var, *result_var_p,</div>
 <div class="line"><a name="l01927"></a><span class="lineno"> 1927</span>&#160;                                           minneg_var);</div>
 <div class="line"><a name="l01928"></a><span class="lineno"> 1928</span>&#160;          <a class="code" href="fxopt__plugin_8h.html#a876c8b44be0037b8595d6cca4e4da2f6">print_gimple_stmt</a>(stderr, new_stmt, 2, 0);</div>
 <div class="line"><a name="l01929"></a><span class="lineno"> 1929</span>&#160;          <span class="comment">//gimple_set_visited(new_stmt, true);</span></div>
@@ -1772,7 +1773,9 @@ $(document).ready(function(){initNavTree('fxopt__utils_8c_source.html','');});
 <div class="ttc" id="fxopt__plugin_8h_html_afaab1eab8bda2b756dce2e9a74bdf17e"><div class="ttname"><a href="fxopt__plugin_8h.html#afaab1eab8bda2b756dce2e9a74bdf17e">range_max</a></div><div class="ttdeci">double_int range_max(struct SIF fmt1, struct SIF fmt2)</div><div class="ttdoc">Determine the larger range max value of two formats. </div><div class="ttdef"><b>Definition:</b> <a href="fxopt__range_8c_source.html#l00426">fxopt_range.c:426</a></div></div>
 <div class="ttc" id="fxopt__plugin_8c_html_a56edbda4dd15509d5347fa917ea5b9ed"><div class="ttname"><a href="fxopt__plugin_8c.html#a56edbda4dd15509d5347fa917ea5b9ed">lastpass</a></div><div class="ttdeci">int lastpass</div><div class="ttdoc">Set to true when all formats are resolved and code can be generated. </div><div class="ttdef"><b>Definition:</b> <a href="fxopt__plugin_8c_source.html#l00039">fxopt_plugin.c:39</a></div></div>
 <div class="ttc" id="fxopt__plugin_8h_html_a4f8811d5916fc02d3ea3369cd63c8583"><div class="ttname"><a href="fxopt__plugin_8h.html#a4f8811d5916fc02d3ea3369cd63c8583">KEY_TO_PASS</a></div><div class="ttdeci">#define KEY_TO_PASS(x)</div><div class="ttdef"><b>Definition:</b> <a href="fxopt__plugin_8h_source.html#l00053">fxopt_plugin.h:53</a></div></div>
+<div class="ttc" id="dct__a_8c_html_af943ed7bf812ae436282a749e888e081"><div class="ttname"><a href="dct__a_8c.html#af943ed7bf812ae436282a749e888e081">MIN_EXPR</a></div><div class="ttdeci">#define MIN_EXPR(X, Y)</div><div class="ttdef"><b>Definition:</b> <a href="dct__a_8c_source.html#l00008">dct_a.c:8</a></div></div>
 <div class="ttc" id="fxopt__plugin_8h_html_ace046b3f15f31d2cdb41c1126fd00517"><div class="ttname"><a href="fxopt__plugin_8h.html#ace046b3f15f31d2cdb41c1126fd00517">error</a></div><div class="ttdeci">void error(const char *,...)</div></div>
+<div class="ttc" id="dct__a_8c_html_aec08fd23e72352919980866ad6becf20"><div class="ttname"><a href="dct__a_8c.html#aec08fd23e72352919980866ad6becf20">MAX_EXPR</a></div><div class="ttdeci">#define MAX_EXPR(X, Y)</div><div class="ttdef"><b>Definition:</b> <a href="dct__a_8c_source.html#l00007">dct_a.c:7</a></div></div>
 <div class="ttc" id="fxopt__utils_8c_html_ab466c1d9b394c4af2ee51b9349253c57"><div class="ttname"><a href="fxopt__utils_8c.html#ab466c1d9b394c4af2ee51b9349253c57">id_sort</a></div><div class="ttdeci">int id_sort(struct SIF *a, struct SIF *b)</div><div class="ttdoc">Sorting function for variable SIF definitions. </div><div class="ttdef"><b>Definition:</b> <a href="fxopt__utils_8c_source.html#l00048">fxopt_utils.c:48</a></div></div>
 <div class="ttc" id="struct_s_i_f_html_aa036ca42a7b23ff2e6f7f76b465b35e1"><div class="ttname"><a href="struct_s_i_f.html#aa036ca42a7b23ff2e6f7f76b465b35e1">SIF::attrI</a></div><div class="ttdeci">int attrI</div><div class="ttdoc">I value assigned by an fxfrmt attribute, if any. </div><div class="ttdef"><b>Definition:</b> <a href="fxopt__plugin_8h_source.html#l00140">fxopt_plugin.h:140</a></div></div>
 <div class="ttc" id="fxopt__utils_8c_html_a22781c7f4b2c2e46cd5d52fe0b64a68f"><div class="ttname"><a href="fxopt__utils_8c.html#a22781c7f4b2c2e46cd5d52fe0b64a68f">real_max</a></div><div class="ttdeci">float real_max(struct SIF *op_fmt)</div><div class="ttdoc">Return range maximum as a floating-point value. </div><div class="ttdef"><b>Definition:</b> <a href="fxopt__utils_8c_source.html#l00304">fxopt_utils.c:304</a></div></div>
@@ -1785,7 +1788,7 @@ $(document).ready(function(){initNavTree('fxopt__utils_8c_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="fxopt__utils_8c.html">fxopt_utils.c</a></li>
-    <li class="footer">Generated on Wed Jan 8 2014 12:19:55 for fxopt by
+    <li class="footer">Generated on Tue Apr 22 2014 19:02:38 for fxopt by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

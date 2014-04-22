@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -92,7 +93,7 @@ $(document).ready(function(){initNavTree('fxopt__utils_8c.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -106,7 +107,7 @@ $(document).ready(function(){initNavTree('fxopt__utils_8c.html','');});
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">fxopt_utils.c File Reference</div>  </div>
+<div class="title">fxopt_utils.c File Reference<div class="ingroups"><a class="el" href="group__fxoptfiles.html">fxopt Source Code</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -255,7 +256,7 @@ Last modified: 2014-01-05T12:44:22-0500</dd></dl>
 <dd>
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</dd>
 <dd>
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </dd></dl>
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</dd></dl>
 
 <p>Definition in file <a class="el" href="fxopt__utils_8c_source.html">fxopt_utils.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
@@ -579,7 +580,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 <div class="line"><a name="l01903"></a><span class="lineno"> 1903</span>&#160;          tree satpos_var =</div>
 <div class="line"><a name="l01904"></a><span class="lineno"> 1904</span>&#160;              make_rename_temp(TREE_TYPE(*result_var_p), <span class="stringliteral">&quot;_fx_satpos0&quot;</span>);</div>
 <div class="line"><a name="l01905"></a><span class="lineno"> 1905</span>&#160;          new_stmt =</div>
-<div class="line"><a name="l01906"></a><span class="lineno"> 1906</span>&#160;              gimple_build_assign_with_ops(MIN_EXPR, satpos_var,</div>
+<div class="line"><a name="l01906"></a><span class="lineno"> 1906</span>&#160;              gimple_build_assign_with_ops(<a class="code" href="dct__a_8c.html#af943ed7bf812ae436282a749e888e081">MIN_EXPR</a>, satpos_var,</div>
 <div class="line"><a name="l01907"></a><span class="lineno"> 1907</span>&#160;                                           *result_var_p, maxpos_var);</div>
 <div class="line"><a name="l01908"></a><span class="lineno"> 1908</span>&#160;          <a class="code" href="fxopt__plugin_8h.html#a876c8b44be0037b8595d6cca4e4da2f6">print_gimple_stmt</a>(stderr, new_stmt, 2, 0);</div>
 <div class="line"><a name="l01909"></a><span class="lineno"> 1909</span>&#160;          <span class="comment">//gimple_set_visited(new_stmt, true);</span></div>
@@ -599,7 +600,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 <div class="line"><a name="l01923"></a><span class="lineno"> 1923</span>&#160;</div>
 <div class="line"><a name="l01924"></a><span class="lineno"> 1924</span>&#160;          tree sat_var = make_rename_temp(TREE_TYPE(*result_var_p), <span class="stringliteral">&quot;_fx_sat0&quot;</span>);</div>
 <div class="line"><a name="l01925"></a><span class="lineno"> 1925</span>&#160;          new_stmt =</div>
-<div class="line"><a name="l01926"></a><span class="lineno"> 1926</span>&#160;              gimple_build_assign_with_ops(MAX_EXPR, sat_var, *result_var_p,</div>
+<div class="line"><a name="l01926"></a><span class="lineno"> 1926</span>&#160;              gimple_build_assign_with_ops(<a class="code" href="dct__a_8c.html#aec08fd23e72352919980866ad6becf20">MAX_EXPR</a>, sat_var, *result_var_p,</div>
 <div class="line"><a name="l01927"></a><span class="lineno"> 1927</span>&#160;                                           minneg_var);</div>
 <div class="line"><a name="l01928"></a><span class="lineno"> 1928</span>&#160;          <a class="code" href="fxopt__plugin_8h.html#a876c8b44be0037b8595d6cca4e4da2f6">print_gimple_stmt</a>(stderr, new_stmt, 2, 0);</div>
 <div class="line"><a name="l01929"></a><span class="lineno"> 1929</span>&#160;          <span class="comment">//gimple_set_visited(new_stmt, true);</span></div>
@@ -711,6 +712,8 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 <div class="ttc" id="fxopt__plugin_8h_html_a8af14854697d422bb08fef6b1db132f4"><div class="ttname"><a href="fxopt__plugin_8h.html#a8af14854697d422bb08fef6b1db132f4">double_int_positive_p</a></div><div class="ttdeci">bool double_int_positive_p(double_int dblint)</div><div class="ttdoc">Test a double_int for being positive. </div><div class="ttdef"><b>Definition:</b> <a href="fxopt__range_8c_source.html#l00080">fxopt_range.c:80</a></div></div>
 <div class="ttc" id="struct_s_i_f_html_a23d0132158a81b4458e2a3f455796d19"><div class="ttname"><a href="struct_s_i_f.html#a23d0132158a81b4458e2a3f455796d19">SIF::shift</a></div><div class="ttdeci">int shift</div><div class="ttdef"><b>Definition:</b> <a href="fxopt__plugin_8h_source.html#l00128">fxopt_plugin.h:128</a></div></div>
 <div class="ttc" id="fxopt__plugin_8c_html_a56edbda4dd15509d5347fa917ea5b9ed"><div class="ttname"><a href="fxopt__plugin_8c.html#a56edbda4dd15509d5347fa917ea5b9ed">lastpass</a></div><div class="ttdeci">int lastpass</div><div class="ttdoc">Set to true when all formats are resolved and code can be generated. </div><div class="ttdef"><b>Definition:</b> <a href="fxopt__plugin_8c_source.html#l00039">fxopt_plugin.c:39</a></div></div>
+<div class="ttc" id="dct__a_8c_html_af943ed7bf812ae436282a749e888e081"><div class="ttname"><a href="dct__a_8c.html#af943ed7bf812ae436282a749e888e081">MIN_EXPR</a></div><div class="ttdeci">#define MIN_EXPR(X, Y)</div><div class="ttdef"><b>Definition:</b> <a href="dct__a_8c_source.html#l00008">dct_a.c:8</a></div></div>
+<div class="ttc" id="dct__a_8c_html_aec08fd23e72352919980866ad6becf20"><div class="ttname"><a href="dct__a_8c.html#aec08fd23e72352919980866ad6becf20">MAX_EXPR</a></div><div class="ttdeci">#define MAX_EXPR(X, Y)</div><div class="ttdef"><b>Definition:</b> <a href="dct__a_8c_source.html#l00007">dct_a.c:7</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3453,7 +3456,7 @@ This only works for binary expressions, for unary expressions the "rhs_code" is 
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="fxopt__utils_8c.html">fxopt_utils.c</a></li>
-    <li class="footer">Generated on Wed Jan 8 2014 12:19:55 for fxopt by
+    <li class="footer">Generated on Tue Apr 22 2014 19:02:38 for fxopt by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

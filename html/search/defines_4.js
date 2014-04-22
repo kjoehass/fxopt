@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['logical',['LOGICAL',['../fxopt__plugin_8h.html#a5e225b86d7b20056ee34b49f436fe6ca',1,'fxopt_plugin.h']]],
-  ['lost_5ff_5fbits',['LOST_F_BITS',['../fxopt__plugin_8h.html#a7b9c839fdfafa524acb81103943ef8fc',1,'fxopt_plugin.h']]]
+  ['info_5fbits',['INFO_BITS',['../fxopt__plugin_8c.html#a6169458d9870790151f886393126ff99',1,'INFO_BITS():&#160;fxopt_plugin.c'],['../fxopt__plugin_8h.html#a6169458d9870790151f886393126ff99',1,'INFO_BITS():&#160;fxopt_plugin.h']]]
 ];

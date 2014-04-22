@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['precision',['PRECISION',['../fxopt__plugin_8h.html#a2bd535fc6e6b20080752929e0bf44cab',1,'fxopt_plugin.h']]],
-  ['print',['PRINT',['../fxopt__plugin_8h.html#a8b43bafee90b30676faae508c21cb8d7',1,'fxopt_plugin.h']]],
-  ['print_5fdouble_5fhex',['PRINT_DOUBLE_HEX',['../fxopt__range_8c.html#ab8ad28cf68bfdbc0b9c23e4a66fb2498',1,'fxopt_range.c']]],
-  ['print_5fdouble_5fhex_5f16',['PRINT_DOUBLE_HEX_16',['../fxopt__range_8c.html#a964c7fc64fa52e76add3712f7f7a258e',1,'fxopt_range.c']]],
-  ['print_5fdouble_5fhex_5f32',['PRINT_DOUBLE_HEX_32',['../fxopt__range_8c.html#acd2816f128173eada989a6c037b51a1e',1,'fxopt_range.c']]],
-  ['print_5fdouble_5fhex_5flow',['PRINT_DOUBLE_HEX_LOW',['../fxopt__range_8c.html#a21def8691d50beb931337419659ec39e',1,'fxopt_range.c']]]
+  ['max_5felements',['MAX_ELEMENTS',['../fxopt__plugin_8h.html#af124795c150434ff274e1572bee8eba9',1,'fxopt_plugin.h']]],
+  ['max_5fexpr',['MAX_EXPR',['../dct__a_8c.html#aec08fd23e72352919980866ad6becf20',1,'MAX_EXPR():&#160;dct_a.c'],['../dct__da_8c.html#aec08fd23e72352919980866ad6becf20',1,'MAX_EXPR():&#160;dct_da.c'],['../dct__pa_8c.html#aec08fd23e72352919980866ad6becf20',1,'MAX_EXPR():&#160;dct_pa.c'],['../dct__pda_8c.html#aec08fd23e72352919980866ad6becf20',1,'MAX_EXPR():&#160;dct_pda.c'],['../dct__ra_8c.html#aec08fd23e72352919980866ad6becf20',1,'MAX_EXPR():&#160;dct_ra.c'],['../dct__rda_8c.html#aec08fd23e72352919980866ad6becf20',1,'MAX_EXPR():&#160;dct_rda.c']]],
+  ['max_5fpasses',['MAX_PASSES',['../fxopt__plugin_8h.html#ac375c87c2a09616f10a6db6bd7dc45bb',1,'fxopt_plugin.h']]],
+  ['max_5frand',['MAX_RAND',['../main_8c.html#ab3aae19d7f5ef86b69b55a19bcd62e06',1,'main.c']]],
+  ['min_5fexpr',['MIN_EXPR',['../dct__a_8c.html#af943ed7bf812ae436282a749e888e081',1,'MIN_EXPR():&#160;dct_a.c'],['../dct__da_8c.html#af943ed7bf812ae436282a749e888e081',1,'MIN_EXPR():&#160;dct_da.c'],['../dct__pa_8c.html#af943ed7bf812ae436282a749e888e081',1,'MIN_EXPR():&#160;dct_pa.c'],['../dct__pda_8c.html#af943ed7bf812ae436282a749e888e081',1,'MIN_EXPR():&#160;dct_pda.c'],['../dct__ra_8c.html#af943ed7bf812ae436282a749e888e081',1,'MIN_EXPR():&#160;dct_ra.c'],['../dct__rda_8c.html#af943ed7bf812ae436282a749e888e081',1,'MIN_EXPR():&#160;dct_rda.c']]],
+  ['mnn',['MNN',['../main_8c.html#a56efee2a599f68e3ae537f1ee6314775',1,'main.c']]]
 ];

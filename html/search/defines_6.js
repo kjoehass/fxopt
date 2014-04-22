@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['noprint',['NOPRINT',['../fxopt__plugin_8h.html#a1934f7f19def21658d04f1cf4bb948b5',1,'fxopt_plugin.h']]],
-  ['not_5fan_5farray',['NOT_AN_ARRAY',['../fxopt__plugin_8h.html#aeaa24dc28d2cae85c4c92370d64310a3',1,'fxopt_plugin.h']]]
+  ['logical',['LOGICAL',['../fxopt__plugin_8h.html#a5e225b86d7b20056ee34b49f436fe6ca',1,'fxopt_plugin.h']]],
+  ['lost_5ff_5fbits',['LOST_F_BITS',['../fxopt__plugin_8h.html#a7b9c839fdfafa524acb81103943ef8fc',1,'fxopt_plugin.h']]]
 ];

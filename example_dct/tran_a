@@ -1,0 +1,2742 @@
+Invoking: GCC C Compiler
+gcc -O2 -g3 -Wall -c -nostdinc -ggdb -mcpu=cortex-m3 -mthumb -fno-use-linker-plugin -fplugin=/home/kjh016/proj/fxplugin/gccplugin//fxopt.so -fplugin-arg-fxopt-ref-pass-name=ssa -fplugin-arg-fxopt-ref-pass-instance-num=1 -fplugin-arg-fxopt-affine -DFORMAT="((fxfrmt(1,7,24,0x00FFFFFF,0xFF000001)))" -fdump-tree-veclower -o"dct.o" "dct.c"
+fxopt: using affine arithmetic
+  ===== Setting formats of declared vars =====
+  ===== Marking induction variables =====
+  ===== Marking induction variable statements =====
+  ===== Marking induction variable statements 2 =====
+  ===== Marking statements not visited =====
+  ===== Starting pass 1 =====
+  ======= Starting basic block 1 =====
+row_3 = 0;
+-------------------------------- 1 1
+# DEBUG row => row_3
+-------------------------------- 1 1
+  End of a basic block
+  ======= Starting basic block 2 =====
+row.0_4 = (unsigned int) row_1;
+-------------------------------- 2 1
+D.1978_5 = row.0_4 * 64;
+-------------------------------- 2 1
+D.1979_7 = dctBlock_6(D) + D.1978_5;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+x0_8 = *D.1979_7[0];
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock[0]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[0]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+# DEBUG x0 => x0_8
+-------------------------------- 2 1
+row.0_9 = (unsigned int) row_1;
+-------------------------------- 2 1
+D.1978_10 = row.0_9 * 64;
+-------------------------------- 2 1
+D.1979_11 = dctBlock_6(D) + D.1978_10;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+x1_12 = *D.1979_11[1];
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock[1]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+# DEBUG x1 => x1_12
+-------------------------------- 2 1
+row.0_13 = (unsigned int) row_1;
+-------------------------------- 2 1
+D.1978_14 = row.0_13 * 64;
+-------------------------------- 2 1
+D.1979_15 = dctBlock_6(D) + D.1978_14;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+x2_16 = *D.1979_15[2];
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock[2]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[2]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+# DEBUG x2 => x2_16
+-------------------------------- 2 1
+row.0_17 = (unsigned int) row_1;
+-------------------------------- 2 1
+D.1978_18 = row.0_17 * 64;
+-------------------------------- 2 1
+D.1979_19 = dctBlock_6(D) + D.1978_18;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+x3_20 = *D.1979_19[3];
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock[3]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[3]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+# DEBUG x3 => x3_20
+-------------------------------- 2 1
+row.0_21 = (unsigned int) row_1;
+-------------------------------- 2 1
+D.1978_22 = row.0_21 * 64;
+-------------------------------- 2 1
+D.1979_23 = dctBlock_6(D) + D.1978_22;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+x4_24 = *D.1979_23[4];
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock[4]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[4]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+# DEBUG x4 => x4_24
+-------------------------------- 2 1
+row.0_25 = (unsigned int) row_1;
+-------------------------------- 2 1
+D.1978_26 = row.0_25 * 64;
+-------------------------------- 2 1
+D.1979_27 = dctBlock_6(D) + D.1978_26;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+x5_28 = *D.1979_27[5];
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock[5]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[5]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+# DEBUG x5 => x5_28
+-------------------------------- 2 1
+row.0_29 = (unsigned int) row_1;
+-------------------------------- 2 1
+D.1978_30 = row.0_29 * 64;
+-------------------------------- 2 1
+D.1979_31 = dctBlock_6(D) + D.1978_30;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+x6_32 = *D.1979_31[6];
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock[6]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[6]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+# DEBUG x6 => x6_32
+-------------------------------- 2 1
+row.0_33 = (unsigned int) row_1;
+-------------------------------- 2 1
+D.1978_34 = row.0_33 * 64;
+-------------------------------- 2 1
+D.1979_35 = dctBlock_6(D) + D.1978_34;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+x7_36 = *D.1979_35[7];
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock[7]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+# DEBUG x7 => x7_36
+-------------------------------- 2 1
+x8_37 = x7_36 + x0_8;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[0]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#0+ 1.000*dctBlock[0]#0  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+-------------------------------- 2 1
+# DEBUG x8 => x8_37
+-------------------------------- 2 1
+x0_38 = x0_8 - x7_36;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[0]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[0]#0+-1.000*dctBlock[7]#0  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+-------------------------------- 2 1
+# DEBUG x0 => x0_38
+-------------------------------- 2 1
+x7_39 = x1_12 + x6_32;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[6]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#0+ 1.000*dctBlock[6]#0  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+-------------------------------- 2 1
+# DEBUG x7 => x7_39
+-------------------------------- 2 1
+x1_40 = x1_12 - x6_32;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[6]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#0+-1.000*dctBlock[6]#0  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+-------------------------------- 2 1
+# DEBUG x1 => x1_40
+-------------------------------- 2 1
+x6_41 = x2_16 + x5_28;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[2]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[5]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[2]#0+ 1.000*dctBlock[5]#0  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+-------------------------------- 2 1
+# DEBUG x6 => x6_41
+-------------------------------- 2 1
+x2_42 = x2_16 - x5_28;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[2]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[5]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[2]#0+-1.000*dctBlock[5]#0  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+-------------------------------- 2 1
+# DEBUG x2 => x2_42
+-------------------------------- 2 1
+x5_43 = x3_20 + x4_24;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[3]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[4]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[3]#0+ 1.000*dctBlock[4]#0  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+-------------------------------- 2 1
+# DEBUG x5 => x5_43
+-------------------------------- 2 1
+x3_44 = x3_20 - x4_24;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[3]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[4]#0  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[3]#0+-1.000*dctBlock[4]#0  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+-------------------------------- 2 1
+# DEBUG x3 => x3_44
+-------------------------------- 2 1
+x4_45 = x8_37 + x5_43;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#0+ 1.000*dctBlock[0]#0  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[3]#0+ 1.000*dctBlock[4]#0  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#0+ 1.000*dctBlock[0]#0+ 1.000*dctBlock[3]#0+ 1.000*dctBlock[4]#0  [-4.000,+4.000] [0xfc000004,0x03fffffc]
+-------------------------------- 2 1
+# DEBUG x4 => x4_45
+-------------------------------- 2 1
+x8_46 = x8_37 - x5_43;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#0+ 1.000*dctBlock[0]#0  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[3]#0+ 1.000*dctBlock[4]#0  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#0+ 1.000*dctBlock[0]#0+-1.000*dctBlock[3]#0+-1.000*dctBlock[4]#0  [-4.000,+4.000] [0xfc000002,0x03fffffe]
+-------------------------------- 2 1
+# DEBUG x8 => x8_46
+-------------------------------- 2 1
+x5_47 = x7_39 + x6_41;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#0+ 1.000*dctBlock[6]#0  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[2]#0+ 1.000*dctBlock[5]#0  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#0+ 1.000*dctBlock[6]#0+ 1.000*dctBlock[2]#0+ 1.000*dctBlock[5]#0  [-4.000,+4.000] [0xfc000004,0x03fffffc]
+-------------------------------- 2 1
+# DEBUG x5 => x5_47
+-------------------------------- 2 1
+x7_48 = x7_39 - x6_41;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#0+ 1.000*dctBlock[6]#0  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[2]#0+ 1.000*dctBlock[5]#0  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#0+ 1.000*dctBlock[6]#0+-1.000*dctBlock[2]#0+-1.000*dctBlock[5]#0  [-4.000,+4.000] [0xfc000002,0x03fffffe]
+-------------------------------- 2 1
+# DEBUG x7 => x7_48
+-------------------------------- 2 1
+D.1980_49 = x1_40 + x2_42;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#0+-1.000*dctBlock[6]#0  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[2]#0+-1.000*dctBlock[5]#0  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#0+-1.000*dctBlock[6]#0+ 1.000*dctBlock[2]#0+-1.000*dctBlock[5]#0  [-4.000,+4.000] [0xfc000002,0x03fffffe]
+-------------------------------- 2 1
+x6_50 = D.1980_49 * 9.807852804032304305792422383092343807220458984375e-1;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#0+-1.000*dctBlock[6]#0+ 1.000*dctBlock[2]#0+-1.000*dctBlock[5]#0  [-4.000,+4.000] [0xfc000002,0x03fffffe]
+  OP2   ( 1/ 0/25/ 6)s  0.981  [+0.981,+0.981] [0x7d8a5f40,0x7d8a5f40]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 6/25/ 0)s  0.980*dctBlock[1]#0+-0.981*dctBlock[6]#0+ 0.980*dctBlock[2]#0+-0.981*dctBlock[5]#0  [-3.921,+3.921] [0xf8285b14,0x07d7a4ec]
+-------------------------------- 2 1
+# DEBUG x6 => x6_50
+-------------------------------- 2 1
+D.1981_51 = x2_42 * -1.1758756024193586231518793283612467348575592041015625e+0;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[2]#0+-1.000*dctBlock[5]#0  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+  OP2   ( 1/ 1/29/ 1)s -1.176  [-1.176,-1.176] [0xb4be7442,0xb4be7442]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s -1.175*dctBlock[2]#0+ 1.176*dctBlock[5]#0  [-2.351,+2.351] [0xfda63b42,0x0259c4be]
+-------------------------------- 2 1
+x2_52 = D.1981_51 + x6_50;
+  OP1   ( 1/ 7/24/ 0)s -1.175*dctBlock[2]#0+ 1.176*dctBlock[5]#0  [-2.351,+2.351] [0xfda63b42,0x0259c4be]
+  OP2   ( 1/ 6/25/ 0)s  0.980*dctBlock[1]#0+-0.981*dctBlock[6]#0+ 0.980*dctBlock[2]#0+-0.981*dctBlock[5]#0  [-3.921,+3.921] [0xf8285b14,0x07d7a4ec]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s -0.195*dctBlock[2]#0+ 0.195*dctBlock[5]#0+ 0.980*dctBlock[1]#0+-0.981*dctBlock[6]#0  [-2.351,+2.351] [0xfda63b42,0x0259c4be]
+-------------------------------- 2 1
+# DEBUG x2 => x2_52
+-------------------------------- 2 1
+D.1982_53 = x1_40 * -7.8569495838710212698430268574156798422336578369140625e-1;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#0+-1.000*dctBlock[6]#0  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+  OP2   ( 1/ 0/31/ 0)s -0.786  [-0.786,-0.786] [0x9b6e58fd,0x9b6e58fd]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 6/25/ 0)s -0.785*dctBlock[1]#0+ 0.786*dctBlock[6]#0  [-1.571,+1.571] [0xfcdbd492,0x03242b6e]
+-------------------------------- 2 1
+x1_54 = D.1982_53 + x6_50;
+  OP1   ( 1/ 6/25/ 0)s -0.785*dctBlock[1]#0+ 0.786*dctBlock[6]#0  [-1.571,+1.571] [0xfcdbd492,0x03242b6e]
+  OP2   ( 1/ 6/25/ 0)s  0.980*dctBlock[1]#0+-0.981*dctBlock[6]#0+ 0.980*dctBlock[2]#0+-0.981*dctBlock[5]#0  [-3.921,+3.921] [0xf8285b14,0x07d7a4ec]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 6/25/ 0)s  0.195*dctBlock[1]#0+-0.195*dctBlock[6]#0+ 0.980*dctBlock[2]#0+-0.981*dctBlock[5]#0  [-2.351,+2.351] [0xfb4c8682,0x04b3797e]
+-------------------------------- 2 1
+# DEBUG x1 => x1_54
+-------------------------------- 2 1
+D.1983_55 = x0_38 + x3_44;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[0]#0+-1.000*dctBlock[7]#0  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[3]#0+-1.000*dctBlock[4]#0  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[0]#0+-1.000*dctBlock[7]#0+ 1.000*dctBlock[3]#0+-1.000*dctBlock[4]#0  [-4.000,+4.000] [0xfc000002,0x03fffffe]
+-------------------------------- 2 1
+x6_56 = D.1983_55 * 8.3146961230254523567140267914510332047939300537109375e-1;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[0]#0+-1.000*dctBlock[7]#0+ 1.000*dctBlock[3]#0+-1.000*dctBlock[4]#0  [-4.000,+4.000] [0xfc000002,0x03fffffe]
+  OP2   ( 1/ 0/29/ 2)s  0.831  [+0.831,+0.831] [0x6a6d98a4,0x6a6d98a4]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 6/25/ 0)s  0.831*dctBlock[0]#0+-0.831*dctBlock[7]#0+ 0.831*dctBlock[3]#0+-0.831*dctBlock[4]#0  [-3.324,+3.324] [0xf95a04da,0x06a5fb26]
+-------------------------------- 2 1
+# DEBUG x6 => x6_56
+-------------------------------- 2 1
+D.1984_57 = x3_44 * -1.387039845322147524342426549992524087429046630859375e+0;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[3]#0+-1.000*dctBlock[4]#0  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+  OP2   ( 1/ 1/30/ 0)s -1.387  [-1.387,-1.387] [0xa73abd3b,0xa73abd3b]
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s -1.384*dctBlock[3]#0+ 1.387*dctBlock[4]#0  [-2.771,+2.771] [0xfd3a858b,0x02c57a75]
+-------------------------------- 2 1
+x3_58 = D.1984_57 + x6_56;
+  OP1   ( 1/ 7/24/ 0)s -1.384*dctBlock[3]#0+ 1.387*dctBlock[4]#0  [-2.771,+2.771] [0xfd3a858b,0x02c57a75]
+  OP2   ( 1/ 6/25/ 0)s  0.831*dctBlock[0]#0+-0.831*dctBlock[7]#0+ 0.831*dctBlock[3]#0+-0.831*dctBlock[4]#0  [-3.324,+3.324] [0xf95a04da,0x06a5fb26]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s -0.554*dctBlock[3]#0+ 0.556*dctBlock[4]#0+ 0.831*dctBlock[0]#0+-0.831*dctBlock[7]#0  [-2.771,+2.771] [0xfd3a858b,0x02c57a75]
+-------------------------------- 2 1
+# DEBUG x3 => x3_58
+-------------------------------- 2 1
+D.1985_59 = x0_38 * -2.7589937928294305802268127081333659589290618896484375e-1;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[0]#0+-1.000*dctBlock[7]#0  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+  OP2   ( 1/ 0/30/ 1)s -0.276  [-0.276,-0.276] [0xdcaf5442,0xdcaf5442]
+  *** Zeros right of b.p., 1 I bits changed to S bits in RSLT
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 5/26/ 0)s -0.275*dctBlock[0]#0+ 0.276*dctBlock[7]#0  [-0.551,+0.551] [0xfdcb8143,0x02347ebd]
+-------------------------------- 2 1
+x0_60 = D.1985_59 + x6_56;
+  OP1   ( 1/ 5/26/ 0)s -0.275*dctBlock[0]#0+ 0.276*dctBlock[7]#0  [-0.551,+0.551] [0xfdcb8143,0x02347ebd]
+  OP2   ( 1/ 6/25/ 0)s  0.831*dctBlock[0]#0+-0.831*dctBlock[7]#0+ 0.831*dctBlock[3]#0+-0.831*dctBlock[4]#0  [-3.324,+3.324] [0xf95a04da,0x06a5fb26]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 6/25/ 0)s  0.555*dctBlock[0]#0+-0.556*dctBlock[7]#0+ 0.831*dctBlock[3]#0+-0.831*dctBlock[4]#0  [-2.773,+2.773] [0xfa744439,0x058bbbc7]
+-------------------------------- 2 1
+# DEBUG x0 => x0_60
+-------------------------------- 2 1
+x6_61 = x4_45 + x5_47;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#0+ 1.000*dctBlock[0]#0+ 1.000*dctBlock[3]#0+ 1.000*dctBlock[4]#0  [-4.000,+4.000] [0xfc000004,0x03fffffc]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#0+ 1.000*dctBlock[6]#0+ 1.000*dctBlock[2]#0+ 1.000*dctBlock[5]#0  [-4.000,+4.000] [0xfc000004,0x03fffffc]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#0+ 1.000*dctBlock[0]#0+ 1.000*dctBlock[3]#0+ 1.000*dctBlock[4]#0+ 1.000*dctBlock[1]#0+ 1.000*dctBlock[6]#0+ 1.000*dctBlock[2]#0+ 1.000*dctBlock[5]#0  [-8.000,+8.000] [0xf8000008,0x07fffff8]
+-------------------------------- 2 1
+# DEBUG x6 => x6_61
+-------------------------------- 2 1
+x4_62 = x4_45 - x5_47;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#0+ 1.000*dctBlock[0]#0+ 1.000*dctBlock[3]#0+ 1.000*dctBlock[4]#0  [-4.000,+4.000] [0xfc000004,0x03fffffc]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#0+ 1.000*dctBlock[6]#0+ 1.000*dctBlock[2]#0+ 1.000*dctBlock[5]#0  [-4.000,+4.000] [0xfc000004,0x03fffffc]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#0+ 1.000*dctBlock[0]#0+ 1.000*dctBlock[3]#0+ 1.000*dctBlock[4]#0+-1.000*dctBlock[1]#0+-1.000*dctBlock[6]#0+-1.000*dctBlock[2]#0+-1.000*dctBlock[5]#0  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 2 1
+# DEBUG x4 => x4_62
+-------------------------------- 2 1
+x5_63 = x0_60 + x2_52;
+  OP1   ( 1/ 6/25/ 0)s  0.555*dctBlock[0]#0+-0.556*dctBlock[7]#0+ 0.831*dctBlock[3]#0+-0.831*dctBlock[4]#0  [-2.773,+2.773] [0xfa744439,0x058bbbc7]
+  OP2   ( 1/ 7/24/ 0)s -0.195*dctBlock[2]#0+ 0.195*dctBlock[5]#0+ 0.980*dctBlock[1]#0+-0.981*dctBlock[6]#0  [-2.351,+2.351] [0xfda63b42,0x0259c4be]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  0.555*dctBlock[0]#0+-0.556*dctBlock[7]#0+ 0.831*dctBlock[3]#0+-0.831*dctBlock[4]#0+-0.195*dctBlock[2]#0+ 0.195*dctBlock[5]#0+ 0.980*dctBlock[1]#0+-0.981*dctBlock[6]#0  [-5.124,+5.124] [0xfae05d5f,0x051fa2a1]
+-------------------------------- 2 1
+# DEBUG x5 => x5_63
+-------------------------------- 2 1
+x0_64 = x0_60 - x2_52;
+  OP1   ( 1/ 6/25/ 0)s  0.555*dctBlock[0]#0+-0.556*dctBlock[7]#0+ 0.831*dctBlock[3]#0+-0.831*dctBlock[4]#0  [-2.773,+2.773] [0xfa744439,0x058bbbc7]
+  OP2   ( 1/ 7/24/ 0)s -0.195*dctBlock[2]#0+ 0.195*dctBlock[5]#0+ 0.980*dctBlock[1]#0+-0.981*dctBlock[6]#0  [-2.351,+2.351] [0xfda63b42,0x0259c4be]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  0.555*dctBlock[0]#0+-0.556*dctBlock[7]#0+ 0.831*dctBlock[3]#0+-0.831*dctBlock[4]#0+ 0.195*dctBlock[2]#0+-0.195*dctBlock[5]#0+-0.980*dctBlock[1]#0+ 0.981*dctBlock[6]#0  [-5.124,+5.124] [0xfae05d5f,0x051fa2a1]
+-------------------------------- 2 1
+# DEBUG x0 => x0_64
+-------------------------------- 2 1
+x2_65 = x3_58 + x1_54;
+  OP1   ( 1/ 7/24/ 0)s -0.554*dctBlock[3]#0+ 0.556*dctBlock[4]#0+ 0.831*dctBlock[0]#0+-0.831*dctBlock[7]#0  [-2.771,+2.771] [0xfd3a858b,0x02c57a75]
+  OP2   ( 1/ 6/25/ 0)s  0.195*dctBlock[1]#0+-0.195*dctBlock[6]#0+ 0.980*dctBlock[2]#0+-0.981*dctBlock[5]#0  [-2.351,+2.351] [0xfb4c8682,0x04b3797e]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s -0.554*dctBlock[3]#0+ 0.556*dctBlock[4]#0+ 0.831*dctBlock[0]#0+-0.831*dctBlock[7]#0+ 0.195*dctBlock[1]#0+-0.195*dctBlock[6]#0+ 0.980*dctBlock[2]#0+-0.981*dctBlock[5]#0  [-5.122,+5.122] [0xfae0c8cc,0x051f3734]
+-------------------------------- 2 1
+# DEBUG x2 => x2_65
+-------------------------------- 2 1
+x3_66 = x3_58 - x1_54;
+  OP1   ( 1/ 7/24/ 0)s -0.554*dctBlock[3]#0+ 0.556*dctBlock[4]#0+ 0.831*dctBlock[0]#0+-0.831*dctBlock[7]#0  [-2.771,+2.771] [0xfd3a858b,0x02c57a75]
+  OP2   ( 1/ 6/25/ 0)s  0.195*dctBlock[1]#0+-0.195*dctBlock[6]#0+ 0.980*dctBlock[2]#0+-0.981*dctBlock[5]#0  [-2.351,+2.351] [0xfb4c8682,0x04b3797e]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s -0.554*dctBlock[3]#0+ 0.556*dctBlock[4]#0+ 0.831*dctBlock[0]#0+-0.831*dctBlock[7]#0+-0.195*dctBlock[1]#0+ 0.195*dctBlock[6]#0+-0.980*dctBlock[2]#0+ 0.981*dctBlock[5]#0  [-5.122,+5.122] [0xfae0c8cc,0x051f3734]
+-------------------------------- 2 1
+# DEBUG x3 => x3_66
+-------------------------------- 2 1
+D.1986_67 = x7_48 + x8_46;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#0+ 1.000*dctBlock[6]#0+-1.000*dctBlock[2]#0+-1.000*dctBlock[5]#0  [-4.000,+4.000] [0xfc000002,0x03fffffe]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#0+ 1.000*dctBlock[0]#0+-1.000*dctBlock[3]#0+-1.000*dctBlock[4]#0  [-4.000,+4.000] [0xfc000002,0x03fffffe]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#0+ 1.000*dctBlock[6]#0+-1.000*dctBlock[2]#0+-1.000*dctBlock[5]#0+ 1.000*dctBlock[7]#0+ 1.000*dctBlock[0]#0+-1.000*dctBlock[3]#0+-1.000*dctBlock[4]#0  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 2 1
+x1_68 = D.1986_67 * 5.4119610014619701221505465582595206797122955322265625e-1;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#0+ 1.000*dctBlock[6]#0+-1.000*dctBlock[2]#0+-1.000*dctBlock[5]#0+ 1.000*dctBlock[7]#0+ 1.000*dctBlock[0]#0+-1.000*dctBlock[3]#0+-1.000*dctBlock[4]#0  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP2   ( 1/ 0/31/ 0)s  0.541  [+0.541,+0.541] [0x4545e9ef,0x4545e9ef]
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 6/25/ 0)s  0.541*dctBlock[1]#0+ 0.541*dctBlock[6]#0+-0.541*dctBlock[2]#0+-0.541*dctBlock[5]#0+ 0.541*dctBlock[7]#0+ 0.541*dctBlock[0]#0+-0.541*dctBlock[3]#0+-0.541*dctBlock[4]#0  [-4.327,+4.327] [0xf7587514,0x08a78aec]
+-------------------------------- 2 1
+# DEBUG x1 => x1_68
+-------------------------------- 2 1
+D.1987_69 = x7_48 * -1.847759065022573476966272210120223462581634521484375e+0;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#0+ 1.000*dctBlock[6]#0+-1.000*dctBlock[2]#0+-1.000*dctBlock[5]#0  [-4.000,+4.000] [0xfc000002,0x03fffffe]
+  OP2   ( 1/ 1/30/ 0)s -1.848  [-1.848,-1.848] [0x89be50c3,0x89be50c3]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s -1.846*dctBlock[1]#0+-1.846*dctBlock[6]#0+ 1.848*dctBlock[2]#0+ 1.848*dctBlock[5]#0  [-7.388,+7.388] [0xf89ccc84,0x0763337c]
+-------------------------------- 2 1
+x7_70 = D.1987_69 + x1_68;
+  OP1   ( 1/ 7/24/ 0)s -1.846*dctBlock[1]#0+-1.846*dctBlock[6]#0+ 1.848*dctBlock[2]#0+ 1.848*dctBlock[5]#0  [-7.388,+7.388] [0xf89ccc84,0x0763337c]
+  OP2   ( 1/ 6/25/ 0)s  0.541*dctBlock[1]#0+ 0.541*dctBlock[6]#0+-0.541*dctBlock[2]#0+-0.541*dctBlock[5]#0+ 0.541*dctBlock[7]#0+ 0.541*dctBlock[0]#0+-0.541*dctBlock[3]#0+-0.541*dctBlock[4]#0  [-4.327,+4.327] [0xf7587514,0x08a78aec]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s -1.305*dctBlock[1]#0+-1.305*dctBlock[6]#0+ 1.307*dctBlock[2]#0+ 1.307*dctBlock[5]#0+ 0.541*dctBlock[7]#0+ 0.541*dctBlock[0]#0+-0.541*dctBlock[3]#0+-0.541*dctBlock[4]#0  [-7.388,+7.388] [0xf89ccc84,0x0763337c]
+-------------------------------- 2 1
+# DEBUG x7 => x7_70
+-------------------------------- 2 1
+D.1988_71 = x8_46 * 7.6536686473017956355846536098397336900234222412109375e-1;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#0+ 1.000*dctBlock[0]#0+-1.000*dctBlock[3]#0+-1.000*dctBlock[4]#0  [-4.000,+4.000] [0xfc000002,0x03fffffe]
+  OP2   ( 1/ 0/31/ 0)s  0.765  [+0.765,+0.765] [0x61f78a9b,0x61f78a9b]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  RSLT  ( 3/ 6/23/ 0)s  0.765*dctBlock[7]#0+ 0.765*dctBlock[0]#0+-0.765*dctBlock[3]#0+-0.765*dctBlock[4]#0  [-3.060,+3.060] [0xfe7860fa,0x01879f06]
+-------------------------------- 2 1
+x8_72 = D.1988_71 + x1_68;
+  OP1   ( 3/ 6/23/ 0)s  0.765*dctBlock[7]#0+ 0.765*dctBlock[0]#0+-0.765*dctBlock[3]#0+-0.765*dctBlock[4]#0  [-3.060,+3.060] [0xfe7860fa,0x01879f06]
+  OP2   ( 1/ 6/25/ 0)s  0.541*dctBlock[1]#0+ 0.541*dctBlock[6]#0+-0.541*dctBlock[2]#0+-0.541*dctBlock[5]#0+ 0.541*dctBlock[7]#0+ 0.541*dctBlock[0]#0+-0.541*dctBlock[3]#0+-0.541*dctBlock[4]#0  [-4.327,+4.327] [0xf7587514,0x08a78aec]
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, converting an I to S in result *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 2/ 6/24/ 0)s  1.305*dctBlock[7]#0+ 1.305*dctBlock[0]#0+-1.306*dctBlock[3]#0+-1.306*dctBlock[4]#0+ 0.541*dctBlock[1]#0+ 0.541*dctBlock[6]#0+-0.541*dctBlock[2]#0+-0.541*dctBlock[5]#0  [-7.387,+7.387] [0xf89cfc80,0x07630380]
+-------------------------------- 2 1
+# DEBUG x8 => x8_72
+-------------------------------- 2 1
+row.0_73 = (unsigned int) row_1;
+-------------------------------- 2 1
+D.1978_74 = row.0_73 * 64;
+-------------------------------- 2 1
+D.1979_75 = dctBlock_6(D) + D.1978_74;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+*D.1979_75[0] = x6_61;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#0+ 1.000*dctBlock[0]#0+ 1.000*dctBlock[3]#0+ 1.000*dctBlock[4]#0+ 1.000*dctBlock[1]#0+ 1.000*dctBlock[6]#0+ 1.000*dctBlock[2]#0+ 1.000*dctBlock[5]#0  [-8.000,+8.000] [0xf8000008,0x07fffff8]
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock[7]#0+ 1.000*dctBlock[0]#0+ 1.000*dctBlock[3]#0+ 1.000*dctBlock[4]#0+ 1.000*dctBlock[1]#0+ 1.000*dctBlock[6]#0+ 1.000*dctBlock[2]#0+ 1.000*dctBlock[5]#0  [-8.000,+8.000] [0xf8000008,0x07fffff8]
+-------------------------------- 2 1
+row.0_76 = (unsigned int) row_1;
+-------------------------------- 2 1
+D.1978_77 = row.0_76 * 64;
+-------------------------------- 2 1
+D.1979_78 = dctBlock_6(D) + D.1978_77;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+*D.1979_78[4] = x4_62;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#0+ 1.000*dctBlock[0]#0+ 1.000*dctBlock[3]#0+ 1.000*dctBlock[4]#0+-1.000*dctBlock[1]#0+-1.000*dctBlock[6]#0+-1.000*dctBlock[2]#0+-1.000*dctBlock[5]#0  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock[7]#0+ 1.000*dctBlock[0]#0+ 1.000*dctBlock[3]#0+ 1.000*dctBlock[4]#0+-1.000*dctBlock[1]#0+-1.000*dctBlock[6]#0+-1.000*dctBlock[2]#0+-1.000*dctBlock[5]#0  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 2 1
+row.0_79 = (unsigned int) row_1;
+-------------------------------- 2 1
+D.1978_80 = row.0_79 * 64;
+-------------------------------- 2 1
+D.1979_81 = dctBlock_6(D) + D.1978_80;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+*D.1979_81[2] = x8_72;
+  OP1   ( 2/ 6/24/ 0)s  1.305*dctBlock[7]#0+ 1.305*dctBlock[0]#0+-1.306*dctBlock[3]#0+-1.306*dctBlock[4]#0+ 0.541*dctBlock[1]#0+ 0.541*dctBlock[6]#0+-0.541*dctBlock[2]#0+-0.541*dctBlock[5]#0  [-7.387,+7.387] [0xf89cfc80,0x07630380]
+  RSLT @( 2/ 6/24/ 0)s  1.305*dctBlock[7]#0+ 1.305*dctBlock[0]#0+-1.306*dctBlock[3]#0+-1.306*dctBlock[4]#0+ 0.541*dctBlock[1]#0+ 0.541*dctBlock[6]#0+-0.541*dctBlock[2]#0+-0.541*dctBlock[5]#0  [-7.387,+7.387] [0xf89cfc80,0x07630380]
+-------------------------------- 2 1
+row.0_82 = (unsigned int) row_1;
+-------------------------------- 2 1
+D.1978_83 = row.0_82 * 64;
+-------------------------------- 2 1
+D.1979_84 = dctBlock_6(D) + D.1978_83;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+*D.1979_84[6] = x7_70;
+  OP1   ( 1/ 7/24/ 0)s -1.305*dctBlock[1]#0+-1.305*dctBlock[6]#0+ 1.307*dctBlock[2]#0+ 1.307*dctBlock[5]#0+ 0.541*dctBlock[7]#0+ 0.541*dctBlock[0]#0+-0.541*dctBlock[3]#0+-0.541*dctBlock[4]#0  [-7.388,+7.388] [0xf89ccc84,0x0763337c]
+  RSLT @( 1/ 7/24/ 0)s -1.305*dctBlock[1]#0+-1.305*dctBlock[6]#0+ 1.307*dctBlock[2]#0+ 1.307*dctBlock[5]#0+ 0.541*dctBlock[7]#0+ 0.541*dctBlock[0]#0+-0.541*dctBlock[3]#0+-0.541*dctBlock[4]#0  [-7.388,+7.388] [0xf89ccc84,0x0763337c]
+-------------------------------- 2 1
+row.0_85 = (unsigned int) row_1;
+-------------------------------- 2 1
+D.1978_86 = row.0_85 * 64;
+-------------------------------- 2 1
+D.1979_87 = dctBlock_6(D) + D.1978_86;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+D.1989_88 = x2_65 - x5_63;
+  OP1   ( 1/ 7/24/ 0)s -0.554*dctBlock[3]#0+ 0.556*dctBlock[4]#0+ 0.831*dctBlock[0]#0+-0.831*dctBlock[7]#0+ 0.195*dctBlock[1]#0+-0.195*dctBlock[6]#0+ 0.980*dctBlock[2]#0+-0.981*dctBlock[5]#0  [-5.122,+5.122] [0xfae0c8cc,0x051f3734]
+  OP2   ( 1/ 7/24/ 0)s  0.555*dctBlock[0]#0+-0.556*dctBlock[7]#0+ 0.831*dctBlock[3]#0+-0.831*dctBlock[4]#0+-0.195*dctBlock[2]#0+ 0.195*dctBlock[5]#0+ 0.980*dctBlock[1]#0+-0.981*dctBlock[6]#0  [-5.124,+5.124] [0xfae05d5f,0x051fa2a1]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s -1.384*dctBlock[3]#0+ 1.387*dctBlock[4]#0+ 0.275*dctBlock[0]#0+-0.276*dctBlock[7]#0+-0.785*dctBlock[1]#0+ 0.786*dctBlock[6]#0+ 1.175*dctBlock[2]#0+-1.176*dctBlock[5]#0  [-7.244,+7.244] [0xf8c18b67,0x073e7499]
+-------------------------------- 2 1
+*D.1979_87[7] = D.1989_88;
+  OP1   ( 1/ 7/24/ 0)s -1.384*dctBlock[3]#0+ 1.387*dctBlock[4]#0+ 0.275*dctBlock[0]#0+-0.276*dctBlock[7]#0+-0.785*dctBlock[1]#0+ 0.786*dctBlock[6]#0+ 1.175*dctBlock[2]#0+-1.176*dctBlock[5]#0  [-7.244,+7.244] [0xf8c18b67,0x073e7499]
+  RSLT @( 1/ 7/24/ 0)s -1.384*dctBlock[3]#0+ 1.387*dctBlock[4]#0+ 0.275*dctBlock[0]#0+-0.276*dctBlock[7]#0+-0.785*dctBlock[1]#0+ 0.786*dctBlock[6]#0+ 1.175*dctBlock[2]#0+-1.176*dctBlock[5]#0  [-7.244,+7.244] [0xf8c18b67,0x073e7499]
+-------------------------------- 2 1
+row.0_89 = (unsigned int) row_1;
+-------------------------------- 2 1
+D.1978_90 = row.0_89 * 64;
+-------------------------------- 2 1
+D.1979_91 = dctBlock_6(D) + D.1978_90;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+D.1990_92 = x2_65 + x5_63;
+  OP1   ( 1/ 7/24/ 0)s -0.554*dctBlock[3]#0+ 0.556*dctBlock[4]#0+ 0.831*dctBlock[0]#0+-0.831*dctBlock[7]#0+ 0.195*dctBlock[1]#0+-0.195*dctBlock[6]#0+ 0.980*dctBlock[2]#0+-0.981*dctBlock[5]#0  [-5.122,+5.122] [0xfae0c8cc,0x051f3734]
+  OP2   ( 1/ 7/24/ 0)s  0.555*dctBlock[0]#0+-0.556*dctBlock[7]#0+ 0.831*dctBlock[3]#0+-0.831*dctBlock[4]#0+-0.195*dctBlock[2]#0+ 0.195*dctBlock[5]#0+ 0.980*dctBlock[1]#0+-0.981*dctBlock[6]#0  [-5.124,+5.124] [0xfae05d5f,0x051fa2a1]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  0.277*dctBlock[3]#0+-0.276*dctBlock[4]#0+ 1.386*dctBlock[0]#0+-1.387*dctBlock[7]#0+ 1.175*dctBlock[1]#0+-1.176*dctBlock[6]#0+ 0.785*dctBlock[2]#0+-0.786*dctBlock[5]#0  [-7.247,+7.247] [0xf8c0d489,0x073f2b77]
+-------------------------------- 2 1
+*D.1979_91[1] = D.1990_92;
+  OP1   ( 1/ 7/24/ 0)s  0.277*dctBlock[3]#0+-0.276*dctBlock[4]#0+ 1.386*dctBlock[0]#0+-1.387*dctBlock[7]#0+ 1.175*dctBlock[1]#0+-1.176*dctBlock[6]#0+ 0.785*dctBlock[2]#0+-0.786*dctBlock[5]#0  [-7.247,+7.247] [0xf8c0d489,0x073f2b77]
+  RSLT @( 1/ 7/24/ 0)s  0.277*dctBlock[3]#0+-0.276*dctBlock[4]#0+ 1.386*dctBlock[0]#0+-1.387*dctBlock[7]#0+ 1.175*dctBlock[1]#0+-1.176*dctBlock[6]#0+ 0.785*dctBlock[2]#0+-0.786*dctBlock[5]#0  [-7.247,+7.247] [0xf8c0d489,0x073f2b77]
+-------------------------------- 2 1
+row.0_93 = (unsigned int) row_1;
+-------------------------------- 2 1
+D.1978_94 = row.0_93 * 64;
+-------------------------------- 2 1
+D.1979_95 = dctBlock_6(D) + D.1978_94;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+D.1991_96 = x3_66 * 1.4142135623730951454746218587388284504413604736328125e+0;
+  OP1   ( 1/ 7/24/ 0)s -0.554*dctBlock[3]#0+ 0.556*dctBlock[4]#0+ 0.831*dctBlock[0]#0+-0.831*dctBlock[7]#0+-0.195*dctBlock[1]#0+ 0.195*dctBlock[6]#0+-0.980*dctBlock[2]#0+ 0.981*dctBlock[5]#0  [-5.122,+5.122] [0xfae0c8cc,0x051f3734]
+  OP2   ( 1/ 1/29/ 1)s  1.414  [+1.414,+1.414] [0x5a82799a,0x5a82799a]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s -0.783*dctBlock[3]#0+ 0.784*dctBlock[4]#0+ 1.174*dctBlock[0]#0+-1.177*dctBlock[7]#0+-0.276*dctBlock[1]#0+ 0.275*dctBlock[6]#0+-1.387*dctBlock[2]#0+ 1.387*dctBlock[5]#0  [-7.242,+7.242] [0xf8c20108,0x073dfef8]
+-------------------------------- 2 1
+*D.1979_95[3] = D.1991_96;
+  OP1   ( 1/ 7/24/ 0)s -0.783*dctBlock[3]#0+ 0.784*dctBlock[4]#0+ 1.174*dctBlock[0]#0+-1.177*dctBlock[7]#0+-0.276*dctBlock[1]#0+ 0.275*dctBlock[6]#0+-1.387*dctBlock[2]#0+ 1.387*dctBlock[5]#0  [-7.242,+7.242] [0xf8c20108,0x073dfef8]
+  RSLT @( 1/ 7/24/ 0)s -0.783*dctBlock[3]#0+ 0.784*dctBlock[4]#0+ 1.174*dctBlock[0]#0+-1.177*dctBlock[7]#0+-0.276*dctBlock[1]#0+ 0.275*dctBlock[6]#0+-1.387*dctBlock[2]#0+ 1.387*dctBlock[5]#0  [-7.242,+7.242] [0xf8c20108,0x073dfef8]
+-------------------------------- 2 1
+row.0_97 = (unsigned int) row_1;
+-------------------------------- 2 1
+D.1978_98 = row.0_97 * 64;
+-------------------------------- 2 1
+D.1979_99 = dctBlock_6(D) + D.1978_98;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 1
+D.1992_100 = x0_64 * 1.4142135623730951454746218587388284504413604736328125e+0;
+  OP1   ( 1/ 7/24/ 0)s  0.555*dctBlock[0]#0+-0.556*dctBlock[7]#0+ 0.831*dctBlock[3]#0+-0.831*dctBlock[4]#0+ 0.195*dctBlock[2]#0+-0.195*dctBlock[5]#0+-0.980*dctBlock[1]#0+ 0.981*dctBlock[6]#0  [-5.124,+5.124] [0xfae05d5f,0x051fa2a1]
+  OP2   ( 1/ 1/29/ 1)s  1.414  [+1.414,+1.414] [0x5a82799a,0x5a82799a]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  0.784*dctBlock[0]#0+-0.786*dctBlock[7]#0+ 1.174*dctBlock[3]#0+-1.177*dctBlock[4]#0+ 0.275*dctBlock[2]#0+-0.276*dctBlock[5]#0+-1.387*dctBlock[1]#0+ 1.387*dctBlock[6]#0  [-7.245,+7.245] [0xf8c14c04,0x073eb3fc]
+-------------------------------- 2 1
+*D.1979_99[5] = D.1992_100;
+  OP1   ( 1/ 7/24/ 0)s  0.784*dctBlock[0]#0+-0.786*dctBlock[7]#0+ 1.174*dctBlock[3]#0+-1.177*dctBlock[4]#0+ 0.275*dctBlock[2]#0+-0.276*dctBlock[5]#0+-1.387*dctBlock[1]#0+ 1.387*dctBlock[6]#0  [-7.245,+7.245] [0xf8c14c04,0x073eb3fc]
+  RSLT @( 1/ 7/24/ 0)s  0.784*dctBlock[0]#0+-0.786*dctBlock[7]#0+ 1.174*dctBlock[3]#0+-1.177*dctBlock[4]#0+ 0.275*dctBlock[2]#0+-0.276*dctBlock[5]#0+-1.387*dctBlock[1]#0+ 1.387*dctBlock[6]#0  [-7.245,+7.245] [0xf8c14c04,0x073eb3fc]
+-------------------------------- 2 1
+row_101 = row_1 + 1;
+-------------------------------- 2 1
+# DEBUG row => row_101
+-------------------------------- 2 1
+  End of a basic block
+  ======= Starting basic block 3 =====
+# DEBUG row => row_1
+-------------------------------- 3 1
+if (row_1 <= 7)
+-------------------------------- 3 1
+  End of a basic block
+  ======= Starting basic block 4 =====
+col_102 = 0;
+-------------------------------- 4 1
+# DEBUG col => col_102
+-------------------------------- 4 1
+  End of a basic block
+  ======= Starting basic block 5 =====
+x0_103 = *dctBlock_6(D)[col_2];
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock[0]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[0]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 1
+# DEBUG x0 => x0_103
+-------------------------------- 5 1
+D.1993_104 = dctBlock_6(D) + 64;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 1
+x1_105 = *D.1993_104[col_2];
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock[1]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 1
+# DEBUG x1 => x1_105
+-------------------------------- 5 1
+D.1994_106 = dctBlock_6(D) + 128;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 1
+x2_107 = *D.1994_106[col_2];
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock[2]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[2]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 1
+# DEBUG x2 => x2_107
+-------------------------------- 5 1
+D.1995_108 = dctBlock_6(D) + 192;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 1
+x3_109 = *D.1995_108[col_2];
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock[3]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[3]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 1
+# DEBUG x3 => x3_109
+-------------------------------- 5 1
+D.1996_110 = dctBlock_6(D) + 256;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 1
+x4_111 = *D.1996_110[col_2];
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock[4]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[4]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 1
+# DEBUG x4 => x4_111
+-------------------------------- 5 1
+D.1997_112 = dctBlock_6(D) + 320;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 1
+x5_113 = *D.1997_112[col_2];
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock[5]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[5]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 1
+# DEBUG x5 => x5_113
+-------------------------------- 5 1
+D.1998_114 = dctBlock_6(D) + 384;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 1
+x6_115 = *D.1998_114[col_2];
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock[6]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[6]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 1
+# DEBUG x6 => x6_115
+-------------------------------- 5 1
+D.1999_116 = dctBlock_6(D) + 448;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 1
+x7_117 = *D.1999_116[col_2];
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock[7]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 1
+# DEBUG x7 => x7_117
+-------------------------------- 5 1
+x8_118 = x7_117 + x0_103;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[0]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#1+ 8.000*dctBlock[0]#1  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+-------------------------------- 5 1
+# DEBUG x8 => x8_118
+-------------------------------- 5 1
+x0_119 = x0_103 - x7_117;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[0]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[0]#1+-8.000*dctBlock[7]#1  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+-------------------------------- 5 1
+# DEBUG x0 => x0_119
+-------------------------------- 5 1
+x7_120 = x1_105 + x6_115;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[6]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#1+ 8.000*dctBlock[6]#1  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+-------------------------------- 5 1
+# DEBUG x7 => x7_120
+-------------------------------- 5 1
+x1_121 = x1_105 - x6_115;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[6]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#1+-8.000*dctBlock[6]#1  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+-------------------------------- 5 1
+# DEBUG x1 => x1_121
+-------------------------------- 5 1
+x6_122 = x2_107 + x5_113;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[2]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[5]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[2]#1+ 8.000*dctBlock[5]#1  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+-------------------------------- 5 1
+# DEBUG x6 => x6_122
+-------------------------------- 5 1
+x2_123 = x2_107 - x5_113;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[2]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[5]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[2]#1+-8.000*dctBlock[5]#1  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+-------------------------------- 5 1
+# DEBUG x2 => x2_123
+-------------------------------- 5 1
+x5_124 = x3_109 + x4_111;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[3]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[4]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[3]#1+ 8.000*dctBlock[4]#1  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+-------------------------------- 5 1
+# DEBUG x5 => x5_124
+-------------------------------- 5 1
+x3_125 = x3_109 - x4_111;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[3]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[4]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[3]#1+-8.000*dctBlock[4]#1  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+-------------------------------- 5 1
+# DEBUG x3 => x3_125
+-------------------------------- 5 1
+x4_126 = x8_118 + x5_124;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#1+ 8.000*dctBlock[0]#1  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[3]#1+ 8.000*dctBlock[4]#1  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#1+ 8.000*dctBlock[0]#1+ 8.000*dctBlock[3]#1+ 8.000*dctBlock[4]#1  [-32.000,+32.000] [0xe0000010,0x1ffffff0]
+-------------------------------- 5 1
+# DEBUG x4 => x4_126
+-------------------------------- 5 1
+x8_127 = x8_118 - x5_124;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#1+ 8.000*dctBlock[0]#1  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[3]#1+ 8.000*dctBlock[4]#1  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#1+ 8.000*dctBlock[0]#1+-8.000*dctBlock[3]#1+-8.000*dctBlock[4]#1  [-32.000,+32.000] [0xe000000e,0x1ffffff2]
+-------------------------------- 5 1
+# DEBUG x8 => x8_127
+-------------------------------- 5 1
+x5_128 = x7_120 + x6_122;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#1+ 8.000*dctBlock[6]#1  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[2]#1+ 8.000*dctBlock[5]#1  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#1+ 8.000*dctBlock[6]#1+ 8.000*dctBlock[2]#1+ 8.000*dctBlock[5]#1  [-32.000,+32.000] [0xe0000010,0x1ffffff0]
+-------------------------------- 5 1
+# DEBUG x5 => x5_128
+-------------------------------- 5 1
+x7_129 = x7_120 - x6_122;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#1+ 8.000*dctBlock[6]#1  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[2]#1+ 8.000*dctBlock[5]#1  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#1+ 8.000*dctBlock[6]#1+-8.000*dctBlock[2]#1+-8.000*dctBlock[5]#1  [-32.000,+32.000] [0xe000000e,0x1ffffff2]
+-------------------------------- 5 1
+# DEBUG x7 => x7_129
+-------------------------------- 5 1
+D.2000_130 = x1_121 + x2_123;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#1+-8.000*dctBlock[6]#1  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[2]#1+-8.000*dctBlock[5]#1  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#1+-8.000*dctBlock[6]#1+ 8.000*dctBlock[2]#1+-8.000*dctBlock[5]#1  [-32.000,+32.000] [0xe000000e,0x1ffffff2]
+-------------------------------- 5 1
+x6_131 = D.2000_130 * 9.807852804032304305792422383092343807220458984375e-1;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#1+-8.000*dctBlock[6]#1+ 8.000*dctBlock[2]#1+-8.000*dctBlock[5]#1  [-32.000,+32.000] [0xe000000e,0x1ffffff2]
+  OP2   ( 1/ 0/25/ 6)s  0.981  [+0.981,+0.981] [0x7d8a5f40,0x7d8a5f40]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 6/25/ 0)s  7.845*dctBlock[1]#1+-7.846*dctBlock[6]#1+ 7.845*dctBlock[2]#1+-7.846*dctBlock[5]#1  [-31.383,+31.383] [0xc13bfb14,0x3ec404ec]
+-------------------------------- 5 1
+# DEBUG x6 => x6_131
+-------------------------------- 5 1
+D.2001_132 = x2_123 * -1.1758756024193586231518793283612467348575592041015625e+0;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[2]#1+-8.000*dctBlock[5]#1  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+  OP2   ( 1/ 1/29/ 1)s -1.176  [-1.176,-1.176] [0xb4be7442,0xb4be7442]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s -9.406*dctBlock[2]#1+ 9.407*dctBlock[5]#1  [-18.813,+18.813] [0xed2fcb42,0x12d034be]
+-------------------------------- 5 1
+x2_133 = D.2001_132 + x6_131;
+  OP1   ( 1/ 7/24/ 0)s -9.406*dctBlock[2]#1+ 9.407*dctBlock[5]#1  [-18.813,+18.813] [0xed2fcb42,0x12d034be]
+  OP2   ( 1/ 6/25/ 0)s  7.845*dctBlock[1]#1+-7.846*dctBlock[6]#1+ 7.845*dctBlock[2]#1+-7.846*dctBlock[5]#1  [-31.383,+31.383] [0xc13bfb14,0x3ec404ec]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s -1.561*dctBlock[2]#1+ 1.561*dctBlock[5]#1+ 7.845*dctBlock[1]#1+-7.846*dctBlock[6]#1  [-18.813,+18.813] [0xed2fcb42,0x12d034be]
+-------------------------------- 5 1
+# DEBUG x2 => x2_133
+-------------------------------- 5 1
+D.2002_134 = x1_121 * -7.8569495838710212698430268574156798422336578369140625e-1;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#1+-8.000*dctBlock[6]#1  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+  OP2   ( 1/ 0/31/ 0)s -0.786  [-0.786,-0.786] [0x9b6e58fd,0x9b6e58fd]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 6/25/ 0)s -6.285*dctBlock[1]#1+ 6.286*dctBlock[6]#1  [-12.571,+12.571] [0xe6dbe492,0x19241b6e]
+-------------------------------- 5 1
+x1_135 = D.2002_134 + x6_131;
+  OP1   ( 1/ 6/25/ 0)s -6.285*dctBlock[1]#1+ 6.286*dctBlock[6]#1  [-12.571,+12.571] [0xe6dbe492,0x19241b6e]
+  OP2   ( 1/ 6/25/ 0)s  7.845*dctBlock[1]#1+-7.846*dctBlock[6]#1+ 7.845*dctBlock[2]#1+-7.846*dctBlock[5]#1  [-31.383,+31.383] [0xc13bfb14,0x3ec404ec]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  RSLT  ( 1/ 6/25/ 0)s  1.560*dctBlock[1]#1+-1.561*dctBlock[6]#1+ 7.845*dctBlock[2]#1+-7.846*dctBlock[5]#1  [-18.812,+18.812] [0xda601682,0x259fe97e]
+-------------------------------- 5 1
+# DEBUG x1 => x1_135
+-------------------------------- 5 1
+D.2003_136 = x0_119 + x3_125;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[0]#1+-8.000*dctBlock[7]#1  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[3]#1+-8.000*dctBlock[4]#1  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[0]#1+-8.000*dctBlock[7]#1+ 8.000*dctBlock[3]#1+-8.000*dctBlock[4]#1  [-32.000,+32.000] [0xe000000e,0x1ffffff2]
+-------------------------------- 5 1
+x6_137 = D.2003_136 * 8.3146961230254523567140267914510332047939300537109375e-1;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[0]#1+-8.000*dctBlock[7]#1+ 8.000*dctBlock[3]#1+-8.000*dctBlock[4]#1  [-32.000,+32.000] [0xe000000e,0x1ffffff2]
+  OP2   ( 1/ 0/29/ 2)s  0.831  [+0.831,+0.831] [0x6a6d98a4,0x6a6d98a4]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 6/25/ 0)s  6.651*dctBlock[0]#1+-6.652*dctBlock[7]#1+ 6.651*dctBlock[3]#1+-6.652*dctBlock[4]#1  [-26.605,+26.605] [0xcaca54da,0x3535ab26]
+-------------------------------- 5 1
+# DEBUG x6 => x6_137
+-------------------------------- 5 1
+D.2004_138 = x3_125 * -1.387039845322147524342426549992524087429046630859375e+0;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[3]#1+-8.000*dctBlock[4]#1  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+  OP2   ( 1/ 1/30/ 0)s -1.387  [-1.387,-1.387] [0xa73abd3b,0xa73abd3b]
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s -11.094*dctBlock[3]#1+11.096*dctBlock[4]#1  [-22.190,+22.190] [0xe9cf518b,0x1630ae75]
+-------------------------------- 5 1
+x3_139 = D.2004_138 + x6_137;
+  OP1   ( 1/ 7/24/ 0)s -11.094*dctBlock[3]#1+11.096*dctBlock[4]#1  [-22.190,+22.190] [0xe9cf518b,0x1630ae75]
+  OP2   ( 1/ 6/25/ 0)s  6.651*dctBlock[0]#1+-6.652*dctBlock[7]#1+ 6.651*dctBlock[3]#1+-6.652*dctBlock[4]#1  [-26.605,+26.605] [0xcaca54da,0x3535ab26]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s -4.443*dctBlock[3]#1+ 4.445*dctBlock[4]#1+ 6.651*dctBlock[0]#1+-6.652*dctBlock[7]#1  [-22.190,+22.190] [0xe9cf518b,0x1630ae75]
+-------------------------------- 5 1
+# DEBUG x3 => x3_139
+-------------------------------- 5 1
+D.2005_140 = x0_119 * -2.7589937928294305802268127081333659589290618896484375e-1;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[0]#1+-8.000*dctBlock[7]#1  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+  OP2   ( 1/ 0/30/ 1)s -0.276  [-0.276,-0.276] [0xdcaf5442,0xdcaf5442]
+  *** Zeros right of b.p., 1 I bits changed to S bits in RSLT
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 5/26/ 0)s -2.207*dctBlock[0]#1+ 2.207*dctBlock[7]#1  [-4.414,+4.414] [0xee582d43,0x11a7d2bd]
+-------------------------------- 5 1
+x0_141 = D.2005_140 + x6_137;
+  OP1   ( 1/ 5/26/ 0)s -2.207*dctBlock[0]#1+ 2.207*dctBlock[7]#1  [-4.414,+4.414] [0xee582d43,0x11a7d2bd]
+  OP2   ( 1/ 6/25/ 0)s  6.651*dctBlock[0]#1+-6.652*dctBlock[7]#1+ 6.651*dctBlock[3]#1+-6.652*dctBlock[4]#1  [-26.605,+26.605] [0xcaca54da,0x3535ab26]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 6/25/ 0)s  4.444*dctBlock[0]#1+-4.444*dctBlock[7]#1+ 6.651*dctBlock[3]#1+-6.652*dctBlock[4]#1  [-22.191,+22.191] [0xd39e3e39,0x2c61c1c7]
+-------------------------------- 5 1
+# DEBUG x0 => x0_141
+-------------------------------- 5 1
+x6_142 = x4_126 + x5_128;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#1+ 8.000*dctBlock[0]#1+ 8.000*dctBlock[3]#1+ 8.000*dctBlock[4]#1  [-32.000,+32.000] [0xe0000010,0x1ffffff0]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#1+ 8.000*dctBlock[6]#1+ 8.000*dctBlock[2]#1+ 8.000*dctBlock[5]#1  [-32.000,+32.000] [0xe0000010,0x1ffffff0]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#1+ 8.000*dctBlock[0]#1+ 8.000*dctBlock[3]#1+ 8.000*dctBlock[4]#1+ 8.000*dctBlock[1]#1+ 8.000*dctBlock[6]#1+ 8.000*dctBlock[2]#1+ 8.000*dctBlock[5]#1  [-64.000,+64.000] [0xc0000020,0x3fffffe0]
+-------------------------------- 5 1
+# DEBUG x6 => x6_142
+-------------------------------- 5 1
+x4_143 = x4_126 - x5_128;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#1+ 8.000*dctBlock[0]#1+ 8.000*dctBlock[3]#1+ 8.000*dctBlock[4]#1  [-32.000,+32.000] [0xe0000010,0x1ffffff0]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#1+ 8.000*dctBlock[6]#1+ 8.000*dctBlock[2]#1+ 8.000*dctBlock[5]#1  [-32.000,+32.000] [0xe0000010,0x1ffffff0]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#1+ 8.000*dctBlock[0]#1+ 8.000*dctBlock[3]#1+ 8.000*dctBlock[4]#1+-8.000*dctBlock[1]#1+-8.000*dctBlock[6]#1+-8.000*dctBlock[2]#1+-8.000*dctBlock[5]#1  [-64.000,+64.000] [0xc000001c,0x3fffffe4]
+-------------------------------- 5 1
+# DEBUG x4 => x4_143
+-------------------------------- 5 1
+x5_144 = x0_141 + x2_133;
+  OP1   ( 1/ 6/25/ 0)s  4.444*dctBlock[0]#1+-4.444*dctBlock[7]#1+ 6.651*dctBlock[3]#1+-6.652*dctBlock[4]#1  [-22.191,+22.191] [0xd39e3e39,0x2c61c1c7]
+  OP2   ( 1/ 7/24/ 0)s -1.561*dctBlock[2]#1+ 1.561*dctBlock[5]#1+ 7.845*dctBlock[1]#1+-7.846*dctBlock[6]#1  [-18.813,+18.813] [0xed2fcb42,0x12d034be]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  4.444*dctBlock[0]#1+-4.444*dctBlock[7]#1+ 6.651*dctBlock[3]#1+-6.652*dctBlock[4]#1+-1.561*dctBlock[2]#1+ 1.561*dctBlock[5]#1+ 7.845*dctBlock[1]#1+-7.846*dctBlock[6]#1  [-41.004,+41.004] [0xd6feea5f,0x290115a1]
+-------------------------------- 5 1
+# DEBUG x5 => x5_144
+-------------------------------- 5 1
+x0_145 = x0_141 - x2_133;
+  OP1   ( 1/ 6/25/ 0)s  4.444*dctBlock[0]#1+-4.444*dctBlock[7]#1+ 6.651*dctBlock[3]#1+-6.652*dctBlock[4]#1  [-22.191,+22.191] [0xd39e3e39,0x2c61c1c7]
+  OP2   ( 1/ 7/24/ 0)s -1.561*dctBlock[2]#1+ 1.561*dctBlock[5]#1+ 7.845*dctBlock[1]#1+-7.846*dctBlock[6]#1  [-18.813,+18.813] [0xed2fcb42,0x12d034be]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  4.444*dctBlock[0]#1+-4.444*dctBlock[7]#1+ 6.651*dctBlock[3]#1+-6.652*dctBlock[4]#1+ 1.561*dctBlock[2]#1+-1.561*dctBlock[5]#1+-7.845*dctBlock[1]#1+ 7.846*dctBlock[6]#1  [-41.004,+41.004] [0xd6feea5f,0x290115a1]
+-------------------------------- 5 1
+# DEBUG x0 => x0_145
+-------------------------------- 5 1
+x2_146 = x3_139 + x1_135;
+  OP1   ( 1/ 7/24/ 0)s -4.443*dctBlock[3]#1+ 4.445*dctBlock[4]#1+ 6.651*dctBlock[0]#1+-6.652*dctBlock[7]#1  [-22.190,+22.190] [0xe9cf518b,0x1630ae75]
+  OP2   ( 1/ 6/25/ 0)s  1.560*dctBlock[1]#1+-1.561*dctBlock[6]#1+ 7.845*dctBlock[2]#1+-7.846*dctBlock[5]#1  [-18.812,+18.812] [0xda601682,0x259fe97e]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s -4.443*dctBlock[3]#1+ 4.445*dctBlock[4]#1+ 6.651*dctBlock[0]#1+-6.652*dctBlock[7]#1+ 1.560*dctBlock[1]#1+-1.561*dctBlock[6]#1+ 7.845*dctBlock[2]#1+-7.846*dctBlock[5]#1  [-41.002,+41.002] [0xd6ff5ccc,0x2900a334]
+-------------------------------- 5 1
+# DEBUG x2 => x2_146
+-------------------------------- 5 1
+x3_147 = x3_139 - x1_135;
+  OP1   ( 1/ 7/24/ 0)s -4.443*dctBlock[3]#1+ 4.445*dctBlock[4]#1+ 6.651*dctBlock[0]#1+-6.652*dctBlock[7]#1  [-22.190,+22.190] [0xe9cf518b,0x1630ae75]
+  OP2   ( 1/ 6/25/ 0)s  1.560*dctBlock[1]#1+-1.561*dctBlock[6]#1+ 7.845*dctBlock[2]#1+-7.846*dctBlock[5]#1  [-18.812,+18.812] [0xda601682,0x259fe97e]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s -4.443*dctBlock[3]#1+ 4.445*dctBlock[4]#1+ 6.651*dctBlock[0]#1+-6.652*dctBlock[7]#1+-1.560*dctBlock[1]#1+ 1.561*dctBlock[6]#1+-7.845*dctBlock[2]#1+ 7.846*dctBlock[5]#1  [-41.002,+41.002] [0xd6ff5ccc,0x2900a334]
+-------------------------------- 5 1
+# DEBUG x3 => x3_147
+-------------------------------- 5 1
+D.2006_148 = x7_129 + x8_127;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#1+ 8.000*dctBlock[6]#1+-8.000*dctBlock[2]#1+-8.000*dctBlock[5]#1  [-32.000,+32.000] [0xe000000e,0x1ffffff2]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#1+ 8.000*dctBlock[0]#1+-8.000*dctBlock[3]#1+-8.000*dctBlock[4]#1  [-32.000,+32.000] [0xe000000e,0x1ffffff2]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#1+ 8.000*dctBlock[6]#1+-8.000*dctBlock[2]#1+-8.000*dctBlock[5]#1+ 8.000*dctBlock[7]#1+ 8.000*dctBlock[0]#1+-8.000*dctBlock[3]#1+-8.000*dctBlock[4]#1  [-64.000,+64.000] [0xc000001c,0x3fffffe4]
+-------------------------------- 5 1
+x1_149 = D.2006_148 * 5.4119610014619701221505465582595206797122955322265625e-1;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#1+ 8.000*dctBlock[6]#1+-8.000*dctBlock[2]#1+-8.000*dctBlock[5]#1+ 8.000*dctBlock[7]#1+ 8.000*dctBlock[0]#1+-8.000*dctBlock[3]#1+-8.000*dctBlock[4]#1  [-64.000,+64.000] [0xc000001c,0x3fffffe4]
+  OP2   ( 1/ 0/31/ 0)s  0.541  [+0.541,+0.541] [0x4545e9ef,0x4545e9ef]
+  *** Pessimistic multiplication axiom, shifting op2 left
+  RSLT  ( 1/ 6/25/ 0)s  4.329*dctBlock[1]#1+ 4.329*dctBlock[6]#1+-4.329*dctBlock[2]#1+-4.329*dctBlock[5]#1+ 4.329*dctBlock[7]#1+ 4.329*dctBlock[0]#1+-4.329*dctBlock[3]#1+-4.329*dctBlock[4]#1  [-34.633,+34.633] [0xbabc1514,0x4543eaec]
+-------------------------------- 5 1
+# DEBUG x1 => x1_149
+-------------------------------- 5 1
+D.2007_150 = x7_129 * -1.847759065022573476966272210120223462581634521484375e+0;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#1+ 8.000*dctBlock[6]#1+-8.000*dctBlock[2]#1+-8.000*dctBlock[5]#1  [-32.000,+32.000] [0xe000000e,0x1ffffff2]
+  OP2   ( 1/ 1/30/ 0)s -1.848  [-1.848,-1.848] [0x89be50c3,0x89be50c3]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s -14.780*dctBlock[1]#1+-14.780*dctBlock[6]#1+14.782*dctBlock[2]#1+14.782*dctBlock[5]#1  [-59.125,+59.125] [0xc4dfec84,0x3b20137c]
+-------------------------------- 5 1
+x7_151 = D.2007_150 + x1_149;
+  OP1   ( 1/ 7/24/ 0)s -14.780*dctBlock[1]#1+-14.780*dctBlock[6]#1+14.782*dctBlock[2]#1+14.782*dctBlock[5]#1  [-59.125,+59.125] [0xc4dfec84,0x3b20137c]
+  OP2   ( 1/ 6/25/ 0)s  4.329*dctBlock[1]#1+ 4.329*dctBlock[6]#1+-4.329*dctBlock[2]#1+-4.329*dctBlock[5]#1+ 4.329*dctBlock[7]#1+ 4.329*dctBlock[0]#1+-4.329*dctBlock[3]#1+-4.329*dctBlock[4]#1  [-34.633,+34.633] [0xbabc1514,0x4543eaec]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  RSLT  ( 1/ 7/24/ 0)s -10.452*dctBlock[1]#1+-10.452*dctBlock[6]#1+10.453*dctBlock[2]#1+10.453*dctBlock[5]#1+ 4.329*dctBlock[7]#1+ 4.329*dctBlock[0]#1+-4.329*dctBlock[3]#1+-4.329*dctBlock[4]#1  [-59.125,+59.125] [0xc4dfec84,0x3b20137c]
+-------------------------------- 5 1
+# DEBUG x7 => x7_151
+-------------------------------- 5 1
+D.2008_152 = x8_127 * 7.6536686473017956355846536098397336900234222412109375e-1;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#1+ 8.000*dctBlock[0]#1+-8.000*dctBlock[3]#1+-8.000*dctBlock[4]#1  [-32.000,+32.000] [0xe000000e,0x1ffffff2]
+  OP2   ( 1/ 0/31/ 0)s  0.765  [+0.765,+0.765] [0x61f78a9b,0x61f78a9b]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  RSLT  ( 3/ 6/23/ 0)s  6.121*dctBlock[7]#1+ 6.121*dctBlock[0]#1+-6.122*dctBlock[3]#1+-6.122*dctBlock[4]#1  [-24.487,+24.487] [0xf3c1b0fa,0x0c3e4f06]
+-------------------------------- 5 1
+x8_153 = D.2008_152 + x1_149;
+  OP1   ( 3/ 6/23/ 0)s  6.121*dctBlock[7]#1+ 6.121*dctBlock[0]#1+-6.122*dctBlock[3]#1+-6.122*dctBlock[4]#1  [-24.487,+24.487] [0xf3c1b0fa,0x0c3e4f06]
+  OP2   ( 1/ 6/25/ 0)s  4.329*dctBlock[1]#1+ 4.329*dctBlock[6]#1+-4.329*dctBlock[2]#1+-4.329*dctBlock[5]#1+ 4.329*dctBlock[7]#1+ 4.329*dctBlock[0]#1+-4.329*dctBlock[3]#1+-4.329*dctBlock[4]#1  [-34.633,+34.633] [0xbabc1514,0x4543eaec]
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, converting an I to S in result *** 
+  RSLT  ( 2/ 6/24/ 0)s 10.450*dctBlock[7]#1+10.450*dctBlock[0]#1+-10.451*dctBlock[3]#1+-10.451*dctBlock[4]#1+ 4.329*dctBlock[1]#1+ 4.329*dctBlock[6]#1+-4.329*dctBlock[2]#1+-4.329*dctBlock[5]#1  [-59.119,+59.119] [0xc4e16c80,0x3b1e9380]
+-------------------------------- 5 1
+# DEBUG x8 => x8_153
+-------------------------------- 5 1
+*dctBlock_6(D)[col_2] = x6_142;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#1+ 8.000*dctBlock[0]#1+ 8.000*dctBlock[3]#1+ 8.000*dctBlock[4]#1+ 8.000*dctBlock[1]#1+ 8.000*dctBlock[6]#1+ 8.000*dctBlock[2]#1+ 8.000*dctBlock[5]#1  [-64.000,+64.000] [0xc0000020,0x3fffffe0]
+  RSLT *( 1/ 7/24/ 0)s  8.000*dctBlock[7]#1+ 8.000*dctBlock[0]#1+ 8.000*dctBlock[3]#1+ 8.000*dctBlock[4]#1+ 8.000*dctBlock[1]#1+ 8.000*dctBlock[6]#1+ 8.000*dctBlock[2]#1+ 8.000*dctBlock[5]#1  [-64.000,+64.000] [0xc0000020,0x3fffffe0]
+  Using index 0
+dct.c: In function ‘dct2dTestFlt’:
+dct.c:137:1: warning: Expanding range of a pointer/iterative target [enabled by default]
+-------------------------------- 5 1
+D.1996_154 = dctBlock_6(D) + 256;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 1
+*D.1996_154[col_2] = x4_143;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#1+ 8.000*dctBlock[0]#1+ 8.000*dctBlock[3]#1+ 8.000*dctBlock[4]#1+-8.000*dctBlock[1]#1+-8.000*dctBlock[6]#1+-8.000*dctBlock[2]#1+-8.000*dctBlock[5]#1  [-64.000,+64.000] [0xc000001c,0x3fffffe4]
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock[7]#1+ 8.000*dctBlock[0]#1+ 8.000*dctBlock[3]#1+ 8.000*dctBlock[4]#1+-8.000*dctBlock[1]#1+-8.000*dctBlock[6]#1+-8.000*dctBlock[2]#1+-8.000*dctBlock[5]#1  [-64.000,+64.000] [0xc000001c,0x3fffffe4]
+  Using index 1
+-------------------------------- 5 1
+D.1994_155 = dctBlock_6(D) + 128;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 1
+*D.1994_155[col_2] = x8_153;
+  OP1   ( 2/ 6/24/ 0)s 10.450*dctBlock[7]#1+10.450*dctBlock[0]#1+-10.451*dctBlock[3]#1+-10.451*dctBlock[4]#1+ 4.329*dctBlock[1]#1+ 4.329*dctBlock[6]#1+-4.329*dctBlock[2]#1+-4.329*dctBlock[5]#1  [-59.119,+59.119] [0xc4e16c80,0x3b1e9380]
+  RSLT @( 2/ 6/24/ 0)s 10.450*dctBlock[7]#1+10.450*dctBlock[0]#1+-10.451*dctBlock[3]#1+-10.451*dctBlock[4]#1+ 4.329*dctBlock[1]#1+ 4.329*dctBlock[6]#1+-4.329*dctBlock[2]#1+-4.329*dctBlock[5]#1  [-59.119,+59.119] [0xc4e16c80,0x3b1e9380]
+  Using index 2
+-------------------------------- 5 1
+D.1998_156 = dctBlock_6(D) + 384;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 1
+*D.1998_156[col_2] = x7_151;
+  OP1   ( 1/ 7/24/ 0)s -10.452*dctBlock[1]#1+-10.452*dctBlock[6]#1+10.453*dctBlock[2]#1+10.453*dctBlock[5]#1+ 4.329*dctBlock[7]#1+ 4.329*dctBlock[0]#1+-4.329*dctBlock[3]#1+-4.329*dctBlock[4]#1  [-59.125,+59.125] [0xc4dfec84,0x3b20137c]
+  RSLT @( 1/ 7/24/ 0)s -10.452*dctBlock[1]#1+-10.452*dctBlock[6]#1+10.453*dctBlock[2]#1+10.453*dctBlock[5]#1+ 4.329*dctBlock[7]#1+ 4.329*dctBlock[0]#1+-4.329*dctBlock[3]#1+-4.329*dctBlock[4]#1  [-59.125,+59.125] [0xc4dfec84,0x3b20137c]
+  Using index 3
+-------------------------------- 5 1
+D.1999_157 = dctBlock_6(D) + 448;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 1
+D.2009_158 = x2_146 - x5_144;
+  OP1   ( 1/ 7/24/ 0)s -4.443*dctBlock[3]#1+ 4.445*dctBlock[4]#1+ 6.651*dctBlock[0]#1+-6.652*dctBlock[7]#1+ 1.560*dctBlock[1]#1+-1.561*dctBlock[6]#1+ 7.845*dctBlock[2]#1+-7.846*dctBlock[5]#1  [-41.002,+41.002] [0xd6ff5ccc,0x2900a334]
+  OP2   ( 1/ 7/24/ 0)s  4.444*dctBlock[0]#1+-4.444*dctBlock[7]#1+ 6.651*dctBlock[3]#1+-6.652*dctBlock[4]#1+-1.561*dctBlock[2]#1+ 1.561*dctBlock[5]#1+ 7.845*dctBlock[1]#1+-7.846*dctBlock[6]#1  [-41.004,+41.004] [0xd6feea5f,0x290115a1]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  RSLT  ( 1/ 7/24/ 0)s -11.094*dctBlock[3]#1+11.096*dctBlock[4]#1+ 2.207*dctBlock[0]#1+-2.207*dctBlock[7]#1+-6.285*dctBlock[1]#1+ 6.286*dctBlock[6]#1+ 9.406*dctBlock[2]#1+-9.407*dctBlock[5]#1  [-57.988,+57.988] [0xc6031a67,0x39fce599]
+-------------------------------- 5 1
+*D.1999_157[col_2] = D.2009_158;
+  OP1   ( 1/ 7/24/ 0)s -11.094*dctBlock[3]#1+11.096*dctBlock[4]#1+ 2.207*dctBlock[0]#1+-2.207*dctBlock[7]#1+-6.285*dctBlock[1]#1+ 6.286*dctBlock[6]#1+ 9.406*dctBlock[2]#1+-9.407*dctBlock[5]#1  [-57.988,+57.988] [0xc6031a67,0x39fce599]
+  RSLT @( 1/ 7/24/ 0)s -11.094*dctBlock[3]#1+11.096*dctBlock[4]#1+ 2.207*dctBlock[0]#1+-2.207*dctBlock[7]#1+-6.285*dctBlock[1]#1+ 6.286*dctBlock[6]#1+ 9.406*dctBlock[2]#1+-9.407*dctBlock[5]#1  [-57.988,+57.988] [0xc6031a67,0x39fce599]
+  Using index 4
+-------------------------------- 5 1
+D.1993_159 = dctBlock_6(D) + 64;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 1
+D.2010_160 = x2_146 + x5_144;
+  OP1   ( 1/ 7/24/ 0)s -4.443*dctBlock[3]#1+ 4.445*dctBlock[4]#1+ 6.651*dctBlock[0]#1+-6.652*dctBlock[7]#1+ 1.560*dctBlock[1]#1+-1.561*dctBlock[6]#1+ 7.845*dctBlock[2]#1+-7.846*dctBlock[5]#1  [-41.002,+41.002] [0xd6ff5ccc,0x2900a334]
+  OP2   ( 1/ 7/24/ 0)s  4.444*dctBlock[0]#1+-4.444*dctBlock[7]#1+ 6.651*dctBlock[3]#1+-6.652*dctBlock[4]#1+-1.561*dctBlock[2]#1+ 1.561*dctBlock[5]#1+ 7.845*dctBlock[1]#1+-7.846*dctBlock[6]#1  [-41.004,+41.004] [0xd6feea5f,0x290115a1]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  RSLT  ( 1/ 7/24/ 0)s  2.208*dctBlock[3]#1+-2.207*dctBlock[4]#1+11.095*dctBlock[0]#1+-11.096*dctBlock[7]#1+ 9.406*dctBlock[1]#1+-9.407*dctBlock[6]#1+ 6.284*dctBlock[2]#1+-6.285*dctBlock[5]#1  [-57.987,+57.987] [0xc6033589,0x39fcca77]
+-------------------------------- 5 1
+*D.1993_159[col_2] = D.2010_160;
+  OP1   ( 1/ 7/24/ 0)s  2.208*dctBlock[3]#1+-2.207*dctBlock[4]#1+11.095*dctBlock[0]#1+-11.096*dctBlock[7]#1+ 9.406*dctBlock[1]#1+-9.407*dctBlock[6]#1+ 6.284*dctBlock[2]#1+-6.285*dctBlock[5]#1  [-57.987,+57.987] [0xc6033589,0x39fcca77]
+  RSLT @( 1/ 7/24/ 0)s  2.208*dctBlock[3]#1+-2.207*dctBlock[4]#1+11.095*dctBlock[0]#1+-11.096*dctBlock[7]#1+ 9.406*dctBlock[1]#1+-9.407*dctBlock[6]#1+ 6.284*dctBlock[2]#1+-6.285*dctBlock[5]#1  [-57.987,+57.987] [0xc6033589,0x39fcca77]
+  Using index 5
+-------------------------------- 5 1
+D.1995_161 = dctBlock_6(D) + 192;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 1
+D.2011_162 = x3_147 * 1.4142135623730951454746218587388284504413604736328125e+0;
+  OP1   ( 1/ 7/24/ 0)s -4.443*dctBlock[3]#1+ 4.445*dctBlock[4]#1+ 6.651*dctBlock[0]#1+-6.652*dctBlock[7]#1+-1.560*dctBlock[1]#1+ 1.561*dctBlock[6]#1+-7.845*dctBlock[2]#1+ 7.846*dctBlock[5]#1  [-41.002,+41.002] [0xd6ff5ccc,0x2900a334]
+  OP2   ( 1/ 1/29/ 1)s  1.414  [+1.414,+1.414] [0x5a82799a,0x5a82799a]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s -6.284*dctBlock[3]#1+ 6.285*dctBlock[4]#1+ 9.405*dctBlock[0]#1+-9.408*dctBlock[7]#1+-2.207*dctBlock[1]#1+ 2.206*dctBlock[6]#1+-11.095*dctBlock[2]#1+11.095*dctBlock[5]#1  [-57.984,+57.984] [0xc60402fc,0x39fbfd04]
+-------------------------------- 5 1
+*D.1995_161[col_2] = D.2011_162;
+  OP1   ( 1/ 7/24/ 0)s -6.284*dctBlock[3]#1+ 6.285*dctBlock[4]#1+ 9.405*dctBlock[0]#1+-9.408*dctBlock[7]#1+-2.207*dctBlock[1]#1+ 2.206*dctBlock[6]#1+-11.095*dctBlock[2]#1+11.095*dctBlock[5]#1  [-57.984,+57.984] [0xc60402fc,0x39fbfd04]
+  RSLT @( 1/ 7/24/ 0)s -6.284*dctBlock[3]#1+ 6.285*dctBlock[4]#1+ 9.405*dctBlock[0]#1+-9.408*dctBlock[7]#1+-2.207*dctBlock[1]#1+ 2.206*dctBlock[6]#1+-11.095*dctBlock[2]#1+11.095*dctBlock[5]#1  [-57.984,+57.984] [0xc60402fc,0x39fbfd04]
+  Using index 6
+-------------------------------- 5 1
+D.1997_163 = dctBlock_6(D) + 320;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 1
+D.2012_164 = x0_145 * 1.4142135623730951454746218587388284504413604736328125e+0;
+  OP1   ( 1/ 7/24/ 0)s  4.444*dctBlock[0]#1+-4.444*dctBlock[7]#1+ 6.651*dctBlock[3]#1+-6.652*dctBlock[4]#1+ 1.561*dctBlock[2]#1+-1.561*dctBlock[5]#1+-7.845*dctBlock[1]#1+ 7.846*dctBlock[6]#1  [-41.004,+41.004] [0xd6feea5f,0x290115a1]
+  OP2   ( 1/ 1/29/ 1)s  1.414  [+1.414,+1.414] [0x5a82799a,0x5a82799a]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  6.284*dctBlock[0]#1+-6.286*dctBlock[7]#1+ 9.405*dctBlock[3]#1+-9.408*dctBlock[4]#1+ 2.207*dctBlock[2]#1+-2.208*dctBlock[5]#1+-11.095*dctBlock[1]#1+11.095*dctBlock[6]#1  [-57.988,+57.988] [0xc602f376,0x39fd0c8a]
+-------------------------------- 5 1
+*D.1997_163[col_2] = D.2012_164;
+  OP1   ( 1/ 7/24/ 0)s  6.284*dctBlock[0]#1+-6.286*dctBlock[7]#1+ 9.405*dctBlock[3]#1+-9.408*dctBlock[4]#1+ 2.207*dctBlock[2]#1+-2.208*dctBlock[5]#1+-11.095*dctBlock[1]#1+11.095*dctBlock[6]#1  [-57.988,+57.988] [0xc602f376,0x39fd0c8a]
+  RSLT @( 1/ 7/24/ 0)s  6.284*dctBlock[0]#1+-6.286*dctBlock[7]#1+ 9.405*dctBlock[3]#1+-9.408*dctBlock[4]#1+ 2.207*dctBlock[2]#1+-2.208*dctBlock[5]#1+-11.095*dctBlock[1]#1+11.095*dctBlock[6]#1  [-57.988,+57.988] [0xc602f376,0x39fd0c8a]
+  Using index 7
+-------------------------------- 5 1
+col_165 = col_2 + 1;
+-------------------------------- 5 1
+# DEBUG col => col_165
+-------------------------------- 5 1
+  End of a basic block
+  ======= Starting basic block 6 =====
+# DEBUG col => col_2
+-------------------------------- 6 1
+if (col_2 <= 7)
+-------------------------------- 6 1
+  End of a basic block
+  ======= Starting basic block 7 =====
+return;
+-------------------------------- 7 1
+  End of a basic block
+  ===== Beginning lastpass =====
+  ===== Marking statements not visited =====
+  ===== Starting pass 2 =====
+  ======= Starting basic block 1 =====
+row_3 = 0;
+-------------------------------- 1 2
+# DEBUG row => row_3
+-------------------------------- 1 2
+  End of a basic block
+  ======= Starting basic block 2 =====
+row.0_4 = (unsigned int) row_1;
+-------------------------------- 2 2
+D.1978_5 = row.0_4 * 64;
+-------------------------------- 2 2
+D.1979_7 = dctBlock_6(D) + D.1978_5;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+_fx_shft2.1 = D.1978_5 >> 1;
+D.1979_7 = dctBlock_6(D) + _fx_shft2.1;
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+x0_8 = *D.1979_7[0];
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock[0]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[0]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+# DEBUG x0 => x0_8
+-------------------------------- 2 2
+row.0_9 = (unsigned int) row_1;
+-------------------------------- 2 2
+D.1978_10 = row.0_9 * 64;
+-------------------------------- 2 2
+D.1979_11 = dctBlock_6(D) + D.1978_10;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+_fx_shft2.2 = D.1978_10 >> 1;
+D.1979_11 = dctBlock_6(D) + _fx_shft2.2;
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+x1_12 = *D.1979_11[1];
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock[1]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+# DEBUG x1 => x1_12
+-------------------------------- 2 2
+row.0_13 = (unsigned int) row_1;
+-------------------------------- 2 2
+D.1978_14 = row.0_13 * 64;
+-------------------------------- 2 2
+D.1979_15 = dctBlock_6(D) + D.1978_14;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+_fx_shft2.3 = D.1978_14 >> 1;
+D.1979_15 = dctBlock_6(D) + _fx_shft2.3;
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+x2_16 = *D.1979_15[2];
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock[2]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[2]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+# DEBUG x2 => x2_16
+-------------------------------- 2 2
+row.0_17 = (unsigned int) row_1;
+-------------------------------- 2 2
+D.1978_18 = row.0_17 * 64;
+-------------------------------- 2 2
+D.1979_19 = dctBlock_6(D) + D.1978_18;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+_fx_shft2.4 = D.1978_18 >> 1;
+D.1979_19 = dctBlock_6(D) + _fx_shft2.4;
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+x3_20 = *D.1979_19[3];
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock[3]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[3]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+# DEBUG x3 => x3_20
+-------------------------------- 2 2
+row.0_21 = (unsigned int) row_1;
+-------------------------------- 2 2
+D.1978_22 = row.0_21 * 64;
+-------------------------------- 2 2
+D.1979_23 = dctBlock_6(D) + D.1978_22;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+_fx_shft2.5 = D.1978_22 >> 1;
+D.1979_23 = dctBlock_6(D) + _fx_shft2.5;
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+x4_24 = *D.1979_23[4];
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock[4]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[4]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+# DEBUG x4 => x4_24
+-------------------------------- 2 2
+row.0_25 = (unsigned int) row_1;
+-------------------------------- 2 2
+D.1978_26 = row.0_25 * 64;
+-------------------------------- 2 2
+D.1979_27 = dctBlock_6(D) + D.1978_26;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+_fx_shft2.6 = D.1978_26 >> 1;
+D.1979_27 = dctBlock_6(D) + _fx_shft2.6;
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+x5_28 = *D.1979_27[5];
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock[5]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[5]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+# DEBUG x5 => x5_28
+-------------------------------- 2 2
+row.0_29 = (unsigned int) row_1;
+-------------------------------- 2 2
+D.1978_30 = row.0_29 * 64;
+-------------------------------- 2 2
+D.1979_31 = dctBlock_6(D) + D.1978_30;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+_fx_shft2.7 = D.1978_30 >> 1;
+D.1979_31 = dctBlock_6(D) + _fx_shft2.7;
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+x6_32 = *D.1979_31[6];
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock[6]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[6]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+# DEBUG x6 => x6_32
+-------------------------------- 2 2
+row.0_33 = (unsigned int) row_1;
+-------------------------------- 2 2
+D.1978_34 = row.0_33 * 64;
+-------------------------------- 2 2
+D.1979_35 = dctBlock_6(D) + D.1978_34;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+_fx_shft2.8 = D.1978_34 >> 1;
+D.1979_35 = dctBlock_6(D) + _fx_shft2.8;
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+x7_36 = *D.1979_35[7];
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock[7]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+# DEBUG x7 => x7_36
+-------------------------------- 2 2
+x8_37 = x7_36 + x0_8;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[0]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#1+ 1.000*dctBlock[0]#1  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+-------------------------------- 2 2
+# DEBUG x8 => x8_37
+-------------------------------- 2 2
+x0_38 = x0_8 - x7_36;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[0]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[0]#1+-1.000*dctBlock[7]#1  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+-------------------------------- 2 2
+# DEBUG x0 => x0_38
+-------------------------------- 2 2
+x7_39 = x1_12 + x6_32;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[6]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#1+ 1.000*dctBlock[6]#1  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+-------------------------------- 2 2
+# DEBUG x7 => x7_39
+-------------------------------- 2 2
+x1_40 = x1_12 - x6_32;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[6]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#1+-1.000*dctBlock[6]#1  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+-------------------------------- 2 2
+# DEBUG x1 => x1_40
+-------------------------------- 2 2
+x6_41 = x2_16 + x5_28;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[2]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[5]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[2]#1+ 1.000*dctBlock[5]#1  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+-------------------------------- 2 2
+# DEBUG x6 => x6_41
+-------------------------------- 2 2
+x2_42 = x2_16 - x5_28;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[2]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[5]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[2]#1+-1.000*dctBlock[5]#1  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+-------------------------------- 2 2
+# DEBUG x2 => x2_42
+-------------------------------- 2 2
+x5_43 = x3_20 + x4_24;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[3]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[4]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[3]#1+ 1.000*dctBlock[4]#1  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+-------------------------------- 2 2
+# DEBUG x5 => x5_43
+-------------------------------- 2 2
+x3_44 = x3_20 - x4_24;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[3]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[4]#1  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[3]#1+-1.000*dctBlock[4]#1  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+-------------------------------- 2 2
+# DEBUG x3 => x3_44
+-------------------------------- 2 2
+x4_45 = x8_37 + x5_43;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#1+ 1.000*dctBlock[0]#1  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[3]#1+ 1.000*dctBlock[4]#1  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#1+ 1.000*dctBlock[0]#1+ 1.000*dctBlock[3]#1+ 1.000*dctBlock[4]#1  [-4.000,+4.000] [0xfc000004,0x03fffffc]
+-------------------------------- 2 2
+# DEBUG x4 => x4_45
+-------------------------------- 2 2
+x8_46 = x8_37 - x5_43;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#1+ 1.000*dctBlock[0]#1  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[3]#1+ 1.000*dctBlock[4]#1  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#1+ 1.000*dctBlock[0]#1+-1.000*dctBlock[3]#1+-1.000*dctBlock[4]#1  [-4.000,+4.000] [0xfc000002,0x03fffffe]
+-------------------------------- 2 2
+# DEBUG x8 => x8_46
+-------------------------------- 2 2
+x5_47 = x7_39 + x6_41;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#1+ 1.000*dctBlock[6]#1  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[2]#1+ 1.000*dctBlock[5]#1  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#1+ 1.000*dctBlock[6]#1+ 1.000*dctBlock[2]#1+ 1.000*dctBlock[5]#1  [-4.000,+4.000] [0xfc000004,0x03fffffc]
+-------------------------------- 2 2
+# DEBUG x5 => x5_47
+-------------------------------- 2 2
+x7_48 = x7_39 - x6_41;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#1+ 1.000*dctBlock[6]#1  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[2]#1+ 1.000*dctBlock[5]#1  [-2.000,+2.000] [0xfe000002,0x01fffffe]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#1+ 1.000*dctBlock[6]#1+-1.000*dctBlock[2]#1+-1.000*dctBlock[5]#1  [-4.000,+4.000] [0xfc000002,0x03fffffe]
+-------------------------------- 2 2
+# DEBUG x7 => x7_48
+-------------------------------- 2 2
+D.1980_49 = x1_40 + x2_42;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#1+-1.000*dctBlock[6]#1  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[2]#1+-1.000*dctBlock[5]#1  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#1+-1.000*dctBlock[6]#1+ 1.000*dctBlock[2]#1+-1.000*dctBlock[5]#1  [-4.000,+4.000] [0xfc000002,0x03fffffe]
+-------------------------------- 2 2
+x6_50 = D.1980_49 * 9.807852804032304305792422383092343807220458984375e-1;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#1+-1.000*dctBlock[6]#1+ 1.000*dctBlock[2]#1+-1.000*dctBlock[5]#1  [-4.000,+4.000] [0xfc000002,0x03fffffe]
+x6_50 = D.1980_49 * 2106220352;
+  OP2   ( 1/ 0/25/ 6)s  0.981  [+0.981,+0.981] [0x7d8a5f40,0x7d8a5f40]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  OP1 >>14 (15/ 7/10/ 0)  [-4.000,+3.999] [0xfffff000,0x00000fff]
+_fx_shft1.9 = D.1980_49 >> 14;
+  OP2 >>16 (17/ 0/14/ 1)  [+0.981,+0.981] [0x00007d8a,0x00007d8a]
+x6_50 = _fx_shft1.9 * 32138;
+  RSLT  ( 1/ 6/25/ 0)s  0.980*dctBlock[1]#1+-0.981*dctBlock[6]#1+ 0.980*dctBlock[2]#1+-0.981*dctBlock[5]#1  [-3.921,+3.921] [0xf8285b14,0x07d7a4ec]
+-------------------------------- 2 2
+# DEBUG x6 => x6_50
+-------------------------------- 2 2
+D.1981_51 = x2_42 * -1.1758756024193586231518793283612467348575592041015625e+0;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[2]#1+-1.000*dctBlock[5]#1  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+D.1981_51 = x2_42 * -1262586814;
+  OP2   ( 1/ 1/29/ 1)s -1.176  [-1.176,-1.176] [0xb4be7442,0xb4be7442]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  OP1 >>14 (15/ 7/10/ 0)  [-2.000,+1.999] [0xfffff800,0x000007ff]
+_fx_shft1.10 = x2_42 >> 14;
+  OP2 >>16 (17/ 1/13/ 1)  [-1.176,-1.176] [0xffffb4be,0xffffb4be]
+D.1981_51 = _fx_shft1.10 * -19266;
+  RSLT  ( 1/ 7/24/ 0)s -1.175*dctBlock[2]#1+ 1.176*dctBlock[5]#1  [-2.351,+2.351] [0xfda63b42,0x0259c4be]
+-------------------------------- 2 2
+x2_52 = D.1981_51 + x6_50;
+  OP1   ( 1/ 7/24/ 0)s -1.175*dctBlock[2]#1+ 1.176*dctBlock[5]#1  [-2.351,+2.351] [0xfda63b42,0x0259c4be]
+  OP2   ( 1/ 6/25/ 0)s  0.980*dctBlock[1]#1+-0.981*dctBlock[6]#1+ 0.980*dctBlock[2]#1+-0.981*dctBlock[5]#1  [-3.921,+3.921] [0xf8285b14,0x07d7a4ec]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  OP2 >>1  ( 2/ 6/24/ 0)  [-3.921,+3.921] [0xfc142d8a,0x03ebd276]
+_fx_shft2.11 = x6_50 >> 1;
+x2_52 = D.1981_51 + _fx_shft2.11;
+  RSLT  ( 1/ 7/24/ 0)s -0.195*dctBlock[2]#1+ 0.195*dctBlock[5]#1+ 0.980*dctBlock[1]#1+-0.981*dctBlock[6]#1  [-2.351,+2.351] [0xfda63b42,0x0259c4be]
+-------------------------------- 2 2
+# DEBUG x2 => x2_52
+-------------------------------- 2 2
+D.1982_53 = x1_40 * -7.8569495838710212698430268574156798422336578369140625e-1;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#1+-1.000*dctBlock[6]#1  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+D.1982_53 = x1_40 * -1687267075;
+  OP2   ( 1/ 0/31/ 0)s -0.786  [-0.786,-0.786] [0x9b6e58fd,0x9b6e58fd]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  OP1 >>14 (15/ 7/10/ 0)  [-2.000,+1.999] [0xfffff800,0x000007ff]
+_fx_shft1.12 = x1_40 >> 14;
+  OP2 >>16 (17/ 0/14/ 1)  [-0.786,-0.786] [0xffff9b6e,0xffff9b6e]
+D.1982_53 = _fx_shft1.12 * -25746;
+  RSLT  ( 1/ 6/25/ 0)s -0.785*dctBlock[1]#1+ 0.786*dctBlock[6]#1  [-1.571,+1.571] [0xfcdbd492,0x03242b6e]
+-------------------------------- 2 2
+x1_54 = D.1982_53 + x6_50;
+  OP1   ( 1/ 6/25/ 0)s -0.785*dctBlock[1]#1+ 0.786*dctBlock[6]#1  [-1.571,+1.571] [0xfcdbd492,0x03242b6e]
+  OP2   ( 1/ 6/25/ 0)s  0.980*dctBlock[1]#1+-0.981*dctBlock[6]#1+ 0.980*dctBlock[2]#1+-0.981*dctBlock[5]#1  [-3.921,+3.921] [0xf8285b14,0x07d7a4ec]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 6/25/ 0)s  0.195*dctBlock[1]#1+-0.195*dctBlock[6]#1+ 0.980*dctBlock[2]#1+-0.981*dctBlock[5]#1  [-2.351,+2.351] [0xfb4c8682,0x04b3797e]
+-------------------------------- 2 2
+# DEBUG x1 => x1_54
+-------------------------------- 2 2
+D.1983_55 = x0_38 + x3_44;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[0]#1+-1.000*dctBlock[7]#1  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[3]#1+-1.000*dctBlock[4]#1  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[0]#1+-1.000*dctBlock[7]#1+ 1.000*dctBlock[3]#1+-1.000*dctBlock[4]#1  [-4.000,+4.000] [0xfc000002,0x03fffffe]
+-------------------------------- 2 2
+x6_56 = D.1983_55 * 8.3146961230254523567140267914510332047939300537109375e-1;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[0]#1+-1.000*dctBlock[7]#1+ 1.000*dctBlock[3]#1+-1.000*dctBlock[4]#1  [-4.000,+4.000] [0xfc000002,0x03fffffe]
+x6_56 = D.1983_55 * 1785567396;
+  OP2   ( 1/ 0/29/ 2)s  0.831  [+0.831,+0.831] [0x6a6d98a4,0x6a6d98a4]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  OP1 >>14 (15/ 7/10/ 0)  [-4.000,+3.999] [0xfffff000,0x00000fff]
+_fx_shft1.13 = D.1983_55 >> 14;
+  OP2 >>16 (17/ 0/14/ 1)  [+0.831,+0.831] [0x00006a6d,0x00006a6d]
+x6_56 = _fx_shft1.13 * 27246;
+  RSLT  ( 1/ 6/25/ 0)s  0.831*dctBlock[0]#1+-0.831*dctBlock[7]#1+ 0.831*dctBlock[3]#1+-0.831*dctBlock[4]#1  [-3.324,+3.324] [0xf95a04da,0x06a5fb26]
+-------------------------------- 2 2
+# DEBUG x6 => x6_56
+-------------------------------- 2 2
+D.1984_57 = x3_44 * -1.387039845322147524342426549992524087429046630859375e+0;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[3]#1+-1.000*dctBlock[4]#1  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+D.1984_57 = x3_44 * -1489322693;
+  OP2   ( 1/ 1/30/ 0)s -1.387  [-1.387,-1.387] [0xa73abd3b,0xa73abd3b]
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  OP1 >>15 (16/ 7/ 9/ 0)  [-2.000,+1.998] [0xfffffc00,0x000003ff]
+_fx_shft1.14 = x3_44 >> 15;
+  OP2 >>15 (16/ 1/15/ 0)  [-1.387,-1.387] [0xffff4e75,0xffff4e75]
+D.1984_57 = _fx_shft1.14 * -45451;
+  RSLT  ( 1/ 7/24/ 0)s -1.384*dctBlock[3]#1+ 1.387*dctBlock[4]#1  [-2.771,+2.771] [0xfd3a858b,0x02c57a75]
+-------------------------------- 2 2
+x3_58 = D.1984_57 + x6_56;
+  OP1   ( 1/ 7/24/ 0)s -1.384*dctBlock[3]#1+ 1.387*dctBlock[4]#1  [-2.771,+2.771] [0xfd3a858b,0x02c57a75]
+  OP2   ( 1/ 6/25/ 0)s  0.831*dctBlock[0]#1+-0.831*dctBlock[7]#1+ 0.831*dctBlock[3]#1+-0.831*dctBlock[4]#1  [-3.324,+3.324] [0xf95a04da,0x06a5fb26]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  OP2 >>1  ( 2/ 6/24/ 0)  [-3.324,+3.324] [0xfcad026d,0x0352fd93]
+_fx_shft2.15 = x6_56 >> 1;
+x3_58 = D.1984_57 + _fx_shft2.15;
+  RSLT  ( 1/ 7/24/ 0)s -0.554*dctBlock[3]#1+ 0.556*dctBlock[4]#1+ 0.831*dctBlock[0]#1+-0.831*dctBlock[7]#1  [-2.771,+2.771] [0xfd3a858b,0x02c57a75]
+-------------------------------- 2 2
+# DEBUG x3 => x3_58
+-------------------------------- 2 2
+D.1985_59 = x0_38 * -2.7589937928294305802268127081333659589290618896484375e-1;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[0]#1+-1.000*dctBlock[7]#1  [-2.000,+2.000] [0xfe000001,0x01ffffff]
+D.1985_59 = x0_38 * -592489406;
+  OP2   ( 1/ 0/30/ 1)s -0.276  [-0.276,-0.276] [0xdcaf5442,0xdcaf5442]
+  *** Zeros right of b.p., 1 I bits changed to S bits in RSLT
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  OP1 >>15 (16/ 7/ 9/ 0)  [-2.000,+1.998] [0xfffffc00,0x000003ff]
+_fx_shft1.16 = x0_38 >> 15;
+  OP2 >>14 (15/ 0/17/ 0)  [-0.276,-0.276] [0xffff72bd,0xffff72bd]
+D.1985_59 = _fx_shft1.16 * -36163;
+  RSLT  ( 1/ 5/26/ 0)s -0.275*dctBlock[0]#1+ 0.276*dctBlock[7]#1  [-0.551,+0.551] [0xfdcb8143,0x02347ebd]
+-------------------------------- 2 2
+x0_60 = D.1985_59 + x6_56;
+  OP1   ( 1/ 5/26/ 0)s -0.275*dctBlock[0]#1+ 0.276*dctBlock[7]#1  [-0.551,+0.551] [0xfdcb8143,0x02347ebd]
+  OP2   ( 1/ 6/25/ 0)s  0.831*dctBlock[0]#1+-0.831*dctBlock[7]#1+ 0.831*dctBlock[3]#1+-0.831*dctBlock[4]#1  [-3.324,+3.324] [0xf95a04da,0x06a5fb26]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  OP1 >>1  ( 2/ 5/25/ 0)  [-0.551,+0.551] [0xfee5c0a1,0x011a3f5e]
+_fx_shft1.17 = D.1985_59 >> 1;
+x0_60 = _fx_shft1.17 + x6_56;
+  RSLT  ( 1/ 6/25/ 0)s  0.555*dctBlock[0]#1+-0.556*dctBlock[7]#1+ 0.831*dctBlock[3]#1+-0.831*dctBlock[4]#1  [-2.773,+2.773] [0xfa744439,0x058bbbc7]
+-------------------------------- 2 2
+# DEBUG x0 => x0_60
+-------------------------------- 2 2
+x6_61 = x4_45 + x5_47;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#1+ 1.000*dctBlock[0]#1+ 1.000*dctBlock[3]#1+ 1.000*dctBlock[4]#1  [-4.000,+4.000] [0xfc000004,0x03fffffc]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#1+ 1.000*dctBlock[6]#1+ 1.000*dctBlock[2]#1+ 1.000*dctBlock[5]#1  [-4.000,+4.000] [0xfc000004,0x03fffffc]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#1+ 1.000*dctBlock[0]#1+ 1.000*dctBlock[3]#1+ 1.000*dctBlock[4]#1+ 1.000*dctBlock[1]#1+ 1.000*dctBlock[6]#1+ 1.000*dctBlock[2]#1+ 1.000*dctBlock[5]#1  [-8.000,+8.000] [0xf8000008,0x07fffff8]
+-------------------------------- 2 2
+# DEBUG x6 => x6_61
+-------------------------------- 2 2
+x4_62 = x4_45 - x5_47;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#1+ 1.000*dctBlock[0]#1+ 1.000*dctBlock[3]#1+ 1.000*dctBlock[4]#1  [-4.000,+4.000] [0xfc000004,0x03fffffc]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#1+ 1.000*dctBlock[6]#1+ 1.000*dctBlock[2]#1+ 1.000*dctBlock[5]#1  [-4.000,+4.000] [0xfc000004,0x03fffffc]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#1+ 1.000*dctBlock[0]#1+ 1.000*dctBlock[3]#1+ 1.000*dctBlock[4]#1+-1.000*dctBlock[1]#1+-1.000*dctBlock[6]#1+-1.000*dctBlock[2]#1+-1.000*dctBlock[5]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 2 2
+# DEBUG x4 => x4_62
+-------------------------------- 2 2
+x5_63 = x0_60 + x2_52;
+  OP1   ( 1/ 6/25/ 0)s  0.555*dctBlock[0]#1+-0.556*dctBlock[7]#1+ 0.831*dctBlock[3]#1+-0.831*dctBlock[4]#1  [-2.773,+2.773] [0xfa744439,0x058bbbc7]
+  OP2   ( 1/ 7/24/ 0)s -0.195*dctBlock[2]#1+ 0.195*dctBlock[5]#1+ 0.980*dctBlock[1]#1+-0.981*dctBlock[6]#1  [-2.351,+2.351] [0xfda63b42,0x0259c4be]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  OP1 >>1  ( 2/ 6/24/ 0)  [-2.773,+2.773] [0xfd3a221c,0x02c5dde3]
+_fx_shft1.18 = x0_60 >> 1;
+x5_63 = _fx_shft1.18 + x2_52;
+  RSLT  ( 1/ 7/24/ 0)s  0.555*dctBlock[0]#1+-0.556*dctBlock[7]#1+ 0.831*dctBlock[3]#1+-0.831*dctBlock[4]#1+-0.195*dctBlock[2]#1+ 0.195*dctBlock[5]#1+ 0.980*dctBlock[1]#1+-0.981*dctBlock[6]#1  [-5.124,+5.124] [0xfae05d5f,0x051fa2a1]
+-------------------------------- 2 2
+# DEBUG x5 => x5_63
+-------------------------------- 2 2
+x0_64 = x0_60 - x2_52;
+  OP1   ( 1/ 6/25/ 0)s  0.555*dctBlock[0]#1+-0.556*dctBlock[7]#1+ 0.831*dctBlock[3]#1+-0.831*dctBlock[4]#1  [-2.773,+2.773] [0xfa744439,0x058bbbc7]
+  OP2   ( 1/ 7/24/ 0)s -0.195*dctBlock[2]#1+ 0.195*dctBlock[5]#1+ 0.980*dctBlock[1]#1+-0.981*dctBlock[6]#1  [-2.351,+2.351] [0xfda63b42,0x0259c4be]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  OP1 >>1  ( 2/ 6/24/ 0)  [-2.773,+2.773] [0xfd3a221c,0x02c5dde3]
+_fx_shft1.19 = x0_60 >> 1;
+x0_64 = _fx_shft1.19 - x2_52;
+  RSLT  ( 1/ 7/24/ 0)s  0.555*dctBlock[0]#1+-0.556*dctBlock[7]#1+ 0.831*dctBlock[3]#1+-0.831*dctBlock[4]#1+ 0.195*dctBlock[2]#1+-0.195*dctBlock[5]#1+-0.980*dctBlock[1]#1+ 0.981*dctBlock[6]#1  [-5.124,+5.124] [0xfae05d5f,0x051fa2a1]
+-------------------------------- 2 2
+# DEBUG x0 => x0_64
+-------------------------------- 2 2
+x2_65 = x3_58 + x1_54;
+  OP1   ( 1/ 7/24/ 0)s -0.554*dctBlock[3]#1+ 0.556*dctBlock[4]#1+ 0.831*dctBlock[0]#1+-0.831*dctBlock[7]#1  [-2.771,+2.771] [0xfd3a858b,0x02c57a75]
+  OP2   ( 1/ 6/25/ 0)s  0.195*dctBlock[1]#1+-0.195*dctBlock[6]#1+ 0.980*dctBlock[2]#1+-0.981*dctBlock[5]#1  [-2.351,+2.351] [0xfb4c8682,0x04b3797e]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  OP2 >>1  ( 2/ 6/24/ 0)  [-2.351,+2.351] [0xfda64341,0x0259bcbf]
+_fx_shft2.20 = x1_54 >> 1;
+x2_65 = x3_58 + _fx_shft2.20;
+  RSLT  ( 1/ 7/24/ 0)s -0.554*dctBlock[3]#1+ 0.556*dctBlock[4]#1+ 0.831*dctBlock[0]#1+-0.831*dctBlock[7]#1+ 0.195*dctBlock[1]#1+-0.195*dctBlock[6]#1+ 0.980*dctBlock[2]#1+-0.981*dctBlock[5]#1  [-5.122,+5.122] [0xfae0c8cc,0x051f3734]
+-------------------------------- 2 2
+# DEBUG x2 => x2_65
+-------------------------------- 2 2
+x3_66 = x3_58 - x1_54;
+  OP1   ( 1/ 7/24/ 0)s -0.554*dctBlock[3]#1+ 0.556*dctBlock[4]#1+ 0.831*dctBlock[0]#1+-0.831*dctBlock[7]#1  [-2.771,+2.771] [0xfd3a858b,0x02c57a75]
+  OP2   ( 1/ 6/25/ 0)s  0.195*dctBlock[1]#1+-0.195*dctBlock[6]#1+ 0.980*dctBlock[2]#1+-0.981*dctBlock[5]#1  [-2.351,+2.351] [0xfb4c8682,0x04b3797e]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  OP2 >>1  ( 2/ 6/24/ 0)  [-2.351,+2.351] [0xfda64341,0x0259bcbf]
+_fx_shft2.21 = x1_54 >> 1;
+x3_66 = x3_58 - _fx_shft2.21;
+  RSLT  ( 1/ 7/24/ 0)s -0.554*dctBlock[3]#1+ 0.556*dctBlock[4]#1+ 0.831*dctBlock[0]#1+-0.831*dctBlock[7]#1+-0.195*dctBlock[1]#1+ 0.195*dctBlock[6]#1+-0.980*dctBlock[2]#1+ 0.981*dctBlock[5]#1  [-5.122,+5.122] [0xfae0c8cc,0x051f3734]
+-------------------------------- 2 2
+# DEBUG x3 => x3_66
+-------------------------------- 2 2
+D.1986_67 = x7_48 + x8_46;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#1+ 1.000*dctBlock[6]#1+-1.000*dctBlock[2]#1+-1.000*dctBlock[5]#1  [-4.000,+4.000] [0xfc000002,0x03fffffe]
+  OP2   ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#1+ 1.000*dctBlock[0]#1+-1.000*dctBlock[3]#1+-1.000*dctBlock[4]#1  [-4.000,+4.000] [0xfc000002,0x03fffffe]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#1+ 1.000*dctBlock[6]#1+-1.000*dctBlock[2]#1+-1.000*dctBlock[5]#1+ 1.000*dctBlock[7]#1+ 1.000*dctBlock[0]#1+-1.000*dctBlock[3]#1+-1.000*dctBlock[4]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 2 2
+x1_68 = D.1986_67 * 5.4119610014619701221505465582595206797122955322265625e-1;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#1+ 1.000*dctBlock[6]#1+-1.000*dctBlock[2]#1+-1.000*dctBlock[5]#1+ 1.000*dctBlock[7]#1+ 1.000*dctBlock[0]#1+-1.000*dctBlock[3]#1+-1.000*dctBlock[4]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+x1_68 = D.1986_67 * 1162209775;
+  OP2   ( 1/ 0/31/ 0)s  0.541  [+0.541,+0.541] [0x4545e9ef,0x4545e9ef]
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  OP1 >>14 (15/ 7/10/ 0)  [-8.000,+7.999] [0xffffe000,0x00001fff]
+_fx_shft1.22 = D.1986_67 >> 14;
+  OP2 >>16 (17/ 0/14/ 1)  [+0.541,+0.541] [0x00004545,0x00004545]
+x1_68 = _fx_shft1.22 * 17734;
+  RSLT  ( 1/ 6/25/ 0)s  0.541*dctBlock[1]#1+ 0.541*dctBlock[6]#1+-0.541*dctBlock[2]#1+-0.541*dctBlock[5]#1+ 0.541*dctBlock[7]#1+ 0.541*dctBlock[0]#1+-0.541*dctBlock[3]#1+-0.541*dctBlock[4]#1  [-4.327,+4.327] [0xf7587514,0x08a78aec]
+-------------------------------- 2 2
+# DEBUG x1 => x1_68
+-------------------------------- 2 2
+D.1987_69 = x7_48 * -1.847759065022573476966272210120223462581634521484375e+0;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[1]#1+ 1.000*dctBlock[6]#1+-1.000*dctBlock[2]#1+-1.000*dctBlock[5]#1  [-4.000,+4.000] [0xfc000002,0x03fffffe]
+D.1987_69 = x7_48 * -1984016189;
+  OP2   ( 1/ 1/30/ 0)s -1.848  [-1.848,-1.848] [0x89be50c3,0x89be50c3]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  OP1 >>14 (15/ 7/10/ 0)  [-4.000,+3.999] [0xfffff000,0x00000fff]
+_fx_shft1.23 = x7_48 >> 14;
+  OP2 >>16 (17/ 1/13/ 1)  [-1.848,-1.848] [0xffff89be,0xffff89be]
+D.1987_69 = _fx_shft1.23 * -30274;
+  RSLT  ( 1/ 7/24/ 0)s -1.846*dctBlock[1]#1+-1.846*dctBlock[6]#1+ 1.848*dctBlock[2]#1+ 1.848*dctBlock[5]#1  [-7.388,+7.388] [0xf89ccc84,0x0763337c]
+-------------------------------- 2 2
+x7_70 = D.1987_69 + x1_68;
+  OP1   ( 1/ 7/24/ 0)s -1.846*dctBlock[1]#1+-1.846*dctBlock[6]#1+ 1.848*dctBlock[2]#1+ 1.848*dctBlock[5]#1  [-7.388,+7.388] [0xf89ccc84,0x0763337c]
+  OP2   ( 1/ 6/25/ 0)s  0.541*dctBlock[1]#1+ 0.541*dctBlock[6]#1+-0.541*dctBlock[2]#1+-0.541*dctBlock[5]#1+ 0.541*dctBlock[7]#1+ 0.541*dctBlock[0]#1+-0.541*dctBlock[3]#1+-0.541*dctBlock[4]#1  [-4.327,+4.327] [0xf7587514,0x08a78aec]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  OP2 >>1  ( 2/ 6/24/ 0)  [-4.327,+4.327] [0xfbac3a8a,0x0453c576]
+_fx_shft2.24 = x1_68 >> 1;
+x7_70 = D.1987_69 + _fx_shft2.24;
+  RSLT  ( 1/ 7/24/ 0)s -1.305*dctBlock[1]#1+-1.305*dctBlock[6]#1+ 1.307*dctBlock[2]#1+ 1.307*dctBlock[5]#1+ 0.541*dctBlock[7]#1+ 0.541*dctBlock[0]#1+-0.541*dctBlock[3]#1+-0.541*dctBlock[4]#1  [-7.388,+7.388] [0xf89ccc84,0x0763337c]
+-------------------------------- 2 2
+# DEBUG x7 => x7_70
+-------------------------------- 2 2
+D.1988_71 = x8_46 * 7.6536686473017956355846536098397336900234222412109375e-1;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#1+ 1.000*dctBlock[0]#1+-1.000*dctBlock[3]#1+-1.000*dctBlock[4]#1  [-4.000,+4.000] [0xfc000002,0x03fffffe]
+D.1988_71 = x8_46 * 1643612827;
+  OP2   ( 1/ 0/31/ 0)s  0.765  [+0.765,+0.765] [0x61f78a9b,0x61f78a9b]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  OP1 >>14 (15/ 7/10/ 0)  [-4.000,+3.999] [0xfffff000,0x00000fff]
+_fx_shft1.25 = x8_46 >> 14;
+  OP2 >>18 (19/ 0/12/ 1)  [+0.765,+0.765] [0x0000187d,0x0000187d]
+D.1988_71 = _fx_shft1.25 * 6270;
+  RSLT  ( 3/ 6/23/ 0)s  0.765*dctBlock[7]#1+ 0.765*dctBlock[0]#1+-0.765*dctBlock[3]#1+-0.765*dctBlock[4]#1  [-3.060,+3.060] [0xfe7860fa,0x01879f06]
+-------------------------------- 2 2
+x8_72 = D.1988_71 + x1_68;
+  OP1   ( 3/ 6/23/ 0)s  0.765*dctBlock[7]#1+ 0.765*dctBlock[0]#1+-0.765*dctBlock[3]#1+-0.765*dctBlock[4]#1  [-3.060,+3.060] [0xfe7860fa,0x01879f06]
+  OP2   ( 1/ 6/25/ 0)s  0.541*dctBlock[1]#1+ 0.541*dctBlock[6]#1+-0.541*dctBlock[2]#1+-0.541*dctBlock[5]#1+ 0.541*dctBlock[7]#1+ 0.541*dctBlock[0]#1+-0.541*dctBlock[3]#1+-0.541*dctBlock[4]#1  [-4.327,+4.327] [0xf7587514,0x08a78aec]
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, converting an I to S in result *** 
+  *** Result format is pessimistic ***
+  OP1 <<1  ( 2/ 6/23/ 1)  [-3.060,+3.060] [0xfcf0c1f4,0x030f3e0c]
+_fx_shft1.26 = D.1988_71 << 1;
+  OP2 >>1  ( 2/ 6/24/ 0)  [-4.327,+4.327] [0xfbac3a8a,0x0453c576]
+_fx_shft2.27 = x1_68 >> 1;
+x8_72 = _fx_shft1.26 + _fx_shft2.27;
+  RSLT  ( 2/ 6/24/ 0)s  1.305*dctBlock[7]#1+ 1.305*dctBlock[0]#1+-1.306*dctBlock[3]#1+-1.306*dctBlock[4]#1+ 0.541*dctBlock[1]#1+ 0.541*dctBlock[6]#1+-0.541*dctBlock[2]#1+-0.541*dctBlock[5]#1  [-7.387,+7.387] [0xf89cfc80,0x07630380]
+-------------------------------- 2 2
+# DEBUG x8 => x8_72
+-------------------------------- 2 2
+row.0_73 = (unsigned int) row_1;
+-------------------------------- 2 2
+D.1978_74 = row.0_73 * 64;
+-------------------------------- 2 2
+D.1979_75 = dctBlock_6(D) + D.1978_74;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+_fx_shft2.28 = D.1978_74 >> 1;
+D.1979_75 = dctBlock_6(D) + _fx_shft2.28;
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+*D.1979_75[0] = x6_61;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#1+ 1.000*dctBlock[0]#1+ 1.000*dctBlock[3]#1+ 1.000*dctBlock[4]#1+ 1.000*dctBlock[1]#1+ 1.000*dctBlock[6]#1+ 1.000*dctBlock[2]#1+ 1.000*dctBlock[5]#1  [-8.000,+8.000] [0xf8000008,0x07fffff8]
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock[7]#1+ 1.000*dctBlock[0]#1+ 1.000*dctBlock[3]#1+ 1.000*dctBlock[4]#1+ 1.000*dctBlock[1]#1+ 1.000*dctBlock[6]#1+ 1.000*dctBlock[2]#1+ 1.000*dctBlock[5]#1  [-8.000,+8.000] [0xf8000008,0x07fffff8]
+-------------------------------- 2 2
+row.0_76 = (unsigned int) row_1;
+-------------------------------- 2 2
+D.1978_77 = row.0_76 * 64;
+-------------------------------- 2 2
+D.1979_78 = dctBlock_6(D) + D.1978_77;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+_fx_shft2.29 = D.1978_77 >> 1;
+D.1979_78 = dctBlock_6(D) + _fx_shft2.29;
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+*D.1979_78[4] = x4_62;
+  OP1   ( 1/ 7/24/ 0)s  1.000*dctBlock[7]#1+ 1.000*dctBlock[0]#1+ 1.000*dctBlock[3]#1+ 1.000*dctBlock[4]#1+-1.000*dctBlock[1]#1+-1.000*dctBlock[6]#1+-1.000*dctBlock[2]#1+-1.000*dctBlock[5]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock[7]#1+ 1.000*dctBlock[0]#1+ 1.000*dctBlock[3]#1+ 1.000*dctBlock[4]#1+-1.000*dctBlock[1]#1+-1.000*dctBlock[6]#1+-1.000*dctBlock[2]#1+-1.000*dctBlock[5]#1  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 2 2
+row.0_79 = (unsigned int) row_1;
+-------------------------------- 2 2
+D.1978_80 = row.0_79 * 64;
+-------------------------------- 2 2
+D.1979_81 = dctBlock_6(D) + D.1978_80;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+_fx_shft2.30 = D.1978_80 >> 1;
+D.1979_81 = dctBlock_6(D) + _fx_shft2.30;
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+*D.1979_81[2] = x8_72;
+  OP1   ( 2/ 6/24/ 0)s  1.305*dctBlock[7]#1+ 1.305*dctBlock[0]#1+-1.306*dctBlock[3]#1+-1.306*dctBlock[4]#1+ 0.541*dctBlock[1]#1+ 0.541*dctBlock[6]#1+-0.541*dctBlock[2]#1+-0.541*dctBlock[5]#1  [-7.387,+7.387] [0xf89cfc80,0x07630380]
+  RSLT @( 2/ 6/24/ 0)s  1.305*dctBlock[7]#1+ 1.305*dctBlock[0]#1+-1.306*dctBlock[3]#1+-1.306*dctBlock[4]#1+ 0.541*dctBlock[1]#1+ 0.541*dctBlock[6]#1+-0.541*dctBlock[2]#1+-0.541*dctBlock[5]#1  [-7.387,+7.387] [0xf89cfc80,0x07630380]
+-------------------------------- 2 2
+row.0_82 = (unsigned int) row_1;
+-------------------------------- 2 2
+D.1978_83 = row.0_82 * 64;
+-------------------------------- 2 2
+D.1979_84 = dctBlock_6(D) + D.1978_83;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+_fx_shft2.31 = D.1978_83 >> 1;
+D.1979_84 = dctBlock_6(D) + _fx_shft2.31;
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+*D.1979_84[6] = x7_70;
+  OP1   ( 1/ 7/24/ 0)s -1.305*dctBlock[1]#1+-1.305*dctBlock[6]#1+ 1.307*dctBlock[2]#1+ 1.307*dctBlock[5]#1+ 0.541*dctBlock[7]#1+ 0.541*dctBlock[0]#1+-0.541*dctBlock[3]#1+-0.541*dctBlock[4]#1  [-7.388,+7.388] [0xf89ccc84,0x0763337c]
+  RSLT @( 1/ 7/24/ 0)s -1.305*dctBlock[1]#1+-1.305*dctBlock[6]#1+ 1.307*dctBlock[2]#1+ 1.307*dctBlock[5]#1+ 0.541*dctBlock[7]#1+ 0.541*dctBlock[0]#1+-0.541*dctBlock[3]#1+-0.541*dctBlock[4]#1  [-7.388,+7.388] [0xf89ccc84,0x0763337c]
+-------------------------------- 2 2
+row.0_85 = (unsigned int) row_1;
+-------------------------------- 2 2
+D.1978_86 = row.0_85 * 64;
+-------------------------------- 2 2
+D.1979_87 = dctBlock_6(D) + D.1978_86;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+_fx_shft2.32 = D.1978_86 >> 1;
+D.1979_87 = dctBlock_6(D) + _fx_shft2.32;
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+D.1989_88 = x2_65 - x5_63;
+  OP1   ( 1/ 7/24/ 0)s -0.554*dctBlock[3]#1+ 0.556*dctBlock[4]#1+ 0.831*dctBlock[0]#1+-0.831*dctBlock[7]#1+ 0.195*dctBlock[1]#1+-0.195*dctBlock[6]#1+ 0.980*dctBlock[2]#1+-0.981*dctBlock[5]#1  [-5.122,+5.122] [0xfae0c8cc,0x051f3734]
+  OP2   ( 1/ 7/24/ 0)s  0.555*dctBlock[0]#1+-0.556*dctBlock[7]#1+ 0.831*dctBlock[3]#1+-0.831*dctBlock[4]#1+-0.195*dctBlock[2]#1+ 0.195*dctBlock[5]#1+ 0.980*dctBlock[1]#1+-0.981*dctBlock[6]#1  [-5.124,+5.124] [0xfae05d5f,0x051fa2a1]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s -1.384*dctBlock[3]#1+ 1.387*dctBlock[4]#1+ 0.275*dctBlock[0]#1+-0.276*dctBlock[7]#1+-0.785*dctBlock[1]#1+ 0.786*dctBlock[6]#1+ 1.175*dctBlock[2]#1+-1.176*dctBlock[5]#1  [-7.244,+7.244] [0xf8c18b67,0x073e7499]
+-------------------------------- 2 2
+*D.1979_87[7] = D.1989_88;
+  OP1   ( 1/ 7/24/ 0)s -1.384*dctBlock[3]#1+ 1.387*dctBlock[4]#1+ 0.275*dctBlock[0]#1+-0.276*dctBlock[7]#1+-0.785*dctBlock[1]#1+ 0.786*dctBlock[6]#1+ 1.175*dctBlock[2]#1+-1.176*dctBlock[5]#1  [-7.244,+7.244] [0xf8c18b67,0x073e7499]
+  RSLT @( 1/ 7/24/ 0)s -1.384*dctBlock[3]#1+ 1.387*dctBlock[4]#1+ 0.275*dctBlock[0]#1+-0.276*dctBlock[7]#1+-0.785*dctBlock[1]#1+ 0.786*dctBlock[6]#1+ 1.175*dctBlock[2]#1+-1.176*dctBlock[5]#1  [-7.244,+7.244] [0xf8c18b67,0x073e7499]
+-------------------------------- 2 2
+row.0_89 = (unsigned int) row_1;
+-------------------------------- 2 2
+D.1978_90 = row.0_89 * 64;
+-------------------------------- 2 2
+D.1979_91 = dctBlock_6(D) + D.1978_90;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+_fx_shft2.33 = D.1978_90 >> 1;
+D.1979_91 = dctBlock_6(D) + _fx_shft2.33;
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+D.1990_92 = x2_65 + x5_63;
+  OP1   ( 1/ 7/24/ 0)s -0.554*dctBlock[3]#1+ 0.556*dctBlock[4]#1+ 0.831*dctBlock[0]#1+-0.831*dctBlock[7]#1+ 0.195*dctBlock[1]#1+-0.195*dctBlock[6]#1+ 0.980*dctBlock[2]#1+-0.981*dctBlock[5]#1  [-5.122,+5.122] [0xfae0c8cc,0x051f3734]
+  OP2   ( 1/ 7/24/ 0)s  0.555*dctBlock[0]#1+-0.556*dctBlock[7]#1+ 0.831*dctBlock[3]#1+-0.831*dctBlock[4]#1+-0.195*dctBlock[2]#1+ 0.195*dctBlock[5]#1+ 0.980*dctBlock[1]#1+-0.981*dctBlock[6]#1  [-5.124,+5.124] [0xfae05d5f,0x051fa2a1]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  0.277*dctBlock[3]#1+-0.276*dctBlock[4]#1+ 1.386*dctBlock[0]#1+-1.387*dctBlock[7]#1+ 1.175*dctBlock[1]#1+-1.176*dctBlock[6]#1+ 0.785*dctBlock[2]#1+-0.786*dctBlock[5]#1  [-7.247,+7.247] [0xf8c0d489,0x073f2b77]
+-------------------------------- 2 2
+*D.1979_91[1] = D.1990_92;
+  OP1   ( 1/ 7/24/ 0)s  0.277*dctBlock[3]#1+-0.276*dctBlock[4]#1+ 1.386*dctBlock[0]#1+-1.387*dctBlock[7]#1+ 1.175*dctBlock[1]#1+-1.176*dctBlock[6]#1+ 0.785*dctBlock[2]#1+-0.786*dctBlock[5]#1  [-7.247,+7.247] [0xf8c0d489,0x073f2b77]
+  RSLT @( 1/ 7/24/ 0)s  0.277*dctBlock[3]#1+-0.276*dctBlock[4]#1+ 1.386*dctBlock[0]#1+-1.387*dctBlock[7]#1+ 1.175*dctBlock[1]#1+-1.176*dctBlock[6]#1+ 0.785*dctBlock[2]#1+-0.786*dctBlock[5]#1  [-7.247,+7.247] [0xf8c0d489,0x073f2b77]
+-------------------------------- 2 2
+row.0_93 = (unsigned int) row_1;
+-------------------------------- 2 2
+D.1978_94 = row.0_93 * 64;
+-------------------------------- 2 2
+D.1979_95 = dctBlock_6(D) + D.1978_94;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+_fx_shft2.34 = D.1978_94 >> 1;
+D.1979_95 = dctBlock_6(D) + _fx_shft2.34;
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+D.1991_96 = x3_66 * 1.4142135623730951454746218587388284504413604736328125e+0;
+  OP1   ( 1/ 7/24/ 0)s -0.554*dctBlock[3]#1+ 0.556*dctBlock[4]#1+ 0.831*dctBlock[0]#1+-0.831*dctBlock[7]#1+-0.195*dctBlock[1]#1+ 0.195*dctBlock[6]#1+-0.980*dctBlock[2]#1+ 0.981*dctBlock[5]#1  [-5.122,+5.122] [0xfae0c8cc,0x051f3734]
+D.1991_96 = x3_66 * 1518500250;
+  OP2   ( 1/ 1/29/ 1)s  1.414  [+1.414,+1.414] [0x5a82799a,0x5a82799a]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  OP1 >>14 (15/ 7/10/ 0)  [-5.122,+5.121] [0xffffeb83,0x0000147c]
+_fx_shft1.35 = x3_66 >> 14;
+  OP2 >>16 (17/ 1/13/ 1)  [+1.414,+1.414] [0x00005a82,0x00005a82]
+D.1991_96 = _fx_shft1.35 * 23170;
+  RSLT  ( 1/ 7/24/ 0)s -0.783*dctBlock[3]#1+ 0.784*dctBlock[4]#1+ 1.174*dctBlock[0]#1+-1.177*dctBlock[7]#1+-0.276*dctBlock[1]#1+ 0.275*dctBlock[6]#1+-1.387*dctBlock[2]#1+ 1.387*dctBlock[5]#1  [-7.242,+7.242] [0xf8c20108,0x073dfef8]
+-------------------------------- 2 2
+*D.1979_95[3] = D.1991_96;
+  OP1   ( 1/ 7/24/ 0)s -0.783*dctBlock[3]#1+ 0.784*dctBlock[4]#1+ 1.174*dctBlock[0]#1+-1.177*dctBlock[7]#1+-0.276*dctBlock[1]#1+ 0.275*dctBlock[6]#1+-1.387*dctBlock[2]#1+ 1.387*dctBlock[5]#1  [-7.242,+7.242] [0xf8c20108,0x073dfef8]
+  RSLT @( 1/ 7/24/ 0)s -0.783*dctBlock[3]#1+ 0.784*dctBlock[4]#1+ 1.174*dctBlock[0]#1+-1.177*dctBlock[7]#1+-0.276*dctBlock[1]#1+ 0.275*dctBlock[6]#1+-1.387*dctBlock[2]#1+ 1.387*dctBlock[5]#1  [-7.242,+7.242] [0xf8c20108,0x073dfef8]
+-------------------------------- 2 2
+row.0_97 = (unsigned int) row_1;
+-------------------------------- 2 2
+D.1978_98 = row.0_97 * 64;
+-------------------------------- 2 2
+D.1979_99 = dctBlock_6(D) + D.1978_98;
+  OP1  *( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+  Pointer stride will be shifted 1
+_fx_shft2.36 = D.1978_98 >> 1;
+D.1979_99 = dctBlock_6(D) + _fx_shft2.36;
+  RSLT @( 1/ 7/24/ 0)s  1.000*dctBlock#2  [-1.000,+1.000] [0xff000001,0x00ffffff]
+-------------------------------- 2 2
+D.1992_100 = x0_64 * 1.4142135623730951454746218587388284504413604736328125e+0;
+  OP1   ( 1/ 7/24/ 0)s  0.555*dctBlock[0]#1+-0.556*dctBlock[7]#1+ 0.831*dctBlock[3]#1+-0.831*dctBlock[4]#1+ 0.195*dctBlock[2]#1+-0.195*dctBlock[5]#1+-0.980*dctBlock[1]#1+ 0.981*dctBlock[6]#1  [-5.124,+5.124] [0xfae05d5f,0x051fa2a1]
+D.1992_100 = x0_64 * 1518500250;
+  OP2   ( 1/ 1/29/ 1)s  1.414  [+1.414,+1.414] [0x5a82799a,0x5a82799a]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  OP1 >>14 (15/ 7/10/ 0)  [-5.124,+5.123] [0xffffeb81,0x0000147e]
+_fx_shft1.37 = x0_64 >> 14;
+  OP2 >>16 (17/ 1/13/ 1)  [+1.414,+1.414] [0x00005a82,0x00005a82]
+D.1992_100 = _fx_shft1.37 * 23170;
+  RSLT  ( 1/ 7/24/ 0)s  0.784*dctBlock[0]#1+-0.786*dctBlock[7]#1+ 1.174*dctBlock[3]#1+-1.177*dctBlock[4]#1+ 0.275*dctBlock[2]#1+-0.276*dctBlock[5]#1+-1.387*dctBlock[1]#1+ 1.387*dctBlock[6]#1  [-7.245,+7.245] [0xf8c14c04,0x073eb3fc]
+-------------------------------- 2 2
+*D.1979_99[5] = D.1992_100;
+  OP1   ( 1/ 7/24/ 0)s  0.784*dctBlock[0]#1+-0.786*dctBlock[7]#1+ 1.174*dctBlock[3]#1+-1.177*dctBlock[4]#1+ 0.275*dctBlock[2]#1+-0.276*dctBlock[5]#1+-1.387*dctBlock[1]#1+ 1.387*dctBlock[6]#1  [-7.245,+7.245] [0xf8c14c04,0x073eb3fc]
+  RSLT @( 1/ 7/24/ 0)s  0.784*dctBlock[0]#1+-0.786*dctBlock[7]#1+ 1.174*dctBlock[3]#1+-1.177*dctBlock[4]#1+ 0.275*dctBlock[2]#1+-0.276*dctBlock[5]#1+-1.387*dctBlock[1]#1+ 1.387*dctBlock[6]#1  [-7.245,+7.245] [0xf8c14c04,0x073eb3fc]
+-------------------------------- 2 2
+row_101 = row_1 + 1;
+-------------------------------- 2 2
+# DEBUG row => row_101
+-------------------------------- 2 2
+  End of a basic block
+  ======= Starting basic block 3 =====
+# DEBUG row => row_1
+-------------------------------- 3 2
+if (row_1 <= 7)
+-------------------------------- 3 2
+  End of a basic block
+  ======= Starting basic block 4 =====
+col_102 = 0;
+-------------------------------- 4 2
+# DEBUG col => col_102
+-------------------------------- 4 2
+  End of a basic block
+  ======= Starting basic block 5 =====
+x0_103 = *dctBlock_6(D)[col_2];
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock[0]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[0]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 2
+# DEBUG x0 => x0_103
+-------------------------------- 5 2
+D.1993_104 = dctBlock_6(D) + 64;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+D.1993_104 = dctBlock_6(D) + 32;
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 2
+x1_105 = *D.1993_104[col_2];
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock[1]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 2
+# DEBUG x1 => x1_105
+-------------------------------- 5 2
+D.1994_106 = dctBlock_6(D) + 128;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+D.1994_106 = dctBlock_6(D) + 64;
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 2
+x2_107 = *D.1994_106[col_2];
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock[2]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[2]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 2
+# DEBUG x2 => x2_107
+-------------------------------- 5 2
+D.1995_108 = dctBlock_6(D) + 192;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+D.1995_108 = dctBlock_6(D) + 96;
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 2
+x3_109 = *D.1995_108[col_2];
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock[3]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[3]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 2
+# DEBUG x3 => x3_109
+-------------------------------- 5 2
+D.1996_110 = dctBlock_6(D) + 256;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+D.1996_110 = dctBlock_6(D) + 128;
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 2
+x4_111 = *D.1996_110[col_2];
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock[4]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[4]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 2
+# DEBUG x4 => x4_111
+-------------------------------- 5 2
+D.1997_112 = dctBlock_6(D) + 320;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+D.1997_112 = dctBlock_6(D) + 160;
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 2
+x5_113 = *D.1997_112[col_2];
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock[5]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[5]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 2
+# DEBUG x5 => x5_113
+-------------------------------- 5 2
+D.1998_114 = dctBlock_6(D) + 384;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+D.1998_114 = dctBlock_6(D) + 192;
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 2
+x6_115 = *D.1998_114[col_2];
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock[6]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[6]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 2
+# DEBUG x6 => x6_115
+-------------------------------- 5 2
+D.1999_116 = dctBlock_6(D) + 448;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+D.1999_116 = dctBlock_6(D) + 224;
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 2
+x7_117 = *D.1999_116[col_2];
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock[7]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 2
+# DEBUG x7 => x7_117
+-------------------------------- 5 2
+x8_118 = x7_117 + x0_103;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[0]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#2+ 8.000*dctBlock[0]#2  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+-------------------------------- 5 2
+# DEBUG x8 => x8_118
+-------------------------------- 5 2
+x0_119 = x0_103 - x7_117;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[0]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[0]#2+-8.000*dctBlock[7]#2  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+-------------------------------- 5 2
+# DEBUG x0 => x0_119
+-------------------------------- 5 2
+x7_120 = x1_105 + x6_115;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[6]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#2+ 8.000*dctBlock[6]#2  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+-------------------------------- 5 2
+# DEBUG x7 => x7_120
+-------------------------------- 5 2
+x1_121 = x1_105 - x6_115;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[6]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#2+-8.000*dctBlock[6]#2  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+-------------------------------- 5 2
+# DEBUG x1 => x1_121
+-------------------------------- 5 2
+x6_122 = x2_107 + x5_113;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[2]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[5]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[2]#2+ 8.000*dctBlock[5]#2  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+-------------------------------- 5 2
+# DEBUG x6 => x6_122
+-------------------------------- 5 2
+x2_123 = x2_107 - x5_113;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[2]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[5]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[2]#2+-8.000*dctBlock[5]#2  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+-------------------------------- 5 2
+# DEBUG x2 => x2_123
+-------------------------------- 5 2
+x5_124 = x3_109 + x4_111;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[3]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[4]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[3]#2+ 8.000*dctBlock[4]#2  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+-------------------------------- 5 2
+# DEBUG x5 => x5_124
+-------------------------------- 5 2
+x3_125 = x3_109 - x4_111;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[3]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[4]#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[3]#2+-8.000*dctBlock[4]#2  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+-------------------------------- 5 2
+# DEBUG x3 => x3_125
+-------------------------------- 5 2
+x4_126 = x8_118 + x5_124;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#2+ 8.000*dctBlock[0]#2  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[3]#2+ 8.000*dctBlock[4]#2  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#2+ 8.000*dctBlock[0]#2+ 8.000*dctBlock[3]#2+ 8.000*dctBlock[4]#2  [-32.000,+32.000] [0xe0000010,0x1ffffff0]
+-------------------------------- 5 2
+# DEBUG x4 => x4_126
+-------------------------------- 5 2
+x8_127 = x8_118 - x5_124;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#2+ 8.000*dctBlock[0]#2  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[3]#2+ 8.000*dctBlock[4]#2  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#2+ 8.000*dctBlock[0]#2+-8.000*dctBlock[3]#2+-8.000*dctBlock[4]#2  [-32.000,+32.000] [0xe000000e,0x1ffffff2]
+-------------------------------- 5 2
+# DEBUG x8 => x8_127
+-------------------------------- 5 2
+x5_128 = x7_120 + x6_122;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#2+ 8.000*dctBlock[6]#2  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[2]#2+ 8.000*dctBlock[5]#2  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#2+ 8.000*dctBlock[6]#2+ 8.000*dctBlock[2]#2+ 8.000*dctBlock[5]#2  [-32.000,+32.000] [0xe0000010,0x1ffffff0]
+-------------------------------- 5 2
+# DEBUG x5 => x5_128
+-------------------------------- 5 2
+x7_129 = x7_120 - x6_122;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#2+ 8.000*dctBlock[6]#2  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[2]#2+ 8.000*dctBlock[5]#2  [-16.000,+16.000] [0xf0000008,0x0ffffff8]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#2+ 8.000*dctBlock[6]#2+-8.000*dctBlock[2]#2+-8.000*dctBlock[5]#2  [-32.000,+32.000] [0xe000000e,0x1ffffff2]
+-------------------------------- 5 2
+# DEBUG x7 => x7_129
+-------------------------------- 5 2
+D.2000_130 = x1_121 + x2_123;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#2+-8.000*dctBlock[6]#2  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[2]#2+-8.000*dctBlock[5]#2  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#2+-8.000*dctBlock[6]#2+ 8.000*dctBlock[2]#2+-8.000*dctBlock[5]#2  [-32.000,+32.000] [0xe000000e,0x1ffffff2]
+-------------------------------- 5 2
+x6_131 = D.2000_130 * 9.807852804032304305792422383092343807220458984375e-1;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#2+-8.000*dctBlock[6]#2+ 8.000*dctBlock[2]#2+-8.000*dctBlock[5]#2  [-32.000,+32.000] [0xe000000e,0x1ffffff2]
+x6_131 = D.2000_130 * 2106220352;
+  OP2   ( 1/ 0/25/ 6)s  0.981  [+0.981,+0.981] [0x7d8a5f40,0x7d8a5f40]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  OP1 >>14 (15/ 7/10/ 0)  [-32.000,+31.999] [0xffff8000,0x00007fff]
+_fx_shft1.38 = D.2000_130 >> 14;
+  OP2 >>16 (17/ 0/14/ 1)  [+0.981,+0.981] [0x00007d8a,0x00007d8a]
+x6_131 = _fx_shft1.38 * 32138;
+  RSLT  ( 1/ 6/25/ 0)s  7.845*dctBlock[1]#2+-7.846*dctBlock[6]#2+ 7.845*dctBlock[2]#2+-7.846*dctBlock[5]#2  [-31.383,+31.383] [0xc13bfb14,0x3ec404ec]
+-------------------------------- 5 2
+# DEBUG x6 => x6_131
+-------------------------------- 5 2
+D.2001_132 = x2_123 * -1.1758756024193586231518793283612467348575592041015625e+0;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[2]#2+-8.000*dctBlock[5]#2  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+D.2001_132 = x2_123 * -1262586814;
+  OP2   ( 1/ 1/29/ 1)s -1.176  [-1.176,-1.176] [0xb4be7442,0xb4be7442]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  OP1 >>14 (15/ 7/10/ 0)  [-16.000,+15.999] [0xffffc000,0x00003fff]
+_fx_shft1.39 = x2_123 >> 14;
+  OP2 >>16 (17/ 1/13/ 1)  [-1.176,-1.176] [0xffffb4be,0xffffb4be]
+D.2001_132 = _fx_shft1.39 * -19266;
+  RSLT  ( 1/ 7/24/ 0)s -9.406*dctBlock[2]#2+ 9.407*dctBlock[5]#2  [-18.813,+18.813] [0xed2fcb42,0x12d034be]
+-------------------------------- 5 2
+x2_133 = D.2001_132 + x6_131;
+  OP1   ( 1/ 7/24/ 0)s -9.406*dctBlock[2]#2+ 9.407*dctBlock[5]#2  [-18.813,+18.813] [0xed2fcb42,0x12d034be]
+  OP2   ( 1/ 6/25/ 0)s  7.845*dctBlock[1]#2+-7.846*dctBlock[6]#2+ 7.845*dctBlock[2]#2+-7.846*dctBlock[5]#2  [-31.383,+31.383] [0xc13bfb14,0x3ec404ec]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  OP2 >>1  ( 2/ 6/24/ 0)  [-31.383,+31.383] [0xe09dfd8a,0x1f620276]
+_fx_shft2.40 = x6_131 >> 1;
+x2_133 = D.2001_132 + _fx_shft2.40;
+  RSLT  ( 1/ 7/24/ 0)s -1.561*dctBlock[2]#2+ 1.561*dctBlock[5]#2+ 7.845*dctBlock[1]#2+-7.846*dctBlock[6]#2  [-18.813,+18.813] [0xed2fcb42,0x12d034be]
+-------------------------------- 5 2
+# DEBUG x2 => x2_133
+-------------------------------- 5 2
+D.2002_134 = x1_121 * -7.8569495838710212698430268574156798422336578369140625e-1;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#2+-8.000*dctBlock[6]#2  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+D.2002_134 = x1_121 * -1687267075;
+  OP2   ( 1/ 0/31/ 0)s -0.786  [-0.786,-0.786] [0x9b6e58fd,0x9b6e58fd]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  OP1 >>14 (15/ 7/10/ 0)  [-16.000,+15.999] [0xffffc000,0x00003fff]
+_fx_shft1.41 = x1_121 >> 14;
+  OP2 >>16 (17/ 0/14/ 1)  [-0.786,-0.786] [0xffff9b6e,0xffff9b6e]
+D.2002_134 = _fx_shft1.41 * -25746;
+  RSLT  ( 1/ 6/25/ 0)s -6.285*dctBlock[1]#2+ 6.286*dctBlock[6]#2  [-12.571,+12.571] [0xe6dbe492,0x19241b6e]
+-------------------------------- 5 2
+x1_135 = D.2002_134 + x6_131;
+  OP1   ( 1/ 6/25/ 0)s -6.285*dctBlock[1]#2+ 6.286*dctBlock[6]#2  [-12.571,+12.571] [0xe6dbe492,0x19241b6e]
+  OP2   ( 1/ 6/25/ 0)s  7.845*dctBlock[1]#2+-7.846*dctBlock[6]#2+ 7.845*dctBlock[2]#2+-7.846*dctBlock[5]#2  [-31.383,+31.383] [0xc13bfb14,0x3ec404ec]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  RSLT  ( 1/ 6/25/ 0)s  1.560*dctBlock[1]#2+-1.561*dctBlock[6]#2+ 7.845*dctBlock[2]#2+-7.846*dctBlock[5]#2  [-18.812,+18.812] [0xda601682,0x259fe97e]
+-------------------------------- 5 2
+# DEBUG x1 => x1_135
+-------------------------------- 5 2
+D.2003_136 = x0_119 + x3_125;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[0]#2+-8.000*dctBlock[7]#2  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[3]#2+-8.000*dctBlock[4]#2  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[0]#2+-8.000*dctBlock[7]#2+ 8.000*dctBlock[3]#2+-8.000*dctBlock[4]#2  [-32.000,+32.000] [0xe000000e,0x1ffffff2]
+-------------------------------- 5 2
+x6_137 = D.2003_136 * 8.3146961230254523567140267914510332047939300537109375e-1;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[0]#2+-8.000*dctBlock[7]#2+ 8.000*dctBlock[3]#2+-8.000*dctBlock[4]#2  [-32.000,+32.000] [0xe000000e,0x1ffffff2]
+x6_137 = D.2003_136 * 1785567396;
+  OP2   ( 1/ 0/29/ 2)s  0.831  [+0.831,+0.831] [0x6a6d98a4,0x6a6d98a4]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  OP1 >>14 (15/ 7/10/ 0)  [-32.000,+31.999] [0xffff8000,0x00007fff]
+_fx_shft1.42 = D.2003_136 >> 14;
+  OP2 >>16 (17/ 0/14/ 1)  [+0.831,+0.831] [0x00006a6d,0x00006a6d]
+x6_137 = _fx_shft1.42 * 27246;
+  RSLT  ( 1/ 6/25/ 0)s  6.651*dctBlock[0]#2+-6.652*dctBlock[7]#2+ 6.651*dctBlock[3]#2+-6.652*dctBlock[4]#2  [-26.605,+26.605] [0xcaca54da,0x3535ab26]
+-------------------------------- 5 2
+# DEBUG x6 => x6_137
+-------------------------------- 5 2
+D.2004_138 = x3_125 * -1.387039845322147524342426549992524087429046630859375e+0;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[3]#2+-8.000*dctBlock[4]#2  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+D.2004_138 = x3_125 * -1489322693;
+  OP2   ( 1/ 1/30/ 0)s -1.387  [-1.387,-1.387] [0xa73abd3b,0xa73abd3b]
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  OP1 >>15 (16/ 7/ 9/ 0)  [-16.000,+15.998] [0xffffe000,0x00001fff]
+_fx_shft1.43 = x3_125 >> 15;
+  OP2 >>15 (16/ 1/15/ 0)  [-1.387,-1.387] [0xffff4e75,0xffff4e75]
+D.2004_138 = _fx_shft1.43 * -45451;
+  RSLT  ( 1/ 7/24/ 0)s -11.094*dctBlock[3]#2+11.096*dctBlock[4]#2  [-22.190,+22.190] [0xe9cf518b,0x1630ae75]
+-------------------------------- 5 2
+x3_139 = D.2004_138 + x6_137;
+  OP1   ( 1/ 7/24/ 0)s -11.094*dctBlock[3]#2+11.096*dctBlock[4]#2  [-22.190,+22.190] [0xe9cf518b,0x1630ae75]
+  OP2   ( 1/ 6/25/ 0)s  6.651*dctBlock[0]#2+-6.652*dctBlock[7]#2+ 6.651*dctBlock[3]#2+-6.652*dctBlock[4]#2  [-26.605,+26.605] [0xcaca54da,0x3535ab26]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  OP2 >>1  ( 2/ 6/24/ 0)  [-26.605,+26.605] [0xe5652a6d,0x1a9ad593]
+_fx_shft2.44 = x6_137 >> 1;
+x3_139 = D.2004_138 + _fx_shft2.44;
+  RSLT  ( 1/ 7/24/ 0)s -4.443*dctBlock[3]#2+ 4.445*dctBlock[4]#2+ 6.651*dctBlock[0]#2+-6.652*dctBlock[7]#2  [-22.190,+22.190] [0xe9cf518b,0x1630ae75]
+-------------------------------- 5 2
+# DEBUG x3 => x3_139
+-------------------------------- 5 2
+D.2005_140 = x0_119 * -2.7589937928294305802268127081333659589290618896484375e-1;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[0]#2+-8.000*dctBlock[7]#2  [-16.000,+16.000] [0xf0000007,0x0ffffff9]
+D.2005_140 = x0_119 * -592489406;
+  OP2   ( 1/ 0/30/ 1)s -0.276  [-0.276,-0.276] [0xdcaf5442,0xdcaf5442]
+  *** Zeros right of b.p., 1 I bits changed to S bits in RSLT
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  OP1 >>15 (16/ 7/ 9/ 0)  [-16.000,+15.998] [0xffffe000,0x00001fff]
+_fx_shft1.45 = x0_119 >> 15;
+  OP2 >>14 (15/ 0/17/ 0)  [-0.276,-0.276] [0xffff72bd,0xffff72bd]
+D.2005_140 = _fx_shft1.45 * -36163;
+  RSLT  ( 1/ 5/26/ 0)s -2.207*dctBlock[0]#2+ 2.207*dctBlock[7]#2  [-4.414,+4.414] [0xee582d43,0x11a7d2bd]
+-------------------------------- 5 2
+x0_141 = D.2005_140 + x6_137;
+  OP1   ( 1/ 5/26/ 0)s -2.207*dctBlock[0]#2+ 2.207*dctBlock[7]#2  [-4.414,+4.414] [0xee582d43,0x11a7d2bd]
+  OP2   ( 1/ 6/25/ 0)s  6.651*dctBlock[0]#2+-6.652*dctBlock[7]#2+ 6.651*dctBlock[3]#2+-6.652*dctBlock[4]#2  [-26.605,+26.605] [0xcaca54da,0x3535ab26]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  OP1 >>1  ( 2/ 5/25/ 0)  [-4.414,+4.414] [0xf72c16a1,0x08d3e95e]
+_fx_shft1.46 = D.2005_140 >> 1;
+x0_141 = _fx_shft1.46 + x6_137;
+  RSLT  ( 1/ 6/25/ 0)s  4.444*dctBlock[0]#2+-4.444*dctBlock[7]#2+ 6.651*dctBlock[3]#2+-6.652*dctBlock[4]#2  [-22.191,+22.191] [0xd39e3e39,0x2c61c1c7]
+-------------------------------- 5 2
+# DEBUG x0 => x0_141
+-------------------------------- 5 2
+x6_142 = x4_126 + x5_128;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#2+ 8.000*dctBlock[0]#2+ 8.000*dctBlock[3]#2+ 8.000*dctBlock[4]#2  [-32.000,+32.000] [0xe0000010,0x1ffffff0]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#2+ 8.000*dctBlock[6]#2+ 8.000*dctBlock[2]#2+ 8.000*dctBlock[5]#2  [-32.000,+32.000] [0xe0000010,0x1ffffff0]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#2+ 8.000*dctBlock[0]#2+ 8.000*dctBlock[3]#2+ 8.000*dctBlock[4]#2+ 8.000*dctBlock[1]#2+ 8.000*dctBlock[6]#2+ 8.000*dctBlock[2]#2+ 8.000*dctBlock[5]#2  [-64.000,+64.000] [0xc0000020,0x3fffffe0]
+-------------------------------- 5 2
+# DEBUG x6 => x6_142
+-------------------------------- 5 2
+x4_143 = x4_126 - x5_128;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#2+ 8.000*dctBlock[0]#2+ 8.000*dctBlock[3]#2+ 8.000*dctBlock[4]#2  [-32.000,+32.000] [0xe0000010,0x1ffffff0]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#2+ 8.000*dctBlock[6]#2+ 8.000*dctBlock[2]#2+ 8.000*dctBlock[5]#2  [-32.000,+32.000] [0xe0000010,0x1ffffff0]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#2+ 8.000*dctBlock[0]#2+ 8.000*dctBlock[3]#2+ 8.000*dctBlock[4]#2+-8.000*dctBlock[1]#2+-8.000*dctBlock[6]#2+-8.000*dctBlock[2]#2+-8.000*dctBlock[5]#2  [-64.000,+64.000] [0xc000001c,0x3fffffe4]
+-------------------------------- 5 2
+# DEBUG x4 => x4_143
+-------------------------------- 5 2
+x5_144 = x0_141 + x2_133;
+  OP1   ( 1/ 6/25/ 0)s  4.444*dctBlock[0]#2+-4.444*dctBlock[7]#2+ 6.651*dctBlock[3]#2+-6.652*dctBlock[4]#2  [-22.191,+22.191] [0xd39e3e39,0x2c61c1c7]
+  OP2   ( 1/ 7/24/ 0)s -1.561*dctBlock[2]#2+ 1.561*dctBlock[5]#2+ 7.845*dctBlock[1]#2+-7.846*dctBlock[6]#2  [-18.813,+18.813] [0xed2fcb42,0x12d034be]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  OP1 >>1  ( 2/ 6/24/ 0)  [-22.191,+22.191] [0xe9cf1f1c,0x1630e0e3]
+_fx_shft1.47 = x0_141 >> 1;
+x5_144 = _fx_shft1.47 + x2_133;
+  RSLT  ( 1/ 7/24/ 0)s  4.444*dctBlock[0]#2+-4.444*dctBlock[7]#2+ 6.651*dctBlock[3]#2+-6.652*dctBlock[4]#2+-1.561*dctBlock[2]#2+ 1.561*dctBlock[5]#2+ 7.845*dctBlock[1]#2+-7.846*dctBlock[6]#2  [-41.004,+41.004] [0xd6feea5f,0x290115a1]
+-------------------------------- 5 2
+# DEBUG x5 => x5_144
+-------------------------------- 5 2
+x0_145 = x0_141 - x2_133;
+  OP1   ( 1/ 6/25/ 0)s  4.444*dctBlock[0]#2+-4.444*dctBlock[7]#2+ 6.651*dctBlock[3]#2+-6.652*dctBlock[4]#2  [-22.191,+22.191] [0xd39e3e39,0x2c61c1c7]
+  OP2   ( 1/ 7/24/ 0)s -1.561*dctBlock[2]#2+ 1.561*dctBlock[5]#2+ 7.845*dctBlock[1]#2+-7.846*dctBlock[6]#2  [-18.813,+18.813] [0xed2fcb42,0x12d034be]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  OP1 >>1  ( 2/ 6/24/ 0)  [-22.191,+22.191] [0xe9cf1f1c,0x1630e0e3]
+_fx_shft1.48 = x0_141 >> 1;
+x0_145 = _fx_shft1.48 - x2_133;
+  RSLT  ( 1/ 7/24/ 0)s  4.444*dctBlock[0]#2+-4.444*dctBlock[7]#2+ 6.651*dctBlock[3]#2+-6.652*dctBlock[4]#2+ 1.561*dctBlock[2]#2+-1.561*dctBlock[5]#2+-7.845*dctBlock[1]#2+ 7.846*dctBlock[6]#2  [-41.004,+41.004] [0xd6feea5f,0x290115a1]
+-------------------------------- 5 2
+# DEBUG x0 => x0_145
+-------------------------------- 5 2
+x2_146 = x3_139 + x1_135;
+  OP1   ( 1/ 7/24/ 0)s -4.443*dctBlock[3]#2+ 4.445*dctBlock[4]#2+ 6.651*dctBlock[0]#2+-6.652*dctBlock[7]#2  [-22.190,+22.190] [0xe9cf518b,0x1630ae75]
+  OP2   ( 1/ 6/25/ 0)s  1.560*dctBlock[1]#2+-1.561*dctBlock[6]#2+ 7.845*dctBlock[2]#2+-7.846*dctBlock[5]#2  [-18.812,+18.812] [0xda601682,0x259fe97e]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  OP2 >>1  ( 2/ 6/24/ 0)  [-18.812,+18.812] [0xed300b41,0x12cff4bf]
+_fx_shft2.49 = x1_135 >> 1;
+x2_146 = x3_139 + _fx_shft2.49;
+  RSLT  ( 1/ 7/24/ 0)s -4.443*dctBlock[3]#2+ 4.445*dctBlock[4]#2+ 6.651*dctBlock[0]#2+-6.652*dctBlock[7]#2+ 1.560*dctBlock[1]#2+-1.561*dctBlock[6]#2+ 7.845*dctBlock[2]#2+-7.846*dctBlock[5]#2  [-41.002,+41.002] [0xd6ff5ccc,0x2900a334]
+-------------------------------- 5 2
+# DEBUG x2 => x2_146
+-------------------------------- 5 2
+x3_147 = x3_139 - x1_135;
+  OP1   ( 1/ 7/24/ 0)s -4.443*dctBlock[3]#2+ 4.445*dctBlock[4]#2+ 6.651*dctBlock[0]#2+-6.652*dctBlock[7]#2  [-22.190,+22.190] [0xe9cf518b,0x1630ae75]
+  OP2   ( 1/ 6/25/ 0)s  1.560*dctBlock[1]#2+-1.561*dctBlock[6]#2+ 7.845*dctBlock[2]#2+-7.846*dctBlock[5]#2  [-18.812,+18.812] [0xda601682,0x259fe97e]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  OP2 >>1  ( 2/ 6/24/ 0)  [-18.812,+18.812] [0xed300b41,0x12cff4bf]
+_fx_shft2.50 = x1_135 >> 1;
+x3_147 = x3_139 - _fx_shft2.50;
+  RSLT  ( 1/ 7/24/ 0)s -4.443*dctBlock[3]#2+ 4.445*dctBlock[4]#2+ 6.651*dctBlock[0]#2+-6.652*dctBlock[7]#2+-1.560*dctBlock[1]#2+ 1.561*dctBlock[6]#2+-7.845*dctBlock[2]#2+ 7.846*dctBlock[5]#2  [-41.002,+41.002] [0xd6ff5ccc,0x2900a334]
+-------------------------------- 5 2
+# DEBUG x3 => x3_147
+-------------------------------- 5 2
+D.2006_148 = x7_129 + x8_127;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#2+ 8.000*dctBlock[6]#2+-8.000*dctBlock[2]#2+-8.000*dctBlock[5]#2  [-32.000,+32.000] [0xe000000e,0x1ffffff2]
+  OP2   ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#2+ 8.000*dctBlock[0]#2+-8.000*dctBlock[3]#2+-8.000*dctBlock[4]#2  [-32.000,+32.000] [0xe000000e,0x1ffffff2]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  *** Result format is pessimistic ***
+  RSLT  ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#2+ 8.000*dctBlock[6]#2+-8.000*dctBlock[2]#2+-8.000*dctBlock[5]#2+ 8.000*dctBlock[7]#2+ 8.000*dctBlock[0]#2+-8.000*dctBlock[3]#2+-8.000*dctBlock[4]#2  [-64.000,+64.000] [0xc000001c,0x3fffffe4]
+-------------------------------- 5 2
+x1_149 = D.2006_148 * 5.4119610014619701221505465582595206797122955322265625e-1;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#2+ 8.000*dctBlock[6]#2+-8.000*dctBlock[2]#2+-8.000*dctBlock[5]#2+ 8.000*dctBlock[7]#2+ 8.000*dctBlock[0]#2+-8.000*dctBlock[3]#2+-8.000*dctBlock[4]#2  [-64.000,+64.000] [0xc000001c,0x3fffffe4]
+x1_149 = D.2006_148 * 1162209775;
+  OP2   ( 1/ 0/31/ 0)s  0.541  [+0.541,+0.541] [0x4545e9ef,0x4545e9ef]
+  *** Pessimistic multiplication axiom, shifting op2 left
+  OP1 >>14 (15/ 7/10/ 0)  [-64.000,+63.999] [0xffff0000,0x0000ffff]
+_fx_shft1.51 = D.2006_148 >> 14;
+  OP2 >>16 (17/ 0/14/ 1)  [+0.541,+0.541] [0x00004545,0x00004545]
+x1_149 = _fx_shft1.51 * 17734;
+  RSLT  ( 1/ 6/25/ 0)s  4.329*dctBlock[1]#2+ 4.329*dctBlock[6]#2+-4.329*dctBlock[2]#2+-4.329*dctBlock[5]#2+ 4.329*dctBlock[7]#2+ 4.329*dctBlock[0]#2+-4.329*dctBlock[3]#2+-4.329*dctBlock[4]#2  [-34.633,+34.633] [0xbabc1514,0x4543eaec]
+-------------------------------- 5 2
+# DEBUG x1 => x1_149
+-------------------------------- 5 2
+D.2007_150 = x7_129 * -1.847759065022573476966272210120223462581634521484375e+0;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[1]#2+ 8.000*dctBlock[6]#2+-8.000*dctBlock[2]#2+-8.000*dctBlock[5]#2  [-32.000,+32.000] [0xe000000e,0x1ffffff2]
+D.2007_150 = x7_129 * -1984016189;
+  OP2   ( 1/ 1/30/ 0)s -1.848  [-1.848,-1.848] [0x89be50c3,0x89be50c3]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  OP1 >>14 (15/ 7/10/ 0)  [-32.000,+31.999] [0xffff8000,0x00007fff]
+_fx_shft1.52 = x7_129 >> 14;
+  OP2 >>16 (17/ 1/13/ 1)  [-1.848,-1.848] [0xffff89be,0xffff89be]
+D.2007_150 = _fx_shft1.52 * -30274;
+  RSLT  ( 1/ 7/24/ 0)s -14.780*dctBlock[1]#2+-14.780*dctBlock[6]#2+14.782*dctBlock[2]#2+14.782*dctBlock[5]#2  [-59.125,+59.125] [0xc4dfec84,0x3b20137c]
+-------------------------------- 5 2
+x7_151 = D.2007_150 + x1_149;
+  OP1   ( 1/ 7/24/ 0)s -14.780*dctBlock[1]#2+-14.780*dctBlock[6]#2+14.782*dctBlock[2]#2+14.782*dctBlock[5]#2  [-59.125,+59.125] [0xc4dfec84,0x3b20137c]
+  OP2   ( 1/ 6/25/ 0)s  4.329*dctBlock[1]#2+ 4.329*dctBlock[6]#2+-4.329*dctBlock[2]#2+-4.329*dctBlock[5]#2+ 4.329*dctBlock[7]#2+ 4.329*dctBlock[0]#2+-4.329*dctBlock[3]#2+-4.329*dctBlock[4]#2  [-34.633,+34.633] [0xbabc1514,0x4543eaec]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  OP2 >>1  ( 2/ 6/24/ 0)  [-34.633,+34.633] [0xdd5e0a8a,0x22a1f576]
+_fx_shft2.53 = x1_149 >> 1;
+x7_151 = D.2007_150 + _fx_shft2.53;
+  RSLT  ( 1/ 7/24/ 0)s -10.452*dctBlock[1]#2+-10.452*dctBlock[6]#2+10.453*dctBlock[2]#2+10.453*dctBlock[5]#2+ 4.329*dctBlock[7]#2+ 4.329*dctBlock[0]#2+-4.329*dctBlock[3]#2+-4.329*dctBlock[4]#2  [-59.125,+59.125] [0xc4dfec84,0x3b20137c]
+-------------------------------- 5 2
+# DEBUG x7 => x7_151
+-------------------------------- 5 2
+D.2008_152 = x8_127 * 7.6536686473017956355846536098397336900234222412109375e-1;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#2+ 8.000*dctBlock[0]#2+-8.000*dctBlock[3]#2+-8.000*dctBlock[4]#2  [-32.000,+32.000] [0xe000000e,0x1ffffff2]
+D.2008_152 = x8_127 * 1643612827;
+  OP2   ( 1/ 0/31/ 0)s  0.765  [+0.765,+0.765] [0x61f78a9b,0x61f78a9b]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  OP1 >>14 (15/ 7/10/ 0)  [-32.000,+31.999] [0xffff8000,0x00007fff]
+_fx_shft1.54 = x8_127 >> 14;
+  OP2 >>18 (19/ 0/12/ 1)  [+0.765,+0.765] [0x0000187d,0x0000187d]
+D.2008_152 = _fx_shft1.54 * 6270;
+  RSLT  ( 3/ 6/23/ 0)s  6.121*dctBlock[7]#2+ 6.121*dctBlock[0]#2+-6.122*dctBlock[3]#2+-6.122*dctBlock[4]#2  [-24.487,+24.487] [0xf3c1b0fa,0x0c3e4f06]
+-------------------------------- 5 2
+x8_153 = D.2008_152 + x1_149;
+  OP1   ( 3/ 6/23/ 0)s  6.121*dctBlock[7]#2+ 6.121*dctBlock[0]#2+-6.122*dctBlock[3]#2+-6.122*dctBlock[4]#2  [-24.487,+24.487] [0xf3c1b0fa,0x0c3e4f06]
+  OP2   ( 1/ 6/25/ 0)s  4.329*dctBlock[1]#2+ 4.329*dctBlock[6]#2+-4.329*dctBlock[2]#2+-4.329*dctBlock[5]#2+ 4.329*dctBlock[7]#2+ 4.329*dctBlock[0]#2+-4.329*dctBlock[3]#2+-4.329*dctBlock[4]#2  [-34.633,+34.633] [0xbabc1514,0x4543eaec]
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, converting an I to S in result *** 
+  OP1 <<1  ( 2/ 6/23/ 1)  [-24.487,+24.487] [0xe78361f4,0x187c9e0c]
+_fx_shft1.55 = D.2008_152 << 1;
+  OP2 >>1  ( 2/ 6/24/ 0)  [-34.633,+34.633] [0xdd5e0a8a,0x22a1f576]
+_fx_shft2.56 = x1_149 >> 1;
+x8_153 = _fx_shft1.55 + _fx_shft2.56;
+  RSLT  ( 2/ 6/24/ 0)s 10.450*dctBlock[7]#2+10.450*dctBlock[0]#2+-10.451*dctBlock[3]#2+-10.451*dctBlock[4]#2+ 4.329*dctBlock[1]#2+ 4.329*dctBlock[6]#2+-4.329*dctBlock[2]#2+-4.329*dctBlock[5]#2  [-59.119,+59.119] [0xc4e16c80,0x3b1e9380]
+-------------------------------- 5 2
+# DEBUG x8 => x8_153
+-------------------------------- 5 2
+*dctBlock_6(D)[col_2] = x6_142;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#2+ 8.000*dctBlock[0]#2+ 8.000*dctBlock[3]#2+ 8.000*dctBlock[4]#2+ 8.000*dctBlock[1]#2+ 8.000*dctBlock[6]#2+ 8.000*dctBlock[2]#2+ 8.000*dctBlock[5]#2  [-64.000,+64.000] [0xc0000020,0x3fffffe0]
+  RSLT *( 1/ 7/24/ 0)s  8.000*dctBlock[7]#2+ 8.000*dctBlock[0]#2+ 8.000*dctBlock[3]#2+ 8.000*dctBlock[4]#2+ 8.000*dctBlock[1]#2+ 8.000*dctBlock[6]#2+ 8.000*dctBlock[2]#2+ 8.000*dctBlock[5]#2  [-64.000,+64.000] [0xc0000020,0x3fffffe0]
+  Using index 0
+dct.c:137:1: warning: Expanding range of a pointer/iterative target [enabled by default]
+-------------------------------- 5 2
+D.1996_154 = dctBlock_6(D) + 256;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+D.1996_154 = dctBlock_6(D) + 128;
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 2
+*D.1996_154[col_2] = x4_143;
+  OP1   ( 1/ 7/24/ 0)s  8.000*dctBlock[7]#2+ 8.000*dctBlock[0]#2+ 8.000*dctBlock[3]#2+ 8.000*dctBlock[4]#2+-8.000*dctBlock[1]#2+-8.000*dctBlock[6]#2+-8.000*dctBlock[2]#2+-8.000*dctBlock[5]#2  [-64.000,+64.000] [0xc000001c,0x3fffffe4]
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock[7]#2+ 8.000*dctBlock[0]#2+ 8.000*dctBlock[3]#2+ 8.000*dctBlock[4]#2+-8.000*dctBlock[1]#2+-8.000*dctBlock[6]#2+-8.000*dctBlock[2]#2+-8.000*dctBlock[5]#2  [-64.000,+64.000] [0xc000001c,0x3fffffe4]
+  Using index 1
+-------------------------------- 5 2
+D.1994_155 = dctBlock_6(D) + 128;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+D.1994_155 = dctBlock_6(D) + 64;
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 2
+*D.1994_155[col_2] = x8_153;
+  OP1   ( 2/ 6/24/ 0)s 10.450*dctBlock[7]#2+10.450*dctBlock[0]#2+-10.451*dctBlock[3]#2+-10.451*dctBlock[4]#2+ 4.329*dctBlock[1]#2+ 4.329*dctBlock[6]#2+-4.329*dctBlock[2]#2+-4.329*dctBlock[5]#2  [-59.119,+59.119] [0xc4e16c80,0x3b1e9380]
+  RSLT @( 2/ 6/24/ 0)s 10.450*dctBlock[7]#2+10.450*dctBlock[0]#2+-10.451*dctBlock[3]#2+-10.451*dctBlock[4]#2+ 4.329*dctBlock[1]#2+ 4.329*dctBlock[6]#2+-4.329*dctBlock[2]#2+-4.329*dctBlock[5]#2  [-59.119,+59.119] [0xc4e16c80,0x3b1e9380]
+  Using index 2
+-------------------------------- 5 2
+D.1998_156 = dctBlock_6(D) + 384;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+D.1998_156 = dctBlock_6(D) + 192;
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 2
+*D.1998_156[col_2] = x7_151;
+  OP1   ( 1/ 7/24/ 0)s -10.452*dctBlock[1]#2+-10.452*dctBlock[6]#2+10.453*dctBlock[2]#2+10.453*dctBlock[5]#2+ 4.329*dctBlock[7]#2+ 4.329*dctBlock[0]#2+-4.329*dctBlock[3]#2+-4.329*dctBlock[4]#2  [-59.125,+59.125] [0xc4dfec84,0x3b20137c]
+  RSLT @( 1/ 7/24/ 0)s -10.452*dctBlock[1]#2+-10.452*dctBlock[6]#2+10.453*dctBlock[2]#2+10.453*dctBlock[5]#2+ 4.329*dctBlock[7]#2+ 4.329*dctBlock[0]#2+-4.329*dctBlock[3]#2+-4.329*dctBlock[4]#2  [-59.125,+59.125] [0xc4dfec84,0x3b20137c]
+  Using index 3
+-------------------------------- 5 2
+D.1999_157 = dctBlock_6(D) + 448;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+D.1999_157 = dctBlock_6(D) + 224;
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 2
+D.2009_158 = x2_146 - x5_144;
+  OP1   ( 1/ 7/24/ 0)s -4.443*dctBlock[3]#2+ 4.445*dctBlock[4]#2+ 6.651*dctBlock[0]#2+-6.652*dctBlock[7]#2+ 1.560*dctBlock[1]#2+-1.561*dctBlock[6]#2+ 7.845*dctBlock[2]#2+-7.846*dctBlock[5]#2  [-41.002,+41.002] [0xd6ff5ccc,0x2900a334]
+  OP2   ( 1/ 7/24/ 0)s  4.444*dctBlock[0]#2+-4.444*dctBlock[7]#2+ 6.651*dctBlock[3]#2+-6.652*dctBlock[4]#2+-1.561*dctBlock[2]#2+ 1.561*dctBlock[5]#2+ 7.845*dctBlock[1]#2+-7.846*dctBlock[6]#2  [-41.004,+41.004] [0xd6feea5f,0x290115a1]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  RSLT  ( 1/ 7/24/ 0)s -11.094*dctBlock[3]#2+11.096*dctBlock[4]#2+ 2.207*dctBlock[0]#2+-2.207*dctBlock[7]#2+-6.285*dctBlock[1]#2+ 6.286*dctBlock[6]#2+ 9.406*dctBlock[2]#2+-9.407*dctBlock[5]#2  [-57.988,+57.988] [0xc6031a67,0x39fce599]
+-------------------------------- 5 2
+*D.1999_157[col_2] = D.2009_158;
+  OP1   ( 1/ 7/24/ 0)s -11.094*dctBlock[3]#2+11.096*dctBlock[4]#2+ 2.207*dctBlock[0]#2+-2.207*dctBlock[7]#2+-6.285*dctBlock[1]#2+ 6.286*dctBlock[6]#2+ 9.406*dctBlock[2]#2+-9.407*dctBlock[5]#2  [-57.988,+57.988] [0xc6031a67,0x39fce599]
+  RSLT @( 1/ 7/24/ 0)s -11.094*dctBlock[3]#2+11.096*dctBlock[4]#2+ 2.207*dctBlock[0]#2+-2.207*dctBlock[7]#2+-6.285*dctBlock[1]#2+ 6.286*dctBlock[6]#2+ 9.406*dctBlock[2]#2+-9.407*dctBlock[5]#2  [-57.988,+57.988] [0xc6031a67,0x39fce599]
+  Using index 4
+-------------------------------- 5 2
+D.1993_159 = dctBlock_6(D) + 64;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+D.1993_159 = dctBlock_6(D) + 32;
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 2
+D.2010_160 = x2_146 + x5_144;
+  OP1   ( 1/ 7/24/ 0)s -4.443*dctBlock[3]#2+ 4.445*dctBlock[4]#2+ 6.651*dctBlock[0]#2+-6.652*dctBlock[7]#2+ 1.560*dctBlock[1]#2+-1.561*dctBlock[6]#2+ 7.845*dctBlock[2]#2+-7.846*dctBlock[5]#2  [-41.002,+41.002] [0xd6ff5ccc,0x2900a334]
+  OP2   ( 1/ 7/24/ 0)s  4.444*dctBlock[0]#2+-4.444*dctBlock[7]#2+ 6.651*dctBlock[3]#2+-6.652*dctBlock[4]#2+-1.561*dctBlock[2]#2+ 1.561*dctBlock[5]#2+ 7.845*dctBlock[1]#2+-7.846*dctBlock[6]#2  [-41.004,+41.004] [0xd6feea5f,0x290115a1]
+  OP1 needs another sign bit
+  OP2 needs another sign bit
+  *** Pessimistic addition axiom, giving back a right shift *** 
+  RSLT  ( 1/ 7/24/ 0)s  2.208*dctBlock[3]#2+-2.207*dctBlock[4]#2+11.095*dctBlock[0]#2+-11.096*dctBlock[7]#2+ 9.406*dctBlock[1]#2+-9.407*dctBlock[6]#2+ 6.284*dctBlock[2]#2+-6.285*dctBlock[5]#2  [-57.987,+57.987] [0xc6033589,0x39fcca77]
+-------------------------------- 5 2
+*D.1993_159[col_2] = D.2010_160;
+  OP1   ( 1/ 7/24/ 0)s  2.208*dctBlock[3]#2+-2.207*dctBlock[4]#2+11.095*dctBlock[0]#2+-11.096*dctBlock[7]#2+ 9.406*dctBlock[1]#2+-9.407*dctBlock[6]#2+ 6.284*dctBlock[2]#2+-6.285*dctBlock[5]#2  [-57.987,+57.987] [0xc6033589,0x39fcca77]
+  RSLT @( 1/ 7/24/ 0)s  2.208*dctBlock[3]#2+-2.207*dctBlock[4]#2+11.095*dctBlock[0]#2+-11.096*dctBlock[7]#2+ 9.406*dctBlock[1]#2+-9.407*dctBlock[6]#2+ 6.284*dctBlock[2]#2+-6.285*dctBlock[5]#2  [-57.987,+57.987] [0xc6033589,0x39fcca77]
+  Using index 5
+-------------------------------- 5 2
+D.1995_161 = dctBlock_6(D) + 192;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+D.1995_161 = dctBlock_6(D) + 96;
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 2
+D.2011_162 = x3_147 * 1.4142135623730951454746218587388284504413604736328125e+0;
+  OP1   ( 1/ 7/24/ 0)s -4.443*dctBlock[3]#2+ 4.445*dctBlock[4]#2+ 6.651*dctBlock[0]#2+-6.652*dctBlock[7]#2+-1.560*dctBlock[1]#2+ 1.561*dctBlock[6]#2+-7.845*dctBlock[2]#2+ 7.846*dctBlock[5]#2  [-41.002,+41.002] [0xd6ff5ccc,0x2900a334]
+D.2011_162 = x3_147 * 1518500250;
+  OP2   ( 1/ 1/29/ 1)s  1.414  [+1.414,+1.414] [0x5a82799a,0x5a82799a]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  OP1 >>14 (15/ 7/10/ 0)  [-41.003,+41.002] [0xffff5bfd,0x0000a402]
+_fx_shft1.57 = x3_147 >> 14;
+  OP2 >>16 (17/ 1/13/ 1)  [+1.414,+1.414] [0x00005a82,0x00005a82]
+D.2011_162 = _fx_shft1.57 * 23170;
+  RSLT  ( 1/ 7/24/ 0)s -6.284*dctBlock[3]#2+ 6.285*dctBlock[4]#2+ 9.405*dctBlock[0]#2+-9.408*dctBlock[7]#2+-2.207*dctBlock[1]#2+ 2.206*dctBlock[6]#2+-11.095*dctBlock[2]#2+11.095*dctBlock[5]#2  [-57.984,+57.984] [0xc60402fc,0x39fbfd04]
+-------------------------------- 5 2
+*D.1995_161[col_2] = D.2011_162;
+  OP1   ( 1/ 7/24/ 0)s -6.284*dctBlock[3]#2+ 6.285*dctBlock[4]#2+ 9.405*dctBlock[0]#2+-9.408*dctBlock[7]#2+-2.207*dctBlock[1]#2+ 2.206*dctBlock[6]#2+-11.095*dctBlock[2]#2+11.095*dctBlock[5]#2  [-57.984,+57.984] [0xc60402fc,0x39fbfd04]
+  RSLT @( 1/ 7/24/ 0)s -6.284*dctBlock[3]#2+ 6.285*dctBlock[4]#2+ 9.405*dctBlock[0]#2+-9.408*dctBlock[7]#2+-2.207*dctBlock[1]#2+ 2.206*dctBlock[6]#2+-11.095*dctBlock[2]#2+11.095*dctBlock[5]#2  [-57.984,+57.984] [0xc60402fc,0x39fbfd04]
+  Using index 6
+-------------------------------- 5 2
+D.1997_163 = dctBlock_6(D) + 320;
+  OP1  *( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+  Pointer stride will be shifted 1
+D.1997_163 = dctBlock_6(D) + 160;
+  RSLT @( 1/ 7/24/ 0)s  8.000*dctBlock#2  [-8.000,+8.000] [0xf8000004,0x07fffffc]
+-------------------------------- 5 2
+D.2012_164 = x0_145 * 1.4142135623730951454746218587388284504413604736328125e+0;
+  OP1   ( 1/ 7/24/ 0)s  4.444*dctBlock[0]#2+-4.444*dctBlock[7]#2+ 6.651*dctBlock[3]#2+-6.652*dctBlock[4]#2+ 1.561*dctBlock[2]#2+-1.561*dctBlock[5]#2+-7.845*dctBlock[1]#2+ 7.846*dctBlock[6]#2  [-41.004,+41.004] [0xd6feea5f,0x290115a1]
+D.2012_164 = x0_145 * 1518500250;
+  OP2   ( 1/ 1/29/ 1)s  1.414  [+1.414,+1.414] [0x5a82799a,0x5a82799a]
+  *** Overoptimized, shifting op1 left
+  *** Pessimistic multiplication axiom, shifting op2 left
+  *** Result format is pessimistic ***
+  OP1 >>14 (15/ 7/10/ 0)  [-41.005,+41.004] [0xffff5bfb,0x0000a404]
+_fx_shft1.58 = x0_145 >> 14;
+  OP2 >>16 (17/ 1/13/ 1)  [+1.414,+1.414] [0x00005a82,0x00005a82]
+D.2012_164 = _fx_shft1.58 * 23170;
+  RSLT  ( 1/ 7/24/ 0)s  6.284*dctBlock[0]#2+-6.286*dctBlock[7]#2+ 9.405*dctBlock[3]#2+-9.408*dctBlock[4]#2+ 2.207*dctBlock[2]#2+-2.208*dctBlock[5]#2+-11.095*dctBlock[1]#2+11.095*dctBlock[6]#2  [-57.988,+57.988] [0xc602f376,0x39fd0c8a]
+-------------------------------- 5 2
+*D.1997_163[col_2] = D.2012_164;
+  OP1   ( 1/ 7/24/ 0)s  6.284*dctBlock[0]#2+-6.286*dctBlock[7]#2+ 9.405*dctBlock[3]#2+-9.408*dctBlock[4]#2+ 2.207*dctBlock[2]#2+-2.208*dctBlock[5]#2+-11.095*dctBlock[1]#2+11.095*dctBlock[6]#2  [-57.988,+57.988] [0xc602f376,0x39fd0c8a]
+  RSLT @( 1/ 7/24/ 0)s  6.284*dctBlock[0]#2+-6.286*dctBlock[7]#2+ 9.405*dctBlock[3]#2+-9.408*dctBlock[4]#2+ 2.207*dctBlock[2]#2+-2.208*dctBlock[5]#2+-11.095*dctBlock[1]#2+11.095*dctBlock[6]#2  [-57.988,+57.988] [0xc602f376,0x39fd0c8a]
+  Using index 7
+-------------------------------- 5 2
+col_165 = col_2 + 1;
+-------------------------------- 5 2
+# DEBUG col => col_165
+-------------------------------- 5 2
+  End of a basic block
+  ======= Starting basic block 6 =====
+# DEBUG col => col_2
+-------------------------------- 6 2
+if (col_2 <= 7)
+-------------------------------- 6 2
+  End of a basic block
+  ======= Starting basic block 7 =====
+return;
+-------------------------------- 7 2
+  End of a basic block
+// ( 1/ 7/24/ 0)=*dctBlock[ 0]
+// ( 1/ 7/24/ 0)=*dctBlock[ 1]
+// ( 1/ 7/24/ 0)=*dctBlock[ 2]
+// ( 1/ 7/24/ 0)=*dctBlock[ 3]
+// ( 1/ 7/24/ 0)=*dctBlock[ 4]
+// ( 1/ 7/24/ 0)=*dctBlock[ 5]
+// ( 1/ 7/24/ 0)=*dctBlock[ 6]
+// ( 1/ 7/24/ 0)=*dctBlock[ 7]
+// ( 1/ 7/24/ 0)=*dctBlock
+// ( 1/ 7/24/ 0)  x0
+// ( 1/ 6/25/ 0)  x1
+// ( 1/ 7/24/ 0)  x2
+// ( 1/ 7/24/ 0)  x3
+// ( 1/ 7/24/ 0)  x4
+// ( 1/ 7/24/ 0)  x5
+// ( 1/ 7/24/ 0)  x6
+// ( 1/ 7/24/ 0)  x7
+// ( 2/ 6/24/ 0)  x8
+// ( 1/ 7/24/ 0)  x0
+// ( 1/ 6/25/ 0)  x1
+// ( 1/ 7/24/ 0)  x2
+// ( 1/ 7/24/ 0)  x3
+// ( 1/ 7/24/ 0)  x4
+// ( 1/ 7/24/ 0)  x5
+// ( 1/ 7/24/ 0)  x6
+// ( 1/ 7/24/ 0)  x7
+// ( 2/ 6/24/ 0)  x8
+//@( 1/ 7/24/ 0) *D1979[ 0]
+//@( 1/ 7/24/ 0) *D1979[ 1]
+//@( 2/ 6/24/ 0) *D1979[ 2]
+//@( 1/ 7/24/ 0) *D1979[ 3]
+//@( 1/ 7/24/ 0) *D1979[ 4]
+//@( 1/ 7/24/ 0) *D1979[ 5]
+//@( 1/ 7/24/ 0) *D1979[ 6]
+//@( 1/ 7/24/ 0) *D1979[ 7]
+//@( 1/ 7/24/ 0) *D1979
+// ( 1/ 7/24/ 0)  D1980
+// ( 1/ 7/24/ 0)  D1981
+// ( 1/ 6/25/ 0)  D1982
+// ( 1/ 7/24/ 0)  D1983
+// ( 1/ 7/24/ 0)  D1984
+// ( 1/ 5/26/ 0)  D1985
+// ( 1/ 7/24/ 0)  D1986
+// ( 1/ 7/24/ 0)  D1987
+// ( 3/ 6/23/ 0)  D1988
+// ( 1/ 7/24/ 0)  D1989
+// ( 1/ 7/24/ 0)  D1990
+// ( 1/ 7/24/ 0)  D1991
+// ( 1/ 7/24/ 0)  D1992
+//@( 1/ 7/24/ 0) *D1993[ 5]
+//@( 1/ 7/24/ 0) *D1993
+//@( 2/ 6/24/ 0) *D1994[ 2]
+//@( 1/ 7/24/ 0) *D1994
+//@( 1/ 7/24/ 0) *D1995[ 6]
+//@( 1/ 7/24/ 0) *D1995
+//@( 1/ 7/24/ 0) *D1996[ 1]
+//@( 1/ 7/24/ 0) *D1996
+//@( 1/ 7/24/ 0) *D1997[ 7]
+//@( 1/ 7/24/ 0) *D1997
+//@( 1/ 7/24/ 0) *D1998[ 3]
+//@( 1/ 7/24/ 0) *D1998
+//@( 1/ 7/24/ 0) *D1999[ 4]
+//@( 1/ 7/24/ 0) *D1999
+// ( 1/ 7/24/ 0)  D2000
+// ( 1/ 7/24/ 0)  D2001
+// ( 1/ 6/25/ 0)  D2002
+// ( 1/ 7/24/ 0)  D2003
+// ( 1/ 7/24/ 0)  D2004
+// ( 1/ 5/26/ 0)  D2005
+// ( 1/ 7/24/ 0)  D2006
+// ( 1/ 7/24/ 0)  D2007
+// ( 3/ 6/23/ 0)  D2008
+// ( 1/ 7/24/ 0)  D2009
+// ( 1/ 7/24/ 0)  D2010
+// ( 1/ 7/24/ 0)  D2011
+// ( 1/ 7/24/ 0)  D2012
+ 
+Dumping assembly listing
+objdump -d -M reg-names-std "dct.o" > "dct.lst"
+ 
+rm dct.o

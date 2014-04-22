@@ -1,9 +1,12 @@
 var searchData=
 [
-  ['fxopt_5faffine_2ec',['fxopt_affine.c',['../fxopt__affine_8c.html',1,'']]],
-  ['fxopt_5fplugin_2ec',['fxopt_plugin.c',['../fxopt__plugin_8c.html',1,'']]],
-  ['fxopt_5fplugin_2eh',['fxopt_plugin.h',['../fxopt__plugin_8h.html',1,'']]],
-  ['fxopt_5frange_2ec',['fxopt_range.c',['../fxopt__range_8c.html',1,'']]],
-  ['fxopt_5fstmts_2ec',['fxopt_stmts.c',['../fxopt__stmts_8c.html',1,'']]],
-  ['fxopt_5futils_2ec',['fxopt_utils.c',['../fxopt__utils_8c.html',1,'']]]
+  ['dct_2ec',['dct.c',['../dct_8c.html',1,'']]],
+  ['dct_2edox',['dct.dox',['../dct_8dox.html',1,'']]],
+  ['dct2dtestflt_2ec',['dct2dTestFlt.c',['../dct2d_test_flt_8c.html',1,'']]],
+  ['dct_5fa_2ec',['dct_a.c',['../dct__a_8c.html',1,'']]],
+  ['dct_5fda_2ec',['dct_da.c',['../dct__da_8c.html',1,'']]],
+  ['dct_5fpa_2ec',['dct_pa.c',['../dct__pa_8c.html',1,'']]],
+  ['dct_5fpda_2ec',['dct_pda.c',['../dct__pda_8c.html',1,'']]],
+  ['dct_5fra_2ec',['dct_ra.c',['../dct__ra_8c.html',1,'']]],
+  ['dct_5frda_2ec',['dct_rda.c',['../dct__rda_8c.html',1,'']]]
 ];

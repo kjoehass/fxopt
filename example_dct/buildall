@@ -1,0 +1,66 @@
+#!/bin/sh
+
+PLUGINPATH=/home/kjh016/proj/fxplugin/gccplugin/
+
+export PATH=/home/kjh016/proj/cross-cortex/arm-elf/bin:/home/kjh016/proj/cross-cortex/libexec/gcc/arm-elf/4.6.2:$PATH
+
+BASE=dct
+
+for i in "" "r" "p" # rounding options, guarding has no effect
+do
+  for j in "" "d"   # multiplication options
+  do
+    for l in "a"    # range estimation options, get same results with IA and AA
+    do
+    rm -f copts.mk
+    make clean
+    SUFFIX="_${i}${j}${l}"
+    rm -f tran${SUFFIX} ${BASE}${SUFFIX}.lst
+
+    #
+    # Invoke the plugin
+    #
+    echo "COPTS += -fplugin=${PLUGINPATH}/\$(PLUGIN).so" >> copts.mk
+    echo "COPTS += -fplugin-arg-\$(PLUGIN)-ref-pass-name=ssa" >> copts.mk
+    echo "COPTS += -fplugin-arg-\$(PLUGIN)-ref-pass-instance-num=1" >> copts.mk
+    #
+    # Enable rounding options
+    #
+    [[ $i = "r" ]] && echo "COPTS += -fplugin-arg-\$(PLUGIN)-round" >> copts.mk
+    [[ $i = "rg" ]] && echo "COPTS += -fplugin-arg-\$(PLUGIN)-round" >> copts.mk
+    [[ $i = "rg" ]] && echo "COPTS += -fplugin-arg-\$(PLUGIN)-guard" >> copts.mk
+    [[ $i = "p" ]] && echo "COPTS += -fplugin-arg-\$(PLUGIN)-round-positive" >> copts.mk
+    [[ $i = "pg" ]] && echo "COPTS += -fplugin-arg-\$(PLUGIN)-round-positive" >> copts.mk
+    [[ $i = "pg" ]] && echo "COPTS += -fplugin-arg-\$(PLUGIN)-guard" >> copts.mk
+    #
+    # Enable double-precision multiply
+    #
+    [[ $j = "d" ]] && echo "COPTS += -fplugin-arg-\$(PLUGIN)-dpmult" >> copts.mk
+    #
+    # Enable interval arithmetic or affine arithmetic. Note that format of the
+    # input is also specified here...AA allows more fraction bits than IA
+    #
+    [[ $l = "i" ]] && echo "COPTS += -fplugin-arg-\$(PLUGIN)-interval" >> copts.mk
+    [[ $l = "i" ]] && echo "COPTS += -DFORMAT=\"((fxfrmt(1,11,20,0x000FFFFF,0xFFF00001)))\"" >> copts.mk
+    [[ $l = "a" ]] && echo "COPTS += -fplugin-arg-\$(PLUGIN)-affine" >> copts.mk
+    [[ $l = "a" ]] && echo "COPTS += -DFORMAT=\"((fxfrmt(1,7,24,0x00FFFFFF,0xFF000001)))\"" >> copts.mk
+
+    make >tran 2>&1
+    grep -i warning tran
+    grep -i error tran
+    mv -f tran tran${SUFFIX}
+    #lst2asm  <${BASE}.lst >${BASE}${SUFFIX}.S
+    echo "#define DCTBLOCKF 24" > ${BASE}${SUFFIX}.c
+    echo "#define DCTBLOCKE 0" >> ${BASE}${SUFFIX}.c
+    echo "#define RETURNF 24" >> ${BASE}${SUFFIX}.c
+    echo "#define RETURNE 0" >> ${BASE}${SUFFIX}.c
+    veclower2c ${BASE}.c.018t.veclower | sed "s/2dTestFlt//" >> ${BASE}${SUFFIX}.c
+    mv ${BASE}.lst ${BASE}${SUFFIX}.lst
+    rm ${BASE}.c.018t.veclower
+
+    done
+  done
+done
+
+make clean
+rm -r copts.mk

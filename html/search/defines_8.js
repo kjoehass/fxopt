@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['real_5fto_5finteger_5ftype',['REAL_TO_INTEGER_TYPE',['../fxopt__plugin_8h.html#a82318b0c995bbec24760dfb746dae2dd',1,'fxopt_plugin.h']]]
+  ['noprint',['NOPRINT',['../fxopt__plugin_8h.html#a1934f7f19def21658d04f1cf4bb948b5',1,'fxopt_plugin.h']]],
+  ['not_5fan_5farray',['NOT_AN_ARRAY',['../fxopt__plugin_8h.html#aeaa24dc28d2cae85c4c92370d64310a3',1,'fxopt_plugin.h']]]
 ];

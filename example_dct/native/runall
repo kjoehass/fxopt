@@ -1,0 +1,41 @@
+#!/bin/sh
+BASE=dct
+
+#
+# may be needed for debian/ubuntu multiarch systems
+#
+export LIBRARY_PATH=/usr/lib/x86_64\-linux\-gnu/:$LIBRARY_PATH
+
+#export PATH=/home/kjh016/proj/fxplugin/gcc/bin:/home/kjh016/proj/fxplugin/gcc/libexec/gcc/x86_64-unknown-linux-gnu/4.6.1:$PATH
+
+echo "COPTS += -DFXOPT" > copts.mk
+
+echo `date` > stats
+
+for i in "" "r" "p"
+do
+  for j in "" "d"
+  do
+    for l in "a"
+      do
+        SUFFIX="_${i}${j}${l}"
+        rm -rf ${BASE}.c main data${SUFFIX}
+        ln -s ../${BASE}${SUFFIX}.c ${BASE}.c
+        make clean;make
+        echo "===== ${BASE}${SUFFIX}.c" >> stats
+        main >> stats
+        echo "" >> stats
+      done
+    done
+  done
+
+SUFFIX="_flt"
+rm -rf main data${SUFFIX}
+echo "COPTS += -DFLOATING" > copts.mk
+make clean; make
+echo "===== ${BASE}${SUFFIX}.c" >> stats
+main >> stats
+echo "" >> stats
+
+make clean
+rm -f main copts.mk dct.c

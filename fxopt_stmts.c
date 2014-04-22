@@ -5,7 +5,7 @@
  *
  * @author K. Joseph Hass
  * @date Created: 2014-01-05T10:20:35-0500
- * @date Last modified: 2014-01-10T16:23:24-0500
+ * @date Last modified: 2014-01-08T12:19:47-0500
  *
  * @details These functions process the operands for the various GIMPLE
  * assignment statements, determining whether any shifts are needed for the
@@ -308,7 +308,7 @@ struct SIF array_ref(gimple_stmt_iterator * gsi_p, struct SIF oprnd_frmt[],
  * include a pointer and (possibly) an offset that must be added to the pointer.
  *
  * In GIMPLE the pointer offset is always some number of bytes, regardless
- * of the actual size of the pointee's datatype. If the pointer is to a real
+ * of the actual size of the pointee's data type. If the pointer is to a real
  * type then we may need to modify the offset's value for the new size of the
  * replacement real-to-integer type.
  * 

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['gnu_20free_20documentation_20license',['GNU Free Documentation License',['../copyright.html',1,'']]],
   ['gate_5ffxopt_5fplugin',['gate_fxopt_plugin',['../fxopt__plugin_8c.html#a048db9a4a1d112a22b9c440aadf4a1e3',1,'fxopt_plugin.c']]],
   ['get_5faa_5fbp',['get_aa_bp',['../fxopt__affine_8c.html#a5d37055410be60143d12cb25efc75d19',1,'fxopt_affine.c']]],
   ['get_5fformat_5fptr',['get_format_ptr',['../fxopt__plugin_8h.html#aa5c082e069ec56032f08d58c1af6e26e',1,'get_format_ptr(int var_id):&#160;fxopt_utils.c'],['../fxopt__utils_8c.html#aa5c082e069ec56032f08d58c1af6e26e',1,'get_format_ptr(int var_id):&#160;fxopt_utils.c']]],

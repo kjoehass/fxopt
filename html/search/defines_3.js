@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['key_5fto_5fidx',['KEY_TO_IDX',['../fxopt__plugin_8h.html#a57b4d6ef6eab411273326b20df6ed752',1,'fxopt_plugin.h']]],
-  ['key_5fto_5fpass',['KEY_TO_PASS',['../fxopt__plugin_8h.html#a4f8811d5916fc02d3ea3369cd63c8583',1,'fxopt_plugin.h']]],
-  ['key_5fto_5fuid',['KEY_TO_UID',['../fxopt__plugin_8h.html#ae799a9ba06cdf1c06da807eb5135d4b0',1,'fxopt_plugin.h']]]
+  ['fltscale',['FLTSCALE',['../main_8c.html#a2a4400cca3b57e3a942849891b56c6e4',1,'main.c']]],
+  ['format',['FORMAT',['../dct_8c.html#ac8dc47e3b39c930caed4bfd05b4ba805',1,'dct.c']]],
+  ['fxscale',['FXSCALE',['../main_8c.html#a7978f8ba89714d70e13ad34bc327226d',1,'main.c']]]
 ];

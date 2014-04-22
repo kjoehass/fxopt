@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -123,7 +124,7 @@ $(document).ready(function(){initNavTree('globals_d.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -140,29 +141,77 @@ $(document).ready(function(){initNavTree('globals_d.html','');});
 : <a class="el" href="fxopt__plugin_8c.html#a30c53ae66611406d961d7ad77161aaa0">fxopt_plugin.c</a>
 , <a class="el" href="fxopt__plugin_8h.html#a30c53ae66611406d961d7ad77161aaa0">fxopt_plugin.h</a>
 </li>
+<li>dct()
+: <a class="el" href="dct__da_8c.html#af789275568241aaaa4c36028e7d4bf6f">dct_da.c</a>
+, <a class="el" href="dct__rda_8c.html#af789275568241aaaa4c36028e7d4bf6f">dct_rda.c</a>
+, <a class="el" href="dct__pa_8c.html#af789275568241aaaa4c36028e7d4bf6f">dct_pa.c</a>
+, <a class="el" href="dct__a_8c.html#af789275568241aaaa4c36028e7d4bf6f">dct_a.c</a>
+, <a class="el" href="dct__pda_8c.html#af789275568241aaaa4c36028e7d4bf6f">dct_pda.c</a>
+, <a class="el" href="dct__ra_8c.html#af789275568241aaaa4c36028e7d4bf6f">dct_ra.c</a>
+</li>
+<li>dct2dDblRef()
+: <a class="el" href="main_8c.html#a457fe65327ab8209c27b39edcf10fef0">main.c</a>
+</li>
+<li>dct2dTestFlt()
+: <a class="el" href="dct_8c.html#ab194d9ab942263711f978e3b90ca62a5">dct.c</a>
+, <a class="el" href="dct2d_test_flt_8c.html#a7cc2e788a5677463ba1a257b26e6e82e">dct2dTestFlt.c</a>
+, <a class="el" href="main_8c.html#ad47ae00b78d73e916bde8619652808a4">main.c</a>
+</li>
+<li>DCTBLOCKE
+: <a class="el" href="dct__pda_8c.html#a75071952688bc77b0c3d61c54c45598a">dct_pda.c</a>
+, <a class="el" href="dct__ra_8c.html#a75071952688bc77b0c3d61c54c45598a">dct_ra.c</a>
+, <a class="el" href="dct__rda_8c.html#a75071952688bc77b0c3d61c54c45598a">dct_rda.c</a>
+, <a class="el" href="dct__a_8c.html#a75071952688bc77b0c3d61c54c45598a">dct_a.c</a>
+, <a class="el" href="dct__da_8c.html#a75071952688bc77b0c3d61c54c45598a">dct_da.c</a>
+, <a class="el" href="dct__pa_8c.html#a75071952688bc77b0c3d61c54c45598a">dct_pa.c</a>
+</li>
+<li>DCTBLOCKF
+: <a class="el" href="dct__a_8c.html#a3fefe2545e4bca30b17e0f728214239f">dct_a.c</a>
+, <a class="el" href="dct__da_8c.html#a3fefe2545e4bca30b17e0f728214239f">dct_da.c</a>
+, <a class="el" href="dct__pa_8c.html#a3fefe2545e4bca30b17e0f728214239f">dct_pa.c</a>
+, <a class="el" href="dct__pda_8c.html#a3fefe2545e4bca30b17e0f728214239f">dct_pda.c</a>
+, <a class="el" href="dct__ra_8c.html#a3fefe2545e4bca30b17e0f728214239f">dct_ra.c</a>
+, <a class="el" href="dct__rda_8c.html#a3fefe2545e4bca30b17e0f728214239f">dct_rda.c</a>
+</li>
 <li>delete_aa_list()
-: <a class="el" href="fxopt__plugin_8h.html#aaa3848f108434439b2d91a86bda052d3">fxopt_plugin.h</a>
-, <a class="el" href="fxopt__affine_8c.html#aaa3848f108434439b2d91a86bda052d3">fxopt_affine.c</a>
+: <a class="el" href="fxopt__affine_8c.html#aaa3848f108434439b2d91a86bda052d3">fxopt_affine.c</a>
+, <a class="el" href="fxopt__plugin_8h.html#aaa3848f108434439b2d91a86bda052d3">fxopt_plugin.h</a>
 </li>
 <li>delete_all_formats()
 : <a class="el" href="fxopt__plugin_8h.html#a97aab7e517fb8e9fd49b22f5dd9b780a">fxopt_plugin.h</a>
 , <a class="el" href="fxopt__utils_8c.html#a97aab7e517fb8e9fd49b22f5dd9b780a">fxopt_utils.c</a>
 </li>
 <li>delete_var_format()
-: <a class="el" href="fxopt__utils_8c.html#ae31c1dc556cb79de8aee5d43d26ee5f9">fxopt_utils.c</a>
-, <a class="el" href="fxopt__plugin_8h.html#ae31c1dc556cb79de8aee5d43d26ee5f9">fxopt_plugin.h</a>
+: <a class="el" href="fxopt__plugin_8h.html#ae31c1dc556cb79de8aee5d43d26ee5f9">fxopt_plugin.h</a>
+, <a class="el" href="fxopt__utils_8c.html#ae31c1dc556cb79de8aee5d43d26ee5f9">fxopt_utils.c</a>
 </li>
 <li>division()
-: <a class="el" href="fxopt__plugin_8h.html#a36e1ee30cfaf69fcd060d9cb6f111ebd">fxopt_plugin.h</a>
-, <a class="el" href="fxopt__stmts_8c.html#a36e1ee30cfaf69fcd060d9cb6f111ebd">fxopt_stmts.c</a>
+: <a class="el" href="fxopt__stmts_8c.html#a36e1ee30cfaf69fcd060d9cb6f111ebd">fxopt_stmts.c</a>
+, <a class="el" href="fxopt__plugin_8h.html#a36e1ee30cfaf69fcd060d9cb6f111ebd">fxopt_plugin.h</a>
 </li>
 <li>double_int_abs()
 : <a class="el" href="fxopt__plugin_8h.html#a34130ea48b0bda9d05933f47c6a2179f">fxopt_plugin.h</a>
 , <a class="el" href="fxopt__range_8c.html#a34130ea48b0bda9d05933f47c6a2179f">fxopt_range.c</a>
 </li>
 <li>double_int_positive_p()
-: <a class="el" href="fxopt__range_8c.html#a8af14854697d422bb08fef6b1db132f4">fxopt_range.c</a>
-, <a class="el" href="fxopt__plugin_8h.html#a8af14854697d422bb08fef6b1db132f4">fxopt_plugin.h</a>
+: <a class="el" href="fxopt__plugin_8h.html#a8af14854697d422bb08fef6b1db132f4">fxopt_plugin.h</a>
+, <a class="el" href="fxopt__range_8c.html#a8af14854697d422bb08fef6b1db132f4">fxopt_range.c</a>
+</li>
+<li>DUMPDBLVAR
+: <a class="el" href="dct__a_8c.html#a82ee0088098cf1bdf18e484cd7690efb">dct_a.c</a>
+, <a class="el" href="dct__pda_8c.html#a82ee0088098cf1bdf18e484cd7690efb">dct_pda.c</a>
+, <a class="el" href="dct__pa_8c.html#a82ee0088098cf1bdf18e484cd7690efb">dct_pa.c</a>
+, <a class="el" href="dct__da_8c.html#a82ee0088098cf1bdf18e484cd7690efb">dct_da.c</a>
+, <a class="el" href="dct__rda_8c.html#a82ee0088098cf1bdf18e484cd7690efb">dct_rda.c</a>
+, <a class="el" href="dct__ra_8c.html#a82ee0088098cf1bdf18e484cd7690efb">dct_ra.c</a>
+</li>
+<li>DUMPVAR
+: <a class="el" href="dct__ra_8c.html#a3fa714a5d966843449873feaa0753dae">dct_ra.c</a>
+, <a class="el" href="dct__da_8c.html#a3fa714a5d966843449873feaa0753dae">dct_da.c</a>
+, <a class="el" href="dct__rda_8c.html#a3fa714a5d966843449873feaa0753dae">dct_rda.c</a>
+, <a class="el" href="dct__pda_8c.html#a3fa714a5d966843449873feaa0753dae">dct_pda.c</a>
+, <a class="el" href="dct__pa_8c.html#a3fa714a5d966843449873feaa0753dae">dct_pa.c</a>
+, <a class="el" href="dct__a_8c.html#a3fa714a5d966843449873feaa0753dae">dct_a.c</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -170,7 +219,7 @@ $(document).ready(function(){initNavTree('globals_d.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Jan 8 2014 12:19:55 for fxopt by
+    <li class="footer">Generated on Tue Apr 22 2014 19:02:48 for fxopt by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
